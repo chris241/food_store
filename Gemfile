@@ -6,6 +6,7 @@ ruby '2.6.3'
 gem 'faker'
 gem 'dotenv-rails'
 gem 'devise'
+gem 'table_print'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
