@@ -27,6 +27,13 @@ ActiveRecord::Schema.define(version: 2019_09_12_080644) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_clients_on_email", unique: true
     t.index ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true
+  create_table "reservations", force: :cascade do |t|
+    t.integer "nbr_person"
+    t.datetime "date"
+    t.bigint "client_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["client_id"], name: "index_reservations_on_client_id"
   end
 
 end
