@@ -5,6 +5,7 @@ class CreateFoods < ActiveRecord::Migration[6.0]
       t.string :description
       t.integer :price
       t.integer :duration
+      t.string :image_url
       t.belongs_to :menu, index: true
 
 
