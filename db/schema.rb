@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_12_080812) do
+ActiveRecord::Schema.define(version: 2019_09_12_081443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,13 @@ ActiveRecord::Schema.define(version: 2019_09_12_080812) do
     t.index ["reset_password_token"], name: "index_clients_on_reset_password_token", unique: true
   end
 
+  create_table "commands", force: :cascade do |t|
+    t.bigint "client_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["client_id"], name: "index_commands_on_client_id"
+  end
+
   create_table "foods", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -38,6 +45,30 @@ ActiveRecord::Schema.define(version: 2019_09_12_080812) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["menu_id"], name: "index_foods_on_menu_id"
+  end
+
+  create_table "join_com_menus", force: :cascade do |t|
+    t.bigint "command_id"
+    t.bigint "menu_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["command_id"], name: "index_join_com_menus_on_command_id"
+    t.index ["menu_id"], name: "index_join_com_menus_on_menu_id"
+  end
+
+  create_table "join_res_menus", force: :cascade do |t|
+    t.bigint "menu_id"
+    t.bigint "reservation_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["menu_id"], name: "index_join_res_menus_on_menu_id"
+    t.index ["reservation_id"], name: "index_join_res_menus_on_reservation_id"
+  end
+
+  create_table "menus", force: :cascade do |t|
+    t.string "category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "reservations", force: :cascade do |t|
