@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.3'
-
+gem 'bootstrap-datepicker-rails'
 gem 'faker'
 gem 'dotenv-rails'
 gem 'devise'
