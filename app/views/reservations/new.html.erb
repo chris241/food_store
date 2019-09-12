@@ -8,11 +8,3 @@
 <%= label_tag 'Dates:' %> <%= datetime_field_tag  'date', @reservation.date%> <br /> <br />
 <%= submit_tag "Reserver", class: "btn btn-warning" %>
 <%end%>
-
-<input type="text" class='datepicker' >
-
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('.datepicker').datepicker();
-  });
-</script>
