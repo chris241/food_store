@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  get 'reservations/show'
-  get 'reservations/create'
-  get 'reservations/new'
-  get 'reservations/update'
-  get 'reservations/destroy'
-  root 'pages#profile'
   devise_for :clients
   resources :reservations
+
+  root 'restaurants#index'
+  devise_for :clients
+  resources :restaurants
+
+
+
   devise_scope :client do
      get '/clients/sign_out'=> 'devise/sessions#destroy'
  end
