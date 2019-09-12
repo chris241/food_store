@@ -3,5 +3,5 @@
 <%@restaurants.each do|restaurant|%>
 <%=restaurant.image_url%>
 <%=restaurant.name%>
-<%=link_to "show", restaurants_show_path(restaurant.id)%>
+<%=link_to "show", restaurant_path(restaurant.id)%>  </br>
 <% end %>
