@@ -13,5 +13,4 @@ class Client < ApplicationRecord
   def welcome_send
     ClientMailer.welcome_email(self).deliver_now
   end
-  
 end
