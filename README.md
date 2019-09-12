@@ -1,24 +1,49 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Group1
 
-Things you may want to cover:
+TEAM: CODER-BRAIN
 
-* Ruby version
+Projet: Food_store
 
-* System dependencies
+Les membres de notre équipe:
 
-* Configuration
+Nom: Léon
+Prénoms: Chris Stone
+Github: https://github.com/chris241
+Slack: ChrisTHP
+Fonction: full-stack
 
-* Database creation
 
-* Database initialization
+Nom: RAKOTONOMENJANAHARY
+Prénoms: github: https://github.com/menja-coder
+Slack: Menja
+Fonction: full-stack
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Nom: RAKOTONINDRINA
+Prénoms: Arotiana Fehizoro
+Github: https://github.com/AroRk226
+Slack: Aro
+Fonction: full-stack
 
-* Deployment instructions
 
-* ...
+Nom: RAKOTOVAO
+Prénoms: Ronick Michael
+Github: https://github.com/kin-coder
+Slack: kin
+Fonction: full-stack
+
+
+Nom: RAZANAJATOVO
+Prénoms: Nanirisoa Nambinina
+Github: https://github.com/Nam-9
+Slack: RAZANAJATOVO Nanirisoa Nambinina
+Fonction: full-stack
+
+
+Nom: RAZANAKOTO
+Prénoms: Tsirimanana Jean Luc
+Github: https://github.com/TsiryJL
+Slack: Razanakoto Tsirimanana Jean Luc
+Fonction: full-stack
