@@ -3,8 +3,8 @@
 
 <%= form_tag url_for(action: 'create'), method: "post" do %>
 
-<%= label_tag 'Nombres de personnes:' %> <%= number_field_tag  'nbr_person', @reservation.nbr_person %> <br /> <br />
 
-<%= label_tag 'Dates:' %> <%= datetime_field_tag  'date', @reservation.date %> <br /> <br />
+<%= label_tag 'Nombres de personnes:' %> <%= number_field_tag  'nbr_person', @reservation.nbr_person %> <br /> <br />
+<%= label_tag 'Dates:' %> <%= datetime_field_tag  'date', @reservation.date%> <br /> <br />
 <%= submit_tag "Reserver", class: "btn btn-warning" %>
 <%end%>
