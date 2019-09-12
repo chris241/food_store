@@ -17,16 +17,7 @@
 .form-signin .form-control:focus {
   z-index: 2;
 }
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
+
 
 .bd-placeholder-img {
   font-size: 1.125rem;
@@ -37,12 +28,16 @@
   user-select: none;
 }
 
-label#pos{
-  float: left;
+.pos{
+  float:left;
 }
-
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
+}
+
+div h2{
+  margin-bottom: 50px;
+  margin-top: 10px;
 }
