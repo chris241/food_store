@@ -1,18 +1,15 @@
-
 .back{
-background-image:url("https://i.pinimg.com/originals/31/ac/7d/31ac7d17b45a6b900090f8a237baa7e4.jpg");                                                                                                                                                                                                                                                                                                                                                                                                                }
+  background-image: url("https://i.pinimg.com/originals/31/ac/7d/31ac7d17b45a6b900090f8a237baa7e4.jpg");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+}
 
 h1{
   position: absolute;
   left: 35%;
   color: white;
-  font-family:georgia, serif;
-  font-size:300px;
-
+  font-family: georgia, serif;
+  font-size: 300px;
 }
 
 .form-group{
-
-color: white;
-
+  color: white;
 }

@@ -1,5 +1,5 @@
 class ClientMailer < ApplicationMailer
-  default from: 'no-reply@FoodStore.mg'
+  default from: 'no-reply@monsite.fr'
  
   def welcome_email(client)
     #on récupère l'instance client pour ensuite pouvoir la passer à la view en @client
