@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   root 'restaurants#index'
   devise_for :clients
-  resources :restaurants
+  resources :restaurants do
+  resources :restoavatar,only: [:create,:show]
+  end	
+
 
 
 

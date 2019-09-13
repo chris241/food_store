@@ -1,8 +1,19 @@
 <h1>Restaurants#show</h1>
 <p>Find me in app/views/restaurants/show.html.erb</p>
-<%=image_tag @restaurant.image_url%>
+<% if @restaurant.restoavatar.attached? == true%>
+<%=image_tag @restaurant.restoavatar%>
+<%else%>
+<%=@restaurant.image_url%>
+<%end%>
 <%=@restaurant.name%>
 <%=@restaurant.description%>
 <%=@restaurant.address%>
+<%=link_to "Reserver table", new_reservation_path, class: "btn btn-primary"%>
+ 
+<%= form_tag restaurant_restoavatar_index_path(session[:resto_id]), multipart: true do %>
+<%= file_field_tag :restoavatar %>
+  <%= submit_tag "mettre à jour" %>
+<% end %>
 
- <%=link_to "Reserver table", new_reservation_path, class: "btn btn-primary"%>
+
+ 
