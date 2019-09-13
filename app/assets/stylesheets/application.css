@@ -22,11 +22,6 @@
      height: 350px;
  }
 
- .container {
-    max-width: 800px; /* Maximum width */
-    margin: 0 auto; /* Center it */
-  }
-  
   .container .content {
     position: center; /* Position the background text */
     background: rgba(26, 25, 25, 0.5); /* Black background with 0.5 opacity */
