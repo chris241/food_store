@@ -9,6 +9,12 @@ class ClientMailer < ApplicationMailer
     @url  = 'https://www.FoodStore.mg' 
 
     # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
-    mail(to: @client.email, subject: 'Bienvenue chez nous !')
+    mail(to: @client.email, subject: 'Bienvenue sur notre site !')
+  end
+
+  def reservation_email(client)
+  	@client = client
+  	@url = 'https://www.FoodStore.mg'
+  	mail(to: @client, subject: 'Réservation')
   end
 end

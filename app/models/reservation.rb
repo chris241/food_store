@@ -4,9 +4,9 @@ class Reservation < ApplicationRecord
  belongs_to :client
  belongs_to :restaurant
 
- after_create :confirmation_reservation_send
+ after_create :reservation_send
 
-  def confirmation_reservation_send
-    ReservationMailer.confirmation_reservation_email(self).deliver_now
+  def reservation_send
+    ClientMailer.reservation_email(self).deliver_now
   end
 end
