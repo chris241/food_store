@@ -1,5 +1,4 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<body id="index">
 <center><%=link_to "ajouter ",new_restaurant_path,class:"btn btn-primary", type:"button"%></center>
 <%@restaurants.each do|restaurant|%>
     <% if restaurant.restoavatar.attached? == true%>
@@ -11,3 +10,8 @@
 <%=restaurant.name%>
 <%=link_to "show", restaurant_path(restaurant.id)%>  </br>
 <% end %>
+</body>
+
+
+
+   

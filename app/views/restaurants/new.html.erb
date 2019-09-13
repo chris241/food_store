@@ -1,23 +1,32 @@
-<%= form_tag url_for(action: 'create'), method: "post" do %>
+
+<section class ="container mt-3">
+
+<!-- Bandeau d'acceuil générique -->
+  <div class=" p-1 mt-1 bg-secondary text-white">
+      <div class="row text-center">
+          <div class="col-9 text-left pl-5">
+              <h3 class="section-title", style="text-align: center;"> Créer un restaurant </h3>
+          </div>
+      </div>
+  </div>
 
 
-    <center><%= label_tag 'name' %></center>
-    <center><%= text_field  'name', @restaurant %></center>
-    <br /> <br />
+<%= form_for @restaurant do |f| %>
+    </br>
+     <%=f.label :name, "Nom" %> 
+    <%=f.text_field :name, class:'form-control' %></br>
+     <%=f.label :description,"Description" %> 
+    <%=f.text_area :description, class:'form-control' %></br>
+    <%=f.label :address,"Lieu" %> 
+    <%=f.text_field :address, class:'form-control' %></br>
+     <%=f.label :image_url,"Image" %> 
+    <%=f.text_field :image_url, class:'form-control' %>
 
 
-
-    <center><%= label_tag 'description' %></center>
-    <center><%= text_field 'description', @restaurant %></center>
-    <br /> <br />
-
-
-    <center><%= label_tag 'address' %></center>
-    <center><%= text_field 'address', @restaurant%></center>
-    <br /> <br />
-    <center><%= label_tag 'image_url' %></center>
-    <center><%= url_field_tag 'image_url', @restaurant%></center>
-     <br /> <br />
-     <center><%= submit_tag "Create restaurant" %></center>
-
+<div class="form-group">
+    <button type="submit" class="btn btn-primary"> Ajouter votre restaurant </button>
+  </div>
 <% end %>
+
+</section>
+

@@ -7,6 +7,7 @@ class RestaurantsController < ApplicationController
   	@restaurant = Restaurant.find(params[:id])
     session[:resto_id]=params[:id]
   end
+
   def create
   	 @restaurant = Restaurant.create(name: params[:name][0],
                                   address: params[:address][0],
@@ -19,4 +20,8 @@ class RestaurantsController < ApplicationController
 
      end
   end 
+
+
+  
+
 end
