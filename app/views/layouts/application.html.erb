@@ -25,7 +25,9 @@
                 <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <%= current_client.first_name %>
                 </a>
+              </li>
               
+              <li class="nav-item dropdown">
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="/clients/sign_out">Deconnexion</a>
                 </div>
@@ -43,11 +45,6 @@
 
             <%end%>
           </ul>
-
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
         </div>
     </nav>
     <%= yield %>
