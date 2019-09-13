@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2019_09_12_081443) do
     t.string "encrypted_password", default: "", null: false
     t.string "first_name"
     t.string "last_name"
+    t.boolean "is_alive"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -75,9 +76,11 @@ ActiveRecord::Schema.define(version: 2019_09_12_081443) do
     t.integer "nbr_person"
     t.datetime "date"
     t.bigint "client_id"
+    t.bigint "restaurant_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["client_id"], name: "index_reservations_on_client_id"
+    t.index ["restaurant_id"], name: "index_reservations_on_restaurant_id"
   end
 
   create_table "restaurants", force: :cascade do |t|
