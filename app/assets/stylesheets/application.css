@@ -14,3 +14,43 @@
  *= require_self
 
  */
+ img.d-block{
+    height: 500px;
+ }
+
+ section img.img-fluid,.shadow{
+     height: 350px;
+ }
+
+ .container {
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto; /* Center it */
+  }
+  
+  .container .content {
+    position: center; /* Position the background text */
+    background: rgba(26, 25, 25, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: 98%;
+    margin-left:10px;
+    color:rgb(255, 187, 0);
+    font-family: lucida sans;
+    text-align: center;
+    margin-top:5px;
+  }
+
+div.py-5{
+    border-top:solid 2px rgb(9, 239, 255);
+    border-bottom: solid 2px rgb(9, 239, 255);
+    background-color:rgba(1, 26, 32, 0.5);
+}
+
+body#index{
+  background-image: url('https://wallpapercave.com/wp/wp1961820.jpg');
+  color: white;
+}
+
+#footer{
+    margin-top: 5px;
+    background-color: rgba(0, 22, 22, 0.74);
+}
