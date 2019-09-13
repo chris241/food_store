@@ -21,14 +21,14 @@ require 'faker'
 		                           address:Faker::Address.street_address,
 		                           description:Faker::Restaurant.description,
 		                           image_url:url[a]
-     
+
 
 		)
 	end
-	
 
- 
-   category =["Dessert","Entrée","Résistance","Boisson"]
+
+
+   category =["Entrée","Résistance","Dessert","Boisson"]
      for i in (0..category.length-1)
  	 menu = Menu.create(category:category[i])
  	end
@@ -43,7 +43,7 @@ require 'faker'
 		              price:Faker::Commerce.price,
 		              menu:Menu.all.sample
 		                 )
-end	
+end
 
 puts "resto"
 puts "menu"

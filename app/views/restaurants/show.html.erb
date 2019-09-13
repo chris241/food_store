@@ -4,5 +4,6 @@
 <%=@restaurant.name%>
 <%=@restaurant.description%>
 <%=@restaurant.address%>
+ <%=link_to "Menus", menus_path, class: "btn btn-info"%>
 
  <%=link_to "Reserver table", new_reservation_path, class: "btn btn-primary"%>

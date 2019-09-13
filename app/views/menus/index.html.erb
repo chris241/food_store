@@ -1,0 +1,7 @@
+<h1>Menus#index</h1>
+<p>Find me in app/views/menus/index.html.erb</p>
+
+
+<%@menus.each do|menu|%>
+<%=link_to menu.category, foods_path%> <br>
+<% end %>
