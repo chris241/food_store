@@ -8,12 +8,16 @@ Rails.application.routes.draw do
   resources :restaurants do
   resources :restoavatar,only: [:create,:show]
   end	
-
-devise_for :gerants, path: 'gerants', controllers: { registrations: "gerants/registrations",sessions: "gerants/sessions" }
-    resources :profiles, only:[:index] do
+  devise_for :gerants, path: 'gerants', controllers: { registrations: "gerants/registrations",sessions: "gerants/sessions" }
+  resources :restaurants
+  
+  resources :profiles, only:[:index] do
   	resources :avatars, only: [:create]
   end
- end
+  resources :food do
+  	resources :foodavatar,only: [:create,:show]
+  end	
+ 
 
   devise_scope :client do
      get '/clients/sign_out'=> 'devise/sessions#destroy'

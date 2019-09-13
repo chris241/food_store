@@ -1,0 +1,16 @@
+<% if @food.foodavatar.attached? == true%>
+   <%=image_tag @food.foodavatar%>
+<%else%>
+    <%=image_tag @food.image_url%>
+<%end%>
+</br><%=@food.name%>
+</br><%=@food.description%>
+</br>€<%=@food.price%>
+</br><%=@food.duration%>mn
+
+ 
+<%= form_tag food_foodavatar_index_path(session[:food_id]), multipart: true do %>
+<%= file_field_tag :foodavatar %>
+  <%= submit_tag "mettre à jour" %>
+<% end %>
+
