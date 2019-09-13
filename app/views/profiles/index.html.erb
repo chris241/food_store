@@ -1,0 +1,19 @@
+
+
+<h1>Page Profil</h1>
+
+<p>Bienvenue sur la page d'ajout d'un avatar pour le User portant l'id : <%=@client.id%></p>
+<h3>Avatar actuel</h3>
+<%if @client.avatar.attached?%>
+  <%= image_tag @client.avatar, alt: 'avatar' %>
+<%else%>
+  <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+<%end%>
+<h3>Changer d'avatar ?</h3>
+<%= form_tag profile_avatars_path(current_client), multipart: true do %>
+  <%= file_field_tag :avatar %>
+  <%= submit_tag "mettre à jour" %>
+<% end %>
+<%=@client.first_name%><br>
+<%=@client.last_name%><br>
+<%=@client.email%><br>
