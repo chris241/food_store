@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  
+  resources :reservations
+
   root 'restaurants#index'
   devise_for :clients
   resources :restaurants
-  
-  
+
+
+
   devise_scope :client do
      get '/clients/sign_out'=> 'devise/sessions#destroy'
  end
