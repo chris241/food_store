@@ -14,12 +14,13 @@
     <span>Prix: </span><%=food.price%> €</br>
     <span>Temps de préparation: </span><%=food.duration%> mn </br>
 
+<span>id_menu: </span> <%=food.menu.id%>   </span> <%=session[:menu_id]%></br>
 
     <%= form_tag foodavatar_path(@menu.id,food.id), multipart: true do %>
         <%= file_field_tag :foodavatar %>
         <%= submit_tag "mettre à jour" %>
     <%end%>
-    <%=link_to "Commander", edit_food_path(food.id), class: "btn btn-warning"%>
+    <%=link_to "Commander", new_join_com_menu_path(session[:food_id]), class: "btn btn-warning"%>
         <%=link_to "Edit", edit_food_path(food.id), class: "btn btn-warning"%>
     <%= link_to 'Destroy', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger"%>
 <br> <br> <br> <br>

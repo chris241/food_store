@@ -1,0 +1,12 @@
+<h1>JoinComMenus#new</h1>
+<p>Find me in app/views/join_com_menus/new.html.erb</p>
+
+ <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+
+    <center><%= label_tag 'Quantités' %></center>
+    <center><%= number_field_tag  'quantity', @joinCM.quantity %></center>
+    <br /> <br />
+     <center><%= submit_tag "confirmer" %></center>
+
+<% end %>

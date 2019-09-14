@@ -5,10 +5,11 @@ class MenusController < ApplicationController
 
   def show
     @menu = Menu.find(params[:id])
+    
   end
 
   def new
-    @menu = Menu.news
+    @menu = Menu.new
   end
 
   def create

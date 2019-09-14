@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 2019_09_13_083606) do
   create_table "join_com_menus", force: :cascade do |t|
     t.bigint "command_id"
     t.bigint "menu_id"
+    t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["command_id"], name: "index_join_com_menus_on_command_id"

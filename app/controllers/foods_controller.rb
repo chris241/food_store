@@ -1,11 +1,17 @@
 class FoodsController < ApplicationController
   def index
     @foods = Food.all
+    session[:menu_id] = @foods[params[:id]].menu.id
+
   end
 
   def show
+    
     @menu = Menu.find(params[:id])
+    session[:menu_id] = @menu.id
     session[:food_id]=params[:id]
+
+
   end
 
   def new

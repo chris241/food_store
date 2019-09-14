@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+  resources :join_com_menus
   resources :reservations
   resources :menus
   resources :foods do
