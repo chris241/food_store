@@ -1,9 +1,4 @@
 class JoinComMenusController < ApplicationController
-  def index
-    @joinCM = JoinComMenu.all
-
-  end
-
   def new
     @joinCM = JoinComMenu.new
   end
@@ -22,6 +17,10 @@ class JoinComMenusController < ApplicationController
 	      else
 	        puts "Try again"
 	      end
+  end
+
+  def index
+    @joinCM = JoinComMenu.all
   end
 
   def destroy
