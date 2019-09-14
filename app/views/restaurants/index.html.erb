@@ -13,8 +13,11 @@
     <div id="side-nav" class="sidenav">
     <div id="canvas-overlay"></div>
       <div class="boxed-page">
-      
+
         <!-- Special Dishes Section -->
+        <div class="content">
+          <h2>~ Food store ~</h2> 
+        </div>   
     <section id="gtco-special-dishes" class="bg-grey section-padding">
       <div class="container">
 
@@ -73,26 +76,23 @@
                 </div>
               </div>
               <!--carousel-->
-
-              <div class="content">
-                <h2>Resto-mada</h2> 
-              </div>   
           </div>
-
+          
+        <%@restaurants.each do |restaurant| %>
               <!-- Gauche -->
           <div class="row mt-5">
             <div class="col-lg-5 col-md-6 align-self-center py-5">
-              <h2 class="special-number">01.</h2>
+              <h2 class="special-number"><%= restaurant.id%></h2>
                 <div class="dishes-text">
-                  <h3><span>Beef</span><br> Steak Sauce</h3>
-                  <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ea vero alias perferendis quas animi doloribus voluptates. Atque explicabo ea nesciunt provident libero qui eum, corporis esse quos excepturi soluta?</p>
-                  <h3 class="special-dishes-price">$15.00</h3>
-                  <a href="#" class="btn btn-outline-warning">book a table</a>
+                  <h3><span><%= restaurant.name %></span><br></h3>
+                  <p class="pt-3"><%= restaurant.address %></p>
+   
+               <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
                 </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
               <div class="hovereffect">
-                <img class="img-fluid shadow w-100" src="http://www.lapasoa.com/wp-content/uploads/2013/05/kudeta-restaurant-salle-madagascar.jpg">
+                <img class="img-fluid shadow w-100" src="<%=restaurant.image_url%>">
                 <div class="overlay">
                   <h2>Hover effect 1</h2>
                   <a class="info" href="#">link here</a>
@@ -101,7 +101,7 @@
             </div>
           </div>
               <!-- Gauche -->
-
+        <% end %>
               <!-- droite -->
           <div class="row mt-5">
             <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
@@ -125,54 +125,6 @@
             </div>
           </div>
               <!-- droite -->
-
-             <!-- Gauche -->
-          <div class="row mt-5">
-            <div class="col-lg-5 col-md-6 align-self-center py-5">
-              <h2 class="special-number">03.</h2>
-                <div class="dishes-text">
-                  <h3><span>Beef</span><br> Steak Sauce</h3>
-                  <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, ea vero alias perferendis quas animi doloribus voluptates. Atque explicabo ea nesciunt provident libero qui eum, corporis esse quos excepturi soluta?</p>
-                  <h3 class="special-dishes-price">$15.00</h3>
-                  <a href="#" class="btn btn-outline-warning">book a table</a>
-                </div>
-            </div>
-
-              <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                <div class="hovereffect">
-                  <img class="img-fluid shadow w-100" src="https://www.tourisme93.com/Local/gus/files/8511/big17.02.2014---077P2014004_APFXM.JPEG">
-                  <div class="overlay">
-                    <h2>Hover effect 1</h2>
-                    <a class="info" href="#">link here</a>
-                  </div>
-                </div>
-              </div>
-          </div>
-              <!-- Gauche -->
-
-              <!-- droite -->
-          <div class="row mt-5">
-            <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-              <div class="hovereffect">
-                <img class="img-fluid shadow w-100" src="http://www.madadecouverte.com/images/tananarive/hotel-chambre-hote/RESTO_12.jpg">
-                  <div class="overlay">
-                    <h2>Hover effect 1</h2>
-                    <a class="info" href="#">link here</a>
-                  </div>
-              </div>
-            </div>
-              <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2 py-5">
-                <h2 class="special-number">04.</h2>
-                  <div class="dishes-text">
-                      <h3><span>Salmon</span><br> Zucchini</h3>
-                      <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, accusamus culpa quam amet ipsam odit ea doloremque accusantium quo, itaque possimus eius. In a quis quibusdam omnis atque vero dolores!</p>
-                      <h3 class="special-dishes-price">$12.00</h3>
-                      <a href="#" class="btn btn-outline-warning">book a table <span><i class="fa fa-long-arrow-right"></i></span></a>
-                  </div>
-              </div>
-            </div>
-          </div>
-              <!-- droite -->  
         </div>
       </div>
     </section>

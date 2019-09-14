@@ -14,3 +14,30 @@
  *= require_self
 
  */
+ body#view-img{
+    background-image: url('https://thewallpaper.co//wp-content/uploads/2016/03/restaurant-hd-wallpaper-for-desktop-background-download-restaurant-photos-best-backgrounds-windows-wallpaper-hd-free-images-1920x1200.jpg');
+   
+}
+
+section#wall{
+    background-color: rgba(24, 24, 24, 0.5);
+}
+
+img{
+    width: 600px;
+    height: 500px;
+}
+div#show-center{
+    align-content: center;
+    text-align: center;
+    margin-left: 25%;
+    width: 600px;
+}
+
+#card-view{
+    width: 600px;
+}
+
+.center{
+    width:600px;
+}

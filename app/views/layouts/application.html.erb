@@ -14,7 +14,7 @@
   </head>
 
   <body>
-
+    <div id="nav"> 
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-nav">
       <a class="navbar-brand" id="acc" href="<%=root_path%>">Accueil</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,12 +28,20 @@
           <% if client_signed_in? %>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<<<<<<< HEAD
                 <%=current_client.first_name%> 
+=======
+                <%if current_client.avatar.attached?%>
+                <%=image_tag current_client.avatar, alt: 'avatar',class:"rounded-circle"%>
+                <%else%>
+                  Connexion
+                <%end%>
+>>>>>>> 2f1d2edd1fb23fdfa9d3f45b4b001616f1c0b5b3
               </a>
        
 
               <div class="dropdown-menu" id="menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<%=profiles_path%>">My profil</a>
+                <a class="dropdown-item" href="<%=profiles_path%>">Mon Profil</a>
                 <a class="dropdown-item" href="/clients/sign_out">Deconnexion</a>
               </div>
 
@@ -41,8 +49,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connexion</a>
                   <div class="dropdown-menu" id="menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/clients/sign_up">Sign up</a>
-                    <a class="dropdown-item" href="/clients/sign_in">Sign in</a>
+                    <a class="dropdown-item" href="/clients/sign_up">S'inscrire</a>
+                    <a class="dropdown-item" href="/clients/sign_in">Se connecter</a>
                   </div>
               </li>
 
@@ -51,6 +59,7 @@
         </ul>
       </div>
     </nav>
+    </div>
     <%= yield %>
   </body>
         <!-- Compiled and minified JavaScript -->
