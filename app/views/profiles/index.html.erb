@@ -1,19 +1,31 @@
-
-
-<h1>Page Profil</h1>
-
-<p>Bienvenue sur la page d'ajout d'un avatar pour le User portant l'id : <%=@client.id%></p>
-<h3>Avatar actuel</h3>
-<%if @client.avatar.attached?%>
-  <%= image_tag @client.avatar, alt: 'avatar' %>
-<%else%>
-  <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
-<%end%>
-<h3>Changer d'avatar ?</h3>
-<%= form_tag profile_avatars_path(current_client), multipart: true do %>
-  <%= file_field_tag :avatar %>
-  <%= submit_tag "mettre à jour" %>
-<% end %>
-<%=@client.first_name%><br>
-<%=@client.last_name%><br>
-<%=@client.email%><br>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile</title>
+</head>
+<body>
+<div class="container">
+  <div class="card" style="width:1000px">
+  	<center class="card-img-top" style="width:100%">
+  		<%if @client.avatar.attached?%>
+  			<%= image_tag @client.avatar, alt: 'avatar', id:"pdp", class:"rounded-circle" %>
+		<%else%>
+ 			 <p>=== Il n'y a pas encore d'avatar lié à cet utilisateur ===</p>
+		<%end%>
+			<%= form_tag profile_avatars_path(current_client), multipart: true do %>
+  			<%= file_field_tag :avatar %>
+  			<%= submit_tag "mettre à jour" %>
+			<% end %>
+	</center>
+	<center>
+    <div class="card-body">
+		<%=@client.first_name%><br>
+		<%=@client.last_name%><br>
+		<%=@client.email%><br>
+		<%= link_to "Edit profile", edit_client_registration_path(current_client.id) %>
+    </div>
+  </center>
+  </div>
+</div>
+</body>
+</html>
