@@ -1,8 +1,19 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
-<%=image_tag @restaurant.image_url%>
-<%=@restaurant.name%>
-<%=@restaurant.description%>
-<%=@restaurant.address%>
-
- <%=link_to "Reserver table", new_reservation_path, class: "btn btn-primary"%>
+<body id="view-img">
+  <section id="wall">
+    <div class="col-sm-4" id="show-center">
+      <div class="#" style="width: 34rem;">
+        <div class="card center" >
+          <div class="w"><%=image_tag @restaurant.image_url%></div>
+          <div class="card-body" id="card-view">
+              <h5 class="card-title"><%=@restaurant.name%></h5>
+              <p class="card-text">
+                <%=@restaurant.description%>
+                <%=@restaurant.address%>
+              </p>
+          </div>
+        <%=link_to "Reserver table", new_reservation_path, class: "btn btn-primary",class:"btn btn-primary"%>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
