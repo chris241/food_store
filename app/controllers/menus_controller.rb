@@ -4,7 +4,11 @@ class MenusController < ApplicationController
   end
 
   def show
+
+
     @menu = Menu.find(params[:id])
+     
+
   end
 
   def new
@@ -12,6 +16,7 @@ class MenusController < ApplicationController
   end
 
   def create
+
   end
 
 

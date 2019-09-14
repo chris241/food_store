@@ -2,6 +2,6 @@
 <p>Find me in app/views/menus/index.html.erb</p>
 
 
-<%@menus.each do|menu|%>
-<%=link_to menu.category, foods_path%> <br>
+<%@menus.each_with_index do|menu,i|%>
+<%=link_to "#{menu.category}", food_path(i+1)%> <br>
 <% end %>
