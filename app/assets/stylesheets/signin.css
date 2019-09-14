@@ -17,13 +17,11 @@ body#sign-in{
   border-color: #00cb82;
 }	
 
-  .form-control, .btn{        
-      border-radius: 3px;
+.form-control, .btn{        
+  border-radius: 3px;
   }
 
 .form-header{
-  margin: -30px -30px 20px;
-  padding: 30px 30px 10px;
   background: rgba(26, 25, 25, 0.5);
   border-bottom: 1px solid rgb(0, 255, 242);
   color: #00cb82;
@@ -44,7 +42,6 @@ body#sign-in{
 }
 
   .signup-form{
-  width: 400px;
   margin: 0 auto;	
   padding: 30px 0;	
 }

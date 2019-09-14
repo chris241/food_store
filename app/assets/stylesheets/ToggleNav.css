@@ -1,0 +1,78 @@
+.skew-wrapper {
+  width: 150px;
+  height: 50px;
+  display: inline-block;
+  transform: skew(-30deg);
+  overflow: hidden;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.orange-filled {
+  background-color: #ee6900;
+  color: #191919;
+  transition: all 150ms ease-in-out;
+  text-decoration: none;
+}
+
+.orange-outline {
+  box-sizing: border-box;
+  border: 2px solid #ee6900;
+  color: #ee6900;
+  transition: all 150ms ease-in-out;
+  text-decoration: none;
+}
+
+.skew-wrapper,
+.skew-wrapper:focus,
+.skew-wrapper:active,
+.skew-wrapper:visited {
+  outline: none;
+  text-decoration: none;
+}
+
+.orange-outline:hover {
+  background-color: #ee6900;
+  text-decoration: none;
+}
+
+.orange-filled:hover {
+  background-color: #ff7a00;
+  text-decoration: none;
+}
+
+.orange-filled:active {
+  background-color: #dd5700;
+  text-decoration: none;
+}
+
+.orange-outline li:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.orange-outline:active {
+  background-color: #dd5700;
+  text-decoration: none;
+}
+
+.unskew {
+  transform: skew(30deg);
+  line-height: 50px;
+  text-decoration: none;
+}
+
+li {
+  text-align: center;
+  font-style: normal;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 0 .25em;
+  text-decoration: none;
+}
