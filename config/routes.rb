@@ -18,4 +18,8 @@ Rails.application.routes.draw do
   post  '/foods/:menu_id/foodavatar/:food_id', to: 'foods#updateAvatar', as: 'foodavatar'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
+  devise_scope :client do
+    get '/clients/sign_out'=> 'devise/sessions#destroy'
+end
  end

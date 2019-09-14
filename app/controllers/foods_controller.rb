@@ -33,20 +33,10 @@ class FoodsController < ApplicationController
   end
 
   def updateAvatar
-    menu = Menu.find(params[:menu_id])
-    p "####################"
     p params
-    foods = menu.foods
-    foods.each do |f|
-      if(f.id == params[:food_id])
-        food = f
-        food.image_url = params[:foodavatar].original_filename
-        food.save
-        File.open(Rails.root.join('public', 'uploads', params[:foodavatar].original_filename), 'wb') do |file|
-          file.write(uploaded_io.read)
-        end
-      end
-    end
+    food = Food.where(id: params[:food_id], menu_id: params[:menu_id])[0]
+
+    food.foodavatar.attach(params[:foodavatar])
   end
 
   def update
@@ -73,4 +63,8 @@ render :edit
     @food.destroy
     redirect_to foods_path
   end
+  private
+    def foodavatar_params
+      params.require(:foodavatar).permit(:foodavatar)
+    end
 end
