@@ -48,5 +48,5 @@ Github: https://github.com/TsiryJL
 Slack: Razanakoto Tsirimanana Jean Luc
 Fonction: full-stack
 
-Lien Trello:
-Lien heroku:https://madaresto.herokuapp.com/
+Lien Trello:https://trello.com/b/nAMs6fr2/foodstore
+Lien heroku:https://foodsstore.herokuapp.com/
