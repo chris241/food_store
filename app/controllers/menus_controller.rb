@@ -4,8 +4,7 @@ class MenusController < ApplicationController
   end
 
   def show
-    @show = Menu.find(params[:menu_id])
-   #@category =session[:@menu.foods[0]]
+    @menu = Menu.find(params[:id])
   end
 
   def new
@@ -13,6 +12,7 @@ class MenusController < ApplicationController
   end
 
   def create
+
   end
 
 
