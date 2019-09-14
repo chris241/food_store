@@ -1,6 +1,7 @@
 .bg-nav{
     background-color: rgba(27, 26, 26, 0.849);
     font-size: 20px;
+    text-transform: lowercase;
     position: fixed;
 }
 #acc{
@@ -11,7 +12,6 @@
     font-style: italic;
 }
 #menu{
-    
     background-color: rgba(27, 26, 26, 0.849);
 }
 #menu a{

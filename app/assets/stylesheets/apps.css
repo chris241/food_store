@@ -77,7 +77,6 @@ body#index{
   }
   
   .hovereffect h2 {
-  text-transform:uppercase;
   color:#fff;
   text-align:center;
   position:relative;
@@ -94,7 +93,6 @@ body#index{
   .hovereffect a.info {
   text-decoration:none;
   display:inline-block;
-  text-transform:uppercase;
   color:#fff;
   border:1px solid #fff;
   background-color:transparent;
