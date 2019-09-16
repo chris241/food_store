@@ -6,10 +6,10 @@ require 'mailjet'
 Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => ENV['MAILJET_LOGIN'],
-  :password => ENV['MAILJET_PWD'],
-  :domain => 'yopmail.com',
-  :address => 'in-v3.mailjet.com',
+  :user_name => ENV['SENDGRID_LOGIN'],
+  :password => ENV['SENDGRID_PWD'],
+  :domain => 'gmail.com',
+  :address => 'smtp.sendgrid.net',
   :port => 587,
   :authentication => :plain
 }
