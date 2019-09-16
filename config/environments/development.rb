@@ -65,5 +65,13 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  ActionMailer::Base.smtp_settings =   {
+    :address            => 'in-v3.mailjet.com',
+    :port               => 587,
+    :domain             => 'gmail.com', #you can also use google.com
+    :authentication     => :plain,
+    :user_name          => ENV['MAILJET_LOGIN'],
+    :password           => ENV['MAILJET_PWD']
+  }
 
 end
