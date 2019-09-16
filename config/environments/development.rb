@@ -61,5 +61,5 @@ config.assets.precompile += %w[active_admin.css active_admin.js]
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 } [ config.action_mailer.default_url_options = {hôte: 'hôte local', port: 3000}] 
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 } [ config.action_mailer.default_url_options = {host: 'hôte local', port: 3000}] 
 end

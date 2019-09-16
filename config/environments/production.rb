@@ -109,7 +109,7 @@ config.assets.precompile += %w[active_admin.css active_admin.js]
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-  config.action_mailer.default_url_options = { :host => 'foodsstore.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'https://foodsstore.herokuapp.com/' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
