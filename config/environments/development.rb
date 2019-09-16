@@ -49,7 +49,7 @@ Rails.application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
-
+config.assets.precompile += %w[active_admin.css active_admin.js]
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
