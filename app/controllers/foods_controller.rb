@@ -4,8 +4,9 @@ class FoodsController < ApplicationController
   end
 
   def show
-    @menu = Menu.find(params[:id])
     session[:food_id]=params[:id]
+    @menu = Menu.find(params[:id])
+
   end
 
   def new
@@ -14,9 +15,9 @@ class FoodsController < ApplicationController
   end
 
   def create
-    @food = Food.new
+     @food = Food.new
 
-      Food.create!(name: params[:name],
+      @food = Food.create!(name: params[:name],
       description: params[:description],
       price: params[:price],
       duration: params[:duration],
@@ -25,7 +26,7 @@ class FoodsController < ApplicationController
 
       if @food.save
         flash[:success] = "Créé avec succés"
-        redirect_to foods_path
+        redirect_to food_path(@food.menu.id)
 
       else
         render :new
