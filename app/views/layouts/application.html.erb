@@ -26,11 +26,10 @@
           <% if client_signed_in? %>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%=current_client.first_name%> 
-
                 <%if current_client.avatar.attached?%>
                 <%=image_tag current_client.avatar, alt: 'avatar',class:"rounded-circle"%>
                 <%else%>
+                <%=current_client.first_name%> 
                 <%end%>
               </a>
        
