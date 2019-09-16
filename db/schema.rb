@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_16_065828) do
+ActiveRecord::Schema.define(version: 2019_09_16_083520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,6 +79,7 @@ ActiveRecord::Schema.define(version: 2019_09_16_065828) do
 
   create_table "commands", force: :cascade do |t|
     t.bigint "client_id"
+    t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["client_id"], name: "index_commands_on_client_id"
@@ -105,6 +106,15 @@ ActiveRecord::Schema.define(version: 2019_09_16_065828) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_gerants_on_email", unique: true
     t.index ["reset_password_token"], name: "index_gerants_on_reset_password_token", unique: true
+  end
+
+  create_table "join_com_foods", force: :cascade do |t|
+    t.bigint "command_id"
+    t.bigint "food_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["command_id"], name: "index_join_com_foods_on_command_id"
+    t.index ["food_id"], name: "index_join_com_foods_on_food_id"
   end
 
   create_table "join_com_menus", force: :cascade do |t|

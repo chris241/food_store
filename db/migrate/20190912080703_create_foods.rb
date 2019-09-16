@@ -6,8 +6,6 @@ class CreateFoods < ActiveRecord::Migration[6.0]
       t.integer :price
       t.integer :duration
       t.belongs_to :menu, index: true
-
-
       t.timestamps
     end
   end
