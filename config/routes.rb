@@ -14,9 +14,7 @@ Rails.application.routes.draw do
   resources :profiles, only:[:index] do
   	resources :avatars, only: [:create]
   end
-  resources :food do
-  	resources :foodavatar,only: [:create,:show]
-  end	
+  
  
 
   devise_scope :client do

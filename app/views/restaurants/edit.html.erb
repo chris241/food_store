@@ -1,0 +1,26 @@
+<center>
+	<%= form_tag url_for(action: 'update'), method: "patch" do %>
+		
+		<center><%= label_tag 'name' %></center>
+    <center><%= text_field  'name', @restaurant %></center>
+    <br /> <br />
+
+
+
+    <center><%= label_tag 'description' %></center>
+    <center><%= text_field 'description', @restaurant %></center>
+    <br /> <br />
+
+
+    <center><%= label_tag 'address' %></center>
+    <center><%= text_field 'address', @restaurant%></center>
+    <br /> <br />
+    <center><%= label_tag 'image_url' %></center>
+    <center><%= url_field_tag 'image_url', @restaurant%></center>
+     <br /> <br />
+     
+
+	  <%= submit_tag "Editer votre restaurant" %>
+
+<% end %>
+</center>

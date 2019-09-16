@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-<body id="index">
-<center><%=link_to "ajouter ",new_restaurant_path,class:"btn btn-primary", type:"button"%></center>
-<%@restaurants.each do|restaurant|%>
-    <% if restaurant.restoavatar.attached? == true%>
-        <%=image_tag restaurant.restoavatar%>
-    <%else%>
-        <%= image_tag restaurant.image_url%>
-     <%end%>
-
-<%=restaurant.name%>
-<%=link_to "show", restaurant_path(restaurant.id)%>  </br>
-<% end %>
-</body>
-
-
-
-   
-=======
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -96,6 +77,10 @@
               </div>
               <!--carousel-->
           </div>
+        <center>
+        <%=link_to "ajouter votre restaurant ",new_restaurant_path,class:"btn btn-outline-info", type:"button"%>
+        </center>
+  
           
         <%@restaurants.each do |restaurant| %>
               <!-- Gauche -->
@@ -111,7 +96,11 @@
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
               <div class="hovereffect">
-                <img class="img-fluid shadow w-100" src="<%=restaurant.image_url%>">
+                <% if restaurant.restoavatar.attached? == true%>
+                  <%=image_tag restaurant.restoavatar%>
+                <%else%>
+                  <img class="img-fluid shadow w-100" src="<%=restaurant.image_url%>">
+                <%end%>
                 <div class="overlay">
                   <h2>Hover effect 1</h2>
                   <a class="info" href="#">link here</a>
@@ -153,4 +142,4 @@
     <%= render "restaurants/index" %>
   </body>
 </html>
->>>>>>> developpement
+
