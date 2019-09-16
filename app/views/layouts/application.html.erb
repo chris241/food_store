@@ -29,9 +29,11 @@
                 <%if current_client.avatar.attached?%>
                 <%=image_tag current_client.avatar, alt: 'avatar',class:"rounded-circle"%>
                 <%else%>
-                  Connexion
+                <%=current_client.first_name%> 
                 <%end%>
               </a>
+       
+
               <div class="dropdown-menu" id="menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="<%=profiles_path%>">Mon Profil</a>
                 <a class="dropdown-item" href="/clients/sign_out">Deconnexion</a>
