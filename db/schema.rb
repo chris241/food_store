@@ -79,7 +79,6 @@ ActiveRecord::Schema.define(version: 2019_09_16_083520) do
 
   create_table "commands", force: :cascade do |t|
     t.bigint "client_id"
-    t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["client_id"], name: "index_commands_on_client_id"
@@ -112,6 +111,7 @@ ActiveRecord::Schema.define(version: 2019_09_16_083520) do
   create_table "join_com_foods", force: :cascade do |t|
     t.bigint "command_id"
     t.bigint "food_id"
+    t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["command_id"], name: "index_join_com_foods_on_command_id"
