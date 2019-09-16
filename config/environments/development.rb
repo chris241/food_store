@@ -73,5 +73,4 @@ Rails.application.configure do
     :user_name          => ENV['MAILJET_LOGIN'],
     :password           => ENV['MAILJET_PWD']
   }
-
 end
