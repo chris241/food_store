@@ -28,15 +28,13 @@
           <% if client_signed_in? %>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-<<<<<<< HEAD
                 <%=current_client.first_name%> 
-=======
+
                 <%if current_client.avatar.attached?%>
                 <%=image_tag current_client.avatar, alt: 'avatar',class:"rounded-circle"%>
                 <%else%>
                   Connexion
                 <%end%>
->>>>>>> 2f1d2edd1fb23fdfa9d3f45b4b001616f1c0b5b3
               </a>
        
 
