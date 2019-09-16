@@ -9,6 +9,7 @@ gem 'devise'
 gem 'table_print'
 gem 'mailjet'
 gem 'jquery-rails'
+gem 'materialize-sass'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
 # Use postgresql as the database for Active Record

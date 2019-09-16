@@ -11,6 +11,7 @@ Restaurant.destroy_all
 
 require 'faker'
 
+
 	url = ["https://www.thonhotels.com/siteassets/hoteller/belgia/brussel/stanhope-hotel-brussels/mat-og-drikke/stanhope-hotel-brighton-restaurant-11.jpg?width=1100&height=550&mode=crop&quality=80",
 	       "https://lascala-paris.com/wp-content/thumbnails/uploads/2018/10/hartl-meyer_restaurant_0089_final-small-e1539254629646-tt-width-875-height-656-fill-0-crop-0-bgcolor-eeeeee.jpg",
 	       "https://img-aws.ehowcdn.com/560x560/photos.demandstudios.com/getty/article/178/80/92572695.jpg",
@@ -51,6 +52,7 @@ for j in (0..food_url.length-1)
 		              menu:Menu.all.sample
 		                 )
  end
+
 
 puts "resto"
 puts "menu"
