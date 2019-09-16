@@ -59,5 +59,6 @@ config.assets.precompile += %w[active_admin.css active_admin.js]
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+  config.action_mailer.perform_deliveries = true
 
 end
