@@ -4,7 +4,7 @@ Group1
 
 TEAM: CODER-BRAIN
 
-Projet: Food_store
+Projet: Mada_resto
 
 Les membres de notre équipe:
 
@@ -47,3 +47,6 @@ Prénoms: Tsirimanana Jean Luc
 Github: https://github.com/TsiryJL
 Slack: Razanakoto Tsirimanana Jean Luc
 Fonction: full-stack
+
+Lien Trello:https://trello.com/b/nAMs6fr2/foodstore
+Lien heroku:https://foodsstore.herokuapp.com/
