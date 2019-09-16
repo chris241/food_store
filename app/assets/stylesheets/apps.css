@@ -1,3 +1,31 @@
+body#view-img{
+  background-image: url('https://thewallpaper.co//wp-content/uploads/2016/03/restaurant-hd-wallpaper-for-desktop-background-download-restaurant-photos-best-backgrounds-windows-wallpaper-hd-free-images-1920x1200.jpg');
+ 
+}
+
+section#wall{
+  background-color: rgba(24, 24, 24, 0.5);
+}
+
+img{
+  width: 600px;
+  height: 500px;
+}
+div#show-center{
+  align-content: center;
+  text-align: center;
+  margin-left: 25%;
+  width: 600px;
+}
+
+#card-view{
+  width: 600px;
+}
+
+.center{
+  width:600px;
+}
+
 img.d-block{
     height: 500px;
  }
@@ -130,4 +158,25 @@ body#index{
   .hovereffect:hover a.info {
   -webkit-transition-delay:.2s;
   transition-delay:.2s;
+  }
+
+  footer#confirme{
+      margin-top:4%;
+      background-image: url('http://dosankorestaurant.ca/wp-content/uploads/2014/05/inside-a-japanese-restaurant-wide-wallpaper-3840x2400-2048x1279.jpg');
+      background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size:cover;
+    color:white;
+    }
+
+  #formInscription{
+    margin-top:2%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+
+    
+  }
+
+  body#commande{
+    background-color:rgb(228, 228, 228);
   }
