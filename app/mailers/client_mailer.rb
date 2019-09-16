@@ -8,3 +8,4 @@ class ClientMailer < ApplicationMailer
     # c'est cet appel à mail() qui permet d'envoyer l’e-mail en définissant destinataire et sujet.
     mail(to: @client.email, subject: 'Bienvenue sur notre site !')
 end
+end
