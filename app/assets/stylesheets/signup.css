@@ -1,18 +1,96 @@
-
-.back{
-background-image:url("https://i.pinimg.com/originals/31/ac/7d/31ac7d17b45a6b900090f8a237baa7e4.jpg");                                                                                                                                                                                                                                                                                                                                                                                                                }
-
-h1{
-  position: absolute;
-  left: 35%;
-  color: white;
-  font-family:georgia, serif;
-  font-size:300px;
-
+body#sign-up{
+  color: #999;
+  background-image: url(sign-in.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
 }
 
-.form-group{
+.form-control{
+  min-height: 41px;
+  box-shadow: none;
+  border-color: #e1e1e1;
+}
 
-color: white;
+.form-control:focus{
+  border-color: #00cb82;
+}	
 
+.form-control, .btn{        
+  border-radius: 3px;
+  }
+
+.form-header{
+  margin: -30px -30px 20px;
+  padding: 30px 30px 10px;
+  background: rgba(26, 25, 25, 0.5);
+  border-bottom: 1px solid rgb(0, 255, 242);
+  color: #00cb82;
+  border-radius: 20px;
+}
+.form-header h2{
+  font-size: 34px;
+  font-weight: bold;
+      margin: 0 0 10px;
+  font-family: 'Pacifico', sans-serif;
+  }
+
+.form-header p{
+  margin: 20px 0 15px;
+  font-size: 17px;
+  line-height: normal;
+  font-family: 'Courgette', sans-serif;
+}
+
+  .signup-form{
+  width: 400px;
+  margin: 0 auto;	
+  padding: 30px 0;	
+}
+
+  .signup-form form{
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    margin-bottom: 15px;
+    background: #383838c5;
+    padding: 30px;
+  }
+
+.signup-form .form-group{
+  margin-bottom: 20px;
+}		
+
+.signup-form label{
+  font-weight: normal;
+  font-size: 13px;
+}
+
+  .signup-form input[type="checkbox"]{
+  margin-top: 2px;
+}
+
+  .signup-form .btn{        
+      font-size: 16px;
+      font-weight: bold;
+  background: #00cb82;
+  border: none;
+  min-width: 200px;
+  }
+
+.signup-form .btn:hover, .signup-form .btn:focus{
+  background: #00b073 !important;
+      outline: none;
+}
+
+  .signup-form a{
+  color: #00cb82;		
+}
+
+  .signup-form a:hover{
+  text-decoration: underline;
+}
+
+div.form-header > h2,p {
+  text-align: center;
 }
