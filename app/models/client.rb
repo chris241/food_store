@@ -1,6 +1,5 @@
 class Client < ApplicationRecord
   after_create :welcome_send
-
   def welcome_send
     ClientMailer.welcome_email(self).deliver_now
   end
