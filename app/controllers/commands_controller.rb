@@ -26,6 +26,7 @@ class CommandsController < ApplicationController
   end
 
   def show
+    @food_id = params[:food_id]
     @command = Command.find(params[:id])
     @tab = @command.foods
     @totalCommands = current_client.command.foods

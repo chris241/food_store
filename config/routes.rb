@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/command_food/:food_id', to: 'commands#new', as: 'command_food'
 
+  get '/reserve_food/:food_id', to: 'reservations#new', as: 'reserve_food'
+
   resources :foods do
     resources :foodavatar, only: [:create,:show]
   end
