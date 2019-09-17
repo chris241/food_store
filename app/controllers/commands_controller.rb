@@ -37,7 +37,14 @@ class CommandsController < ApplicationController
 	          @sum = totalprice
 	      end
     # @menu = params[:menu_id]
-
+    respond_to do |format|
+      format.html
+      format.pdf do 
+        pdf = Prawn::Document.new
+        pdf.text "hello word"
+        send_data pdf.render
+      end
+    end
 
 
   end
