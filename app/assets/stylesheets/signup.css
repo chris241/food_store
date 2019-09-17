@@ -1,4 +1,4 @@
-/* body#sign-up{
+body#sign-up{
   color: #999;
   background-image: url(sign-in.jpg);
   background-size: cover;
@@ -94,4 +94,4 @@
 
 div.form-header > h2,p {
   text-align: center;
-} */
+}

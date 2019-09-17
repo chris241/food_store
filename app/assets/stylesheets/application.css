@@ -17,9 +17,14 @@
 *= require picto-foundry-food
 *= require style-portfolio
 *= require style
+*= require demo
+*= require footer-distributed-with-address-and-phones
+
 
  *= require_tree .
  *= require_self
  */
+
+ 
 
  
