@@ -14,12 +14,6 @@ variable = Mailjet::Send.create(messages: [{
     'Email'=> 'aomine280498@gmail.com',
     'Name'=> 'Aro'
   },
-  'To'=> [
-    {
-      'Email'=> 'arorakotonindrina12@gmail.com',
-      'Name'=> 'Aro'
-    }
-  ],
   'Subject'=> 'Greetings from Mailjet.',
   'TextPart'=> 'My first Mailjet email',
   'HTMLPart'=> '<h3>Dear passenger 1, welcome to <a href=\'https://www.mailjet.com/\'>Mailjet</a>!</h3><br />May the delivery force be with you!',
