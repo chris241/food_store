@@ -1,6 +1,8 @@
 # Load the Rails application.
 require_relative 'application'
 
+setx -m $RECIPIENT_EMAIL "current_client.email"
+
 # Initialize the Rails application.
 Rails.application.initialize!
 require 'mailjet'
@@ -16,13 +18,13 @@ variable = Mailjet::Send.create(messages: [{
   },
   'To'=> [
     {
-      'Email'
-      'Name'
+      'Email' => "$RECIPIENT_EMAIL",
+      'Name' => "You"
     }
   ],
   'Subject'=> 'Greetings from Mailjet.',
   'TextPart'=> 'My first Mailjet email',
-  'HTMLPart'=> '<h3>Dear passenger 1, welcome to <a href=\'https://www.mailjet.com/\'>Mailjet</a>!</h3><br />May the delivery force be with you!',
+  'HTMLPart'=> '<h3>Cher utilisateur, bienvenue sur notre site <a href=\'https://www.foodsstore.herokuapp.com/\'>Foodsstore</a>!</h3><br />Nous sommes impatients de vous revoir à très bientôt!',
   'CustomID' => 'AppGettingStartedTest'
 }]
 )
