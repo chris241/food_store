@@ -4,7 +4,6 @@ class Client < ApplicationRecord
   def welcome_send
     ClientMailer.welcome_email(self).deliver_now
   end
-
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
