@@ -9,9 +9,7 @@ Mailjet.configure do |config|
 config.api_key = '67bc69ef6c6e913806f8e378467143fa'
 config.secret_key = '736f7480d41ae481568b42907791e6dd'
 config.api_version = "v3.1"
-$ RECIPIENT_EMAIL= current_client.email
 end
-
 variable = Mailjet::Send.create(messages: [{
   'From'=> {
     'Email'=> 'aomine280498@gmail.com',
@@ -19,7 +17,7 @@ variable = Mailjet::Send.create(messages: [{
   },
   'To'=> [
     {
-      'Email'=> ENV['RECIPIENT_EMAIL'],
+      'Email'=> 'arorakotonindrina12@gmail.com',
       'Name'=> 'Aro'
     }
   ],
