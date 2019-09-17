@@ -2,24 +2,17 @@
 <html>
   <head>
     <title>FoodStore</title>
-      <%= csrf_meta_tags %>
-      <%= csp_meta_tag %>
-
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="apps.css" type="text/css">
   </head>
 
   <body>
-
+    <div id="nav"> 
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-nav">
       <a class="navbar-brand" id="acc" href="<%=root_path%>">Accueil</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,10 +26,16 @@
           <% if client_signed_in? %>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%=current_client.first_name%>
+                <%if current_client.avatar.attached?%>
+                <%=image_tag current_client.avatar, alt: 'avatar',class:"rounded-circle"%>
+                <%else%>
+                <%=current_client.first_name%> 
+                <%end%>
               </a>
+       
+
               <div class="dropdown-menu" id="menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<%=profiles_path%>">My profil</a>
+                <a class="dropdown-item" href="<%=profiles_path%>">Mon Profil</a>
                 <a class="dropdown-item" href="/clients/sign_out">Deconnexion</a>
               </div>
 
@@ -44,8 +43,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connexion</a>
                   <div class="dropdown-menu" id="menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/clients/sign_up">Sign up</a>
-                    <a class="dropdown-item" href="/clients/sign_in">Sign in</a>
+                    <a class="dropdown-item" href="/clients/sign_up">S'inscrire</a>
+                    <a class="dropdown-item" href="/clients/sign_in">Se connecter</a>
                   </div>
               </li>
 
@@ -54,6 +53,11 @@
         </ul>
       </div>
     </nav>
+    </div>
     <%= yield %>
   </body>
+        <!-- Compiled and minified JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            
 </html>

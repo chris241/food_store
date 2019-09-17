@@ -7,8 +7,6 @@ class CreateFoods < ActiveRecord::Migration[6.0]
       t.integer :duration
       t.string :image_url
       t.belongs_to :menu, index: true
-
-
       t.timestamps
     end
   end
