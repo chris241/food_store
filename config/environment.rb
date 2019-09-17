@@ -3,8 +3,8 @@
 Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => ENV['SENDGRID_LOGIN'],
-  :password => ENV['SENDGRID_PWD'],
+  :user_name => SENDGRID_LOGIN,
+  :password => SENDGRID_PWD,
   :domain => 'gmail.com',
   :address => 'smtp.sendgrid.net',
   :port => 25,
