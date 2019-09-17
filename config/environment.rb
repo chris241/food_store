@@ -9,8 +9,9 @@ Mailjet.configure do |config|
 config.api_key = '67bc69ef6c6e913806f8e378467143fa'
 config.secret_key = '736f7480d41ae481568b42907791e6dd'
 config.api_version = "v3.1"
+export $RECIPIENT_EMAIL='@client.email'
 end
-export $RECIPIENT_EMAIL='current_client.email'
+
 variable = Mailjet::Send.create(messages: [{
   'From'=> {
     'Email'=> 'aomine280498@gmail.com',
