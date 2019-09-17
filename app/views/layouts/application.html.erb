@@ -1,78 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Restaurant</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <%= csrf_meta_tags %>
-        <%= csp_meta_tag %>
-        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-        <link rel="icon" href="favicon-1.ico" type="image/x-icon">
-    </head>
+  <head>
+    <title>FoodStore</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="apps.css" type="text/css">
+  </head>
 
-    <body>
+  <body>
+    <div id="nav"> 
+    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-nav">
+      <a class="navbar-brand" id="acc" href="<%=root_path%>">Accueil</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand"  href="<%=reservations_path%>">Reservation</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent col">
+        <ul class="navbar-nav mr-auto">
 
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="row">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">Restaurant</a>
-                    </div>
+          <div id="back">
+          <% if client_signed_in? %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%if current_client.avatar.attached?%>
+                <%=image_tag current_client.avatar, alt: 'avatar',class:"rounded-circle"%>
+                <%else%>
+                <%=current_client.first_name%> 
+                <%end%>
+              </a>
+       
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav main-nav clear navbar-right ">
-                            <li><a class="navactive color_animation" href="#top">WELCOME</a></li>
-                            <li><a class="color_animation" href="#story">ABOUT</a></li>
-                            <li><a class="color_animation" href="#pricing">PRICING</a></li>
-                            <li><a class="color_animation" href="#beer">BEER</a></li>
-                            <li><a class="color_animation" href="#bread">BREAD</a></li>
-                            <li><a class="color_animation" href="#featured">FEATURED</a></li>
-                            <li><a class="color_animation" href="#reservation">RESERVATION</a></li>
-                            <li><a class="color_animation" href="#contact">CONTACT</a></li>
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div>
-            </div><!-- /.container-fluid -->
-        </nav>
-         
-        <div id="top" class="starter_container bg">
-            <div class="follow_container">
-                <div class="col-md-6 col-md-offset-3">
-                    <h2 class="top-title"> Restaurant</h2>
-                    <h2 class="white second-title">" Best in the city "</h2>
-                    <hr>
-                </div>
-            </div>
-        </div>
+              <div class="dropdown-menu" id="menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="<%=profiles_path%>">Mon Profil</a>
+                <a class="dropdown-item" href="/clients/sign_out">Deconnexion</a>
+              </div>
 
+          <%else%>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connexion</a>
+                  <div class="dropdown-menu" id="menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/clients/sign_up">S'inscrire</a>
+                    <a class="dropdown-item" href="/clients/sign_in">Se connecter</a>
+                  </div>
+              </li>
 
+          <%end%>
 
-        <!-- ============ Footer Section  ============= -->
-
-        <footer class="sub_footer">
-            <div class="container">
-                <div class="col-md-4"><p class="sub-footer-text text-center">&copy; Restaurant 2014, Theme by <a href="https://themewagon.com/">ThemeWagon</a></p></div>
-                <div class="col-md-4"><p class="sub-footer-text text-center">Back to <a href="#top">TOP</a></p>
-                </div>
-                <div class="col-md-4"><p class="sub-footer-text text-center">Built With Care By <a href="#" target="_blank">Us</a></p></div>
-            </div>
-        </footer>
-
-
-        <script type="text/javascript" src="jquery-1.10.2.min.js"> </script>
-        <script type="text/javascript" src="bootstrap.min.js" ></script>
-        <script type="text/javascript" src="jquery-1.10.2.js"></script>     
-        <script type="text/javascript" src="jquery.mixitup.min.js" ></script>
-        <script type="text/javascript" src="main.js" ></script>
-
-    </body>
+          </div>
+        </ul>
+      </div>
+    </nav>
+    </div>
+    <%= yield %>
+  </body>
+        <!-- Compiled and minified JavaScript -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            
 </html>
