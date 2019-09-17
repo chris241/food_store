@@ -4,6 +4,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(client,gerant)
+  	client ||= Client.new 
     can :manage, Reservation
     can :read, Client
     can :manage, Client, id: current_client.id
