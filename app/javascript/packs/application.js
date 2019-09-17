@@ -8,7 +8,14 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
-require("packs/image.js")
+
+//= require jquery-1.10.2.min
+//= require js/bootstrap.min
+//= require jquery-1.10.2
+//= require jquery.mixitup.min
+//= require main
+//= require bootstrap.min
+
 
 
 //= require bootstrap.min
@@ -29,3 +36,4 @@ require("packs/image.js")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+//= require active_admin/base

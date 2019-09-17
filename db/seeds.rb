@@ -10,6 +10,7 @@ Menu.destroy_all
 Restaurant.destroy_all
 
 require 'faker'
+
 url = [
   "https://media-cdn.tripadvisor.com/media/photo-o/0e/7a/70/64/2eme-salle-du-restaurant.jpg",
   "https://www.toute-la-franchise.com/images/zoom/fiches-franchises/restaurant_de_viande-franchis_ela_c__te_et_l'ar__te_4.jpg",
@@ -19,7 +20,7 @@ url = [
   "https://ad962edbae8ba7b03b7f-d10007df79b5b7a4e475a291e50a08cf.ssl.cf3.rackcdn.com/statut-juridique-restaurant/statut-juridique-restaurant.jpg",
 
 ]
-  
+
 for a in (0..url.length-1)
   restaurant = Restaurant.create(
         name: Faker::Restaurant.name,
@@ -32,7 +33,7 @@ end
 
 
   category =["Dessert","Entrée","Résistance","Boisson"]
-  
+
 for i in (0..category.length-1)
   menu = Menu.create(category:category[i])
 end
@@ -45,7 +46,8 @@ food =Food.create!(
         price:Faker::Commerce.price,
         menu:Menu.all.sample
       )
-end	
+end
+
 
 puts "resto"
 puts "menu"
