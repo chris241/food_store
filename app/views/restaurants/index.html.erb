@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%
+=begin%>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
       <meta charset="utf-8">
@@ -15,9 +17,7 @@
       <div class="boxed-page">
 
         <!-- Special Dishes Section -->
-        <div class="content">
-          <h2>~ Food store ~</h2> 
-        </div>   
+      
     <section id="gtco-special-dishes" class="bg-grey section-padding">
       <div class="container">
 
@@ -133,4 +133,63 @@
     <!-- footer -->
     <%= render "restaurants/index" %>
   </body>
-</html>
+</html> 
+<%
+=end%>
+
+
+   
+    <div id="top" class="starter_container bg">
+        <div class="follow_container">
+            <div class="col-md-6 col-md-offset-3">
+                <h2 class="top-title"> Restaurant</h2>
+                <h2 class="white second-title">" Best in the city "</h2>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- ============ Our Bread  ============= -->
+
+    <section id="portfolio" class="light-bg">
+          <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <div class="section-title">
+                <h2>Resto de Tanà</h2>
+                <p>Faite votre choix</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+          
+            <!-- start portfolio item -->
+          <% @restaurants.each do |restaurant| %>
+            <div class="col-md-4">
+              <div class="ot-portfolio-item">
+                <figure class="effect-bubba">
+                  <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive" >
+                  <figcaption>
+                    <h2><%= restaurant.name %></h2>
+                    <p>Branding, Design</p>
+                     <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          <% end %>
+
+            <!-- end portfolio item -->
+
+           
+            <!-- end portfolio item -->
+          </div>
+          </div><!-- end container -->
+    </section>
+
+   
+    <!-- ============ Footer Section  ============= -->
+
+    <!-- footer -->
+    <%= render "restaurants/index" %>
