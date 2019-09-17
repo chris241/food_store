@@ -3,13 +3,15 @@ class CommandsController < ApplicationController
   def new
     @command = Command.new
     @command = JoinComFood.new
+    @food_id = params[:food_id]
+    # @menu_id = params[:menu_id]
   end
 
   def create
-    @food = Food.find(session[:food_id])
+    @food = Food.find(params[:food_id])
 
 	     @u=current_client.id
-	     @f=session[:food_id]
+	     @f=params[:food_id]
 
 	      if current_client.command == nil
 	          @command = Command.create(client_id: @u)
@@ -26,12 +28,14 @@ class CommandsController < ApplicationController
   def show
     @command = Command.find(params[:id])
     @tab = @command.foods
-    @food = Food.find(session[:food_id])
-    @totalCommands = current_client.command.foods
-    @menu = session[:menu_id]
+    # @food = Food.find(session[:food_id])
+    # @totalCommands = current_client.command.foods
+    # @menu = params[:menu_id]
 
   end
 
   def destroy
+    @food = Food.find(params[:id])
+    @food.destroy
   end
 end

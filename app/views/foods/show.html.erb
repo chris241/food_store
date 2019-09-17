@@ -20,7 +20,7 @@
         <%= submit_tag "mettre à jour" %>
     <%end%>
 
-        <%=link_to "Commander", new_command_path, class: "btn btn-warning"%>
+        <%=link_to "Commander", command_food_path(food.id), class: "btn btn-warning"%>
         <%=link_to "Edit", edit_food_path(food.id), class: "btn btn-warning"%>
     <%= link_to 'Destroy', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger"%>
 <br> <br> <br> <br>

@@ -18,7 +18,7 @@
               <td><%=tab.name%></td>
               <td><%=tab.join_com_foods[0].quantity%></td>
               <td>
-                <%= link_to "Enlever de la liste",command_path(@command.id) ,method: :delete , class: "btn btn-outline-warning" , style: "width:auto"%>
+                <%= link_to "Enlever de la liste",command_path(tab.id) ,method: :delete , class: "btn btn-outline-warning" , style: "width:auto"%>
               </td>
             </tr>
         <%end%>

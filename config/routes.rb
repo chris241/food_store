@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :reservations
 
   resources :menus
+
+  get '/command_food/:food_id', to: 'commands#new', as: 'command_food'
+
   resources :foods do
     resources :foodavatar, only: [:create,:show]
   end

@@ -2,6 +2,8 @@
 <p>Find me in app/views/commands/create.html.erb</p>
 
 <%= form_tag url_for(action: 'create'), method: "post" do %>
+    <%= hidden_field_tag 'food_id', @food_id %>
+    <!-- <%= hidden_field_tag 'menu_id', @menu_id %> -->
     <center><%= label_tag 'Quantités' %></center>
     <center><%= number_field_tag  'quantity', @command.quantity %></center>
     <br /> <br />
