@@ -35,7 +35,10 @@ class CommandsController < ApplicationController
   end
 
   def destroy
-    @food = Food.find(params[:id])
-    @food.destroy
+
+    @command = Command.find(current_client.command.id)
+    @join_com_foods = @command.join_com_foods[0].destroy
+    redirect_to command_path(current_client.command.id)
+
   end
 end
