@@ -52,4 +52,3 @@ end
 puts "resto"
 puts "menu"
 puts "food"
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
