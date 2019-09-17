@@ -1,5 +1,6 @@
 <body>
-  <h1 id="title-table">Voici la liste de votre commande</h1>
+
+   <center><h1 id="title-table">Voici la liste de votre commande</h1></center>  <br> <br>
 
   <table class="table" id="table-command">
       <thead >
@@ -7,7 +8,8 @@
           <th >Menus</th>
           <th >Répas</th>
           <th >Quantités</th>
-
+          <th >Prix unitaire (€)</th>
+          <th >Prix total (€)</th>
         </tr>
       </thead>
 
@@ -17,13 +19,38 @@
               <td><%=tab.menu.category %></td>
               <td><%=tab.name%></td>
               <td><%=tab.join_com_foods[0].quantity%></td>
+              <td><%=tab.price%></td>
+              <td><%=(tab.price).to_i*(tab.join_com_foods[0].quantity).to_i%></td>
               <td>
                 <%= link_to "Enlever de la liste",command_path(tab.id) ,method: :delete , class: "btn btn-outline-warning" , style: "width:auto"%>
               </td>
             </tr>
         <%end%>
+        <tr id="total">
+        <td ></td>
+        <td ></td>
+        <td>
+          <%= %>
+        </td>
+        <td >Total</td>
+          <td ><%=@sum%> €</td>
 
 
+
+          <%if current_client.reservations[0]==nil%>
+          <td>
+            <%= link_to "Reserver table", new_reservation_path, class: "btn btn-primary",class:"btn btn-primary", style: "width:auto"%>
+          </td>
+          <%else%>
+          <td>
+          <%= link_to "Reserver une autre table", new_reservation_path, class: "btn btn-primary",class:"btn btn-primary", style: "width:auto"%>
+          <%= link_to "Confirmer ma reservation", edit_reservation_path, class: "btn btn-primary",class:"btn btn-primary", style: "width:auto"%>
+          </td>
+          <%end%>
+
+
+
+      </tr>
     </tbody>
   </table>
 </body>

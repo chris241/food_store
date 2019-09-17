@@ -28,14 +28,23 @@ class CommandsController < ApplicationController
   def show
     @command = Command.find(params[:id])
     @tab = @command.foods
-    # @food = Food.find(session[:food_id])
-    # @totalCommands = current_client.command.foods
+    @totalCommands = current_client.command.foods
+
+    totalprice = 0
+    @totalCommands.each do |food|
+            @foodsprice = (food.price).to_i*(food.join_com_foods[0].quantity).to_i
+            totalprice += @foodsprice
+	          @sum = totalprice
+	      end
     # @menu = params[:menu_id]
+
+
 
   end
 
   def destroy
-    @food = Food.find(params[:id])
-    @food.destroy
+    @command = Command.find(current_client.command.id)
+	  @join = @command.join_com_foods[0].destroy
+	    redirect_to command_path(current_client.command.id)
   end
 end
