@@ -47,6 +47,5 @@ class CommandsController < ApplicationController
     @command = Command.find(current_client.command.id)
 	  @join = @command.join_com_foods[0].destroy
 	    redirect_to command_path(current_client.command.id)
-
   end
 end
