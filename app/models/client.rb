@@ -7,7 +7,7 @@ class Client < ApplicationRecord
  
    has_one_attached :avatar
   has_many :reservations
-  has_many :commands
+  has_one :command
   has_many :restaurants, through: :reservations
 end
 

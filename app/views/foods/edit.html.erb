@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <h1>Foods#update</h1>
+<p>Find me in app/views/foods/update.html.erb</p>
+
+
+<%= form_tag url_for(action: 'update'), method: "patch" do %>
+        
+    <%= label_tag 'name' %></br>
+    <%= text_field  'name', @food %></br>
+
+    <%= label_tag 'description' %></br>
+    <%= text_field 'description', @food %>
+
+    <br /><%= label_tag 'duration' %></br>
+    <%= text_field 'duration', @food %>
+
+    <br /> <br />
+
+    <%= label_tag 'image_url' %></br>
+    <%= url_field_tag 'image_url', @food%>
+
+    <br /> <br />
+
+    <%= label_tag 'price' %></br>
+    <%= text_field 'price', @food%>
+    
+    <br /> <br />
+
+<select id="menu_id" name="menu_id"></br>
+<option value="1">Entrée</option>
+<option value="2">Résistance</option>
+<option value="3">Dessert</option>
+<option value="4">Boisson</option>
+</select><br /><br />
+
+ 
+  <%= submit_tag "Edit Food" %>
+<% end %>
+    
+  </body>
+</html>
+
+
+
+
+
+
+

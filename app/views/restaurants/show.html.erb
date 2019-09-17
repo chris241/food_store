@@ -1,3 +1,4 @@
+
 <body id="view-img">
   <section id="wall">
     <div class="col-sm-4" id="show-center">
@@ -11,6 +12,7 @@
                 <%=@restaurant.address%>
               </p>
           </div>
+          <%=link_to "Menus", menus_path, class: "btn btn-info"%>
         <%=link_to "Reserver table", new_reservation_path, class: "btn btn-primary",class:"btn btn-primary"%>
         </div>
       </div>

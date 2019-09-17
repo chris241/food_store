@@ -1,0 +1,2 @@
+module CoucouHelper
+end
