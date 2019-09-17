@@ -9,5 +9,11 @@ class Client < ApplicationRecord
   has_many :reservations
   has_one :command
   has_many :restaurants, through: :reservations
+
+  after_create :welcome_send
+
+  def welcome_send
+    ClientMailer.welcome_email(self).deliver_now
+  end
 end
 
