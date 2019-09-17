@@ -5,7 +5,7 @@
          :recoverable, :rememberable, :validatable
    has_one_attached :avatar
   has_many :reservations
-  has_many :commands
+  has_one :command
   has_many :restaurants, through: :reservations
   after_create :welcome_send
 
