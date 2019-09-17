@@ -16,8 +16,8 @@ variable = Mailjet::Send.create(messages: [{
   },
   'To'=> [
     {
-      'Email'=> '@client.email',
-      'Name'=> '@client.first_name'
+      'Email'=> <%=@client.email%>,
+      'Name'=> <%=@client.first_name%>
     }
   ],
   'Subject'=> 'Greetings from Mailjet.',
