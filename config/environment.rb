@@ -16,7 +16,7 @@ variable = Mailjet::Send.create(messages: [{
   },
   'To'=> [
     {
-      'Email'=> 'aomine280498@gmail.com',
+      'Email'=> 'arorakotonindrina12@gmail.com',
       'Name'=> 'Aro'
     }
   ],
@@ -26,4 +26,13 @@ variable = Mailjet::Send.create(messages: [{
   'CustomID' => 'AppGettingStartedTest'
 }]
 )
+
+ActionMailer::Base.smtp_settings =   {
+    :address            => 'in-v3.mailjet.com',
+    :port               => 25,
+    :domain             => 'gmail.com', #you can also use google.com
+    :authentication     => :plain,
+    :user_name          => ENV['MAILJET_LOGIN'],
+    :password           => ENV['MAILJET_PWD']
+  }
 p variable.attributes['Messages']
