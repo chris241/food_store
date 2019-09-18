@@ -7,7 +7,14 @@ body#profil{
     color: #6c6c6c; 
     font-weight: 400; 
     line-height: 28px;
+    background-image: url("https://images.pexels.com/photos/949587/pexels-photo-949587.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 
+}
+
+body#client{
+    background-image: url("https://images.pexels.com/photos/1903702/pexels-photo-1903702.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6 { color: #dadada; 

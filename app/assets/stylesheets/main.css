@@ -310,8 +310,9 @@ DESCRIPTION BODY CONTENT
     margin: 0 auto 0 auto;
     z-index: 99;
     position: relative;
-    background: white;
+    background: rgba(41, 41, 41, 0.555);
     text-align: center; 
+    
 }
 .description_body {
     margin: 45px auto;
