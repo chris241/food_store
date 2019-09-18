@@ -26,7 +26,6 @@ class CommandsController < ApplicationController
   end
 
   def show
-    @food_id = params[:food_id]
     @command = Command.find(params[:id])
     @tab = @command.foods
     @totalCommands = current_client.command.foods
@@ -40,14 +39,11 @@ class CommandsController < ApplicationController
     # @menu = params[:menu_id]
 
 
-
   end
 
   def destroy
-
     @command = Command.find(current_client.command.id)
 	  @join = @command.join_com_foods[0].destroy
 	    redirect_to command_path(current_client.command.id)
-
   end
 end

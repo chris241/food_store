@@ -5,7 +5,7 @@ class FoodsController < ApplicationController
 
   def show
     @menu = Menu.find(params[:id])
-    session[:food_id]=params[:id]
+    
   end
 
   def new
