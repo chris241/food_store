@@ -40,8 +40,9 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
     respond_to do |format|
-      format.html { redirect_to reservations_path}
+      format.html { redirect_to reservations_path }
       format.js { }
     end
+    
   end
 end
