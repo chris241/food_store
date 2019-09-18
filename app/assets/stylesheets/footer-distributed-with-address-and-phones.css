@@ -1,5 +1,9 @@
+footer{
+	background-image: url("http://jolofsystem.com/wp-content/uploads/2014/12/footer-background-011.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 .footer-distributed{
-	background-color: #292c2f;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
@@ -32,7 +36,7 @@
 }
 
 .footer-distributed h3 span{
-	color:  #5383d3;
+	color:  #efff10;
 }
 
 /* Footer links */
@@ -51,7 +55,7 @@
 }
 
 .footer-distributed .footer-company-name{
-	color:  #8f9296;
+	color:  #ffffff;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -64,7 +68,7 @@
 }
 
 .footer-distributed .footer-center i{
-	background-color:  #33383b;
+	background-image:url("https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
 	color: #ffffff;
 	font-size: 25px;
 	width: 38px;
@@ -77,11 +81,14 @@
 }
 
 .footer-distributed .footer-center i.fa-envelope{
+	background-image:url("https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
 	font-size: 17px;
 	line-height: 38px;
+	
 }
 
 .footer-distributed .footer-center p{
+	
 	display: inline-block;
 	color: #ffffff;
 	vertical-align: middle;
@@ -96,7 +103,8 @@
 }
 
 .footer-distributed .footer-center p a{
-	color:  #5383d3;
+	
+	color:  #04ffea;
 	text-decoration: none;;
 }
 
@@ -109,7 +117,7 @@
 
 .footer-distributed .footer-company-about{
 	line-height: 20px;
-	color:  #92999f;
+	color:  #ffffff;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
@@ -132,11 +140,11 @@
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color:  #008b6d;
 	border-radius: 2px;
 
 	font-size: 20px;
-	color: #ffffff;
+	color: #fffdfd;
 	text-align: center;
 	line-height: 35px;
 
