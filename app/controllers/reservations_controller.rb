@@ -25,7 +25,11 @@ class ReservationsController < ApplicationController
 
 
     if @reservation.save
-      redirect_to root_path
+      flash[:success] = "Vous avez enregistré une réservation"
+      redirect_to reservations_path
+    else
+
+
     end
 
 
@@ -37,5 +41,8 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
+    @reservation = Reservation.find(params[:id])
+    @reservation.destroy
+    redirect_to reservations_path
   end
 end
