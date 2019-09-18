@@ -1,13 +1,8 @@
 
   <body id="profil">    
-    <div id="place">
-      <%= form_tag profile_avatars_path(current_client), multipart: true do %>
-        <%= file_field_tag :avatar %>
-        <%= submit_tag "mettre à jour",class:"btn btn-outline-success" %>
-      <% end %>
-    </div>
+ 
     <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30">
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb30" style="margin-left: 500px;">
         <div class="tutor-block">
           <div class="tutor-img">
             <%if @client.avatar.attached?%>
@@ -18,8 +13,13 @@
           </div>
             
           <div class="tutor-content">
-            <h5 class="tutor-title"><%= @client.first_name %></h5>
+            <%= form_tag profile_avatars_path(current_client), multipart: true do %>
+              <%= file_field_tag :avatar %>
+              <%= submit_tag "mettre à jour",class:"btn btn-outline-success" %>
+              <% end %>
+            <h5 class="tutor-title"><%= @client.first_name %></h5>              
               <span class="tutor-designation"><%= @client.last_name %></span>
+              <span class="tutor-designation"><%= @client.email %></span>
                 <p>Quisque malesuada nullanec mivarius efficitur. stibulum sollicitudin tortor vellorem.</p>
             <%= link_to "Edit profile", edit_client_registration_path(current_client.id), class:"btn btn-primary" %>
           </div>

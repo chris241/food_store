@@ -3,11 +3,10 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  bottom:-74px;
-  right: -70px;
+  bottom:-72px;
+  right: -59px;
   height: 85px;
-  background-color: #2c2c2c;
-  min-width: 160px;
+  min-width: 135px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-top: 2px solid rgb(19, 173, 27);
@@ -21,7 +20,9 @@
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #333333}
+.dropdown-content a:hover {background-color: #333333;
+  padding:10px;
+}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {

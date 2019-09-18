@@ -33,5 +33,7 @@
     top:-90px;
 }
  
-
- 
+div.dropdown-content > a{
+    text-decoration: none;
+    position: relative;
+}

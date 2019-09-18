@@ -11,9 +11,11 @@ class ReservationsController < ApplicationController
 
   def new
     @reservation = Reservation.new
+    @food_id = params[:food_id]
   end
 
   def create
+    @food_id = params[:food_id]
     @reservation = Reservation.new(nbr_person: params[:nbr_person],
                                    date: params[:date],
                                    client_id: current_client.id,
@@ -23,7 +25,10 @@ class ReservationsController < ApplicationController
       redirect_to reservations_path
     else
 
+
     end
+
+
 
   end
 
