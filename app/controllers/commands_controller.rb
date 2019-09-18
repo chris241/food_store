@@ -9,27 +9,63 @@ class CommandsController < ApplicationController
   end
 
   def create
-    @food = Food.find(params[:food_id])
+    # @food = Food.find(params[:food_id])
 
-	     @u=current_client.id
-	     @f=params[:food_id]
+    # @u=current_client.id
+    # @f=params[:food_id]
 
-	      if current_client.command == nil
-	          @command = Command.create(client_id: @u)
-	      end
+    # # if current_client.command == nil
+    # #     @command = Command.create(client_id: @u)
+    # # end
+    
+    @command = Command.create(client_id: current_client.id)
+    @command.save
 
-	      @command = JoinComFood.create(command_id: current_client.command.id, food_id: @f, quantity: params[:quantity])
-	      if @command.save
-	          redirect_to  command_path(current_client.command.id)
-	      else
-	        puts "Try again"
-	      end
+
+    session[:note].each do |n|
+      @food = Food.find(n[0])
+      @joinCommand = JoinComFood.create(command_id: @command.id, food_id: @food.id, quantity: n[1])
+      @joinCommand.save
+    end
+
+    session[:note] = []
+
+    redirect_to  command_path(@command.id)
+
+    # @command = JoinComFood.create(command_id: current_client.command.id, food_id: @f, quantity: params[:quantity])
+    # @joinCommand = JoinComFood.create(command_id: @command.id, food_id: @f, quantity: params[:quantity])
+    # if @joinCommand.save
+    #     # redirect_to  command_path(current_client.command.id)
+    #     redirect_to  command_path(@command.id)
+    # else
+    #   puts "Try again"
+    # end
+  end
+
+  def note
+    if(session[:note] == nil)
+      session[:note] = []
+      session[:note].push(
+        [params[:food_id], params[:quantity] ]
+      )
+      @note = session[:note]
+    else
+      session[:note].push(
+        [params[:food_id], params[:quantity] ]
+      )
+      @note = session[:note]
+    end
+
+    p "#################"
+    p session[:note]
+    
   end
 
   def show
     @command = Command.find(params[:id])
     @tab = @command.foods
-    @totalCommands = current_client.command.foods
+    # @totalCommands = current_client.command.foods
+    @totalCommands = @tab
 
     totalprice = 0
     @totalCommands.each do |food|
@@ -54,11 +90,13 @@ class CommandsController < ApplicationController
   rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to root_path
+
   end
 end
 
 
   def destroy
+
     @command = Command.find(current_client.command.id)
 	  @join = @command.join_com_foods[0].destroy
 	    redirect_to command_path(current_client.command.id)
