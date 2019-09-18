@@ -41,3 +41,7 @@ div.dropdown-content > a{
 #round{
     border-radius: 10px;
 }
+form#wrp{
+    display: flex;
+    padding:1px;
+}

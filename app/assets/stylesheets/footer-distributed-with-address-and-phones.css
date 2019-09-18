@@ -1,3 +1,4 @@
+
 footer{
 	background-image: url("http://jolofsystem.com/wp-content/uploads/2014/12/footer-background-011.jpg");
 	background-size: cover;
@@ -9,7 +10,7 @@ footer{
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-	margin-top: 19em;
+	
 }
 
 .footer-distributed .footer-left,
@@ -140,12 +141,10 @@ footer{
 	cursor: pointer;
 	background-color:  #008b6d;
 	border-radius: 2px;
-
 	font-size: 20px;
 	color: #fffdfd;
 	text-align: center;
 	line-height: 35px;
-
 	margin-right: 3px;
 	margin-bottom: 5px;
 }

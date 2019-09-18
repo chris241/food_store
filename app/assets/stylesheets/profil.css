@@ -36,15 +36,19 @@ a:focus, a:hover {
     color: #ff3c2e;
  }
 
-.tutor-block { background-color: rgba(0, 0, 0, 0.938); 
-    padding: 30px; 
+.tutor-block { 
+    background-color: rgba(0, 0, 0, 0.938); 
+    padding: 55px; 
+    position: relative;
+    height: 37em;
+    width: 32em;
 }
 
 .tutor-content { 
     text-align: center; 
 }
 .tutor-title { 
-    margin-bottom: 5px; 
+    margin: 14px; 
 }
 
 .tutor-designation { 
