@@ -1,19 +1,17 @@
-<ul>
-<%
 
-p @note[0]
-%>
+
+<ul id = "note">
 <% @note.each do |n| %>
     <%p n[0]%>
     <li>
         <strong>Sakafo</strong>: <%= Food.find(n[0]).name %>
         <strong>Quantité</strong>: <%= n[1] %> 
     </li>
-<%end%>
+    <%end%>
 </ul>
 
 <%= link_to "Commander plus", menus_path %>
 
 <%= form_tag('/commands', method: :post) do %>
- <%= submit_tag "Commander" %>
+ <%= submit_tag "Voir votre réçu" %>
 <% end %>
