@@ -10,13 +10,13 @@
     </tr>
   </thead>
   <%@reservations.each do |reservation|%>
-  <tbody>
-    <tr>
+  <tbody >
+    <tr id="<%=reservation.id%>">
       <td><%=reservation.client.last_name%></td>
       <td><%=reservation.restaurant.name%></td>
       <td><%=reservation.date%></td>
       <td><%=reservation.nbr_person%></td>
-       <td><%= link_to "cancel",reservation_path(reservation.id), method: :delete %> </td>
+       <td><%= link_to "cancel",reservation_path(reservation.id), method: :delete, remote: true %> </td>
     </tr>
   </tbody>
     <%end%>
