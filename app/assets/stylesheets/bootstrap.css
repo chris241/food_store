@@ -989,15 +989,7 @@ mark,
 .text-nowrap {
   white-space: nowrap;
 }
-.text-lowercase {
-  text-transform: lowercase;
-}
-.text-uppercase {
-  text-transform: uppercase;
-}
-.text-capitalize {
-  text-transform: capitalize;
-}
+
 .text-muted {
   color: #777;
 }
@@ -1127,7 +1119,6 @@ abbr[data-original-title] {
 }
 .initialism {
   font-size: 90%;
-  text-transform: uppercase;
 }
 blockquote {
   padding: 10px 20px;
