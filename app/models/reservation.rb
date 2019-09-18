@@ -5,8 +5,11 @@ class Reservation < ApplicationRecord
  belongs_to :client
  belongs_to :restaurant
 
+
+
  has_many :join_res_foods
  has_many :foods, through: :join_res_foods
+
 
  after_create :reservation_send
 
