@@ -11,4 +11,10 @@ class ClientMailer < ApplicationMailer
     mail(to: @client.email, subject: 'Bienvenue sur notre site !')
 
   end
+
+  def reservation_email(client)
+  	@client = client
+  	@url = "https://foodsstore.herokuapp.com"
+  	mail(to: "", subject: 'Réservation prise en compte !')
+  end
 end

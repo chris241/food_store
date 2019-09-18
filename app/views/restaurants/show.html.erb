@@ -2,17 +2,22 @@
     <div class="text-content container">
         <div class="col-md-6">
             <h1>About us</h1>
-            <div class="fa fa-cutlery fa-2x"> <strong><%=@restaurant.name%></strong></div>
-            <p class="desc-text"><%=@restaurant.description%></p> <br>
-            <p class="desc-text"> <i>Adresse:</i>  <%=@restaurant.address%></p> <br> <br>
+            <div class="fa fa-cutlery fa-2x">
+                <strong><%=@restaurant.name%></strong>
+            </div>
+
+            <p class="desc-text"><%=@restaurant.description%></p> 
+            <br>
+            <p class="desc-text"> <i>Adresse:</i><%=@restaurant.address%></p> <br> <br>
             <p class="desc-text"><%=link_to "Nos menus", menus_path, class: "btn btn-info"%>
             <%=link_to "Reserver table", new_reservation_path,class:"btn btn-primary"%>
             </p>
         </div>
         <div class="col-md-6">
-            <div class="img-section">
-              <div ><%=image_tag @restaurant.image_url%> </div>
-           </div>
+            <%= image_tag @restaurant.image_url %> 
         </div>
-    </div>
+ 
+
 </section>
+
+

@@ -338,135 +338,6 @@ IMAGE DESCRIPTION BODY CONTENT
 .picture_content {
     display: none;
 }
-/*========================
-FIRST FOOTER CONTENT
-=========================*/
-.first_footer {
-    background-color: #1e1e1e;
-    text-align: center;
-}
-.social_heading,
-.social_info {
-    display: block;
-}
-.social_heading {
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 0.040em;
-    color: #63C85D;
-    text-align: center;
-    margin: 40px 0 0 0;
-}
-.social_info, 
-.social_icons {
-    margin: 18px 0 50px 0;
-}
-
-.social_info a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.200em;
-    line-height: 1.400em;
-    color: #fff;
-    display: inline-block;
-    margin: 0 auto;
-    width: 210px;
-}
-
-.social_info a:hover {
-    color: #6c8f34;
-}
-
-.social_icons {
-    padding: 0;
-}
-
-.social_icons li {
-    list-style: none;
-    display: inline-block;
-    padding: none;
-}
-
-.social_icons li:nth-child(1),
-.social_icons li:nth-child(2),
-.social_icons li:nth-child(3) {
-    margin: 0 50px 0 0;
-}
-.social_icons li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 25px;
-}
-
-.social_icons li a:hover {
-    color: #6c8f34;
-}
-
-.direction a{
-    color: white !important;
-}
-
-/*========================
-SECOND FOOTER CONTENT
-=========================*/
-
-footer.sub_footer {
-    background-color: #1C1C1C;
-    padding: 20px;
-}
-
-p.sub-footer-text{
-    color: #6B6B6B;
-}
-
-p.sub-footer-text a{
-    color: #BDBDBD;
-    text-decoration: none;
-}
-
-/*Contact */
-
-.contact-text{
-    margin:45px auto;
-}
-/* Contact Form */
-#contact .contact-form{
-    margin: 0 auto;
-    padding:25px 25px 0px 25px;
-    -moz-box-shadow: 0px 1px 4px rgba(0,0,0, 0.2);
-    /* -webkit-box-shadow: 0px 1px 4px rgba(0,0,0, 0.2); */
-}
-
-.mail-message-area{
-    width:100%;
-    padding:0 15px;
-}
-
-.mail-message{
-    width: 100%;
-    background:rgba(255,255,255, 0.8) !important;
-    -webkit-transition: all 0.7s;
-    -moz-transition: all 0.7s;
-    transition: all 0.7s;
-    margin:0 auto;
-    border-radius: 0;
-}
-
-.not-visible-message{
-    height:0px;
-    opacity: 0;
-}
-
-.visible-message{
-    height:auto;
-    opacity: 1;
-    margin:25px auto 0;
-}
-
-.inner.contact {
-    padding: 50px 0;
-}
 
 /* Input Styles */
 
@@ -654,6 +525,10 @@ MEDIA QUERIES TABLET
         list-style: none;
         margin: 0 29px 0 29px;
     }
+
+ /*###########################################*/
+  /*#############       NavBar       ###########*/   
+   /*###########################################*/      
     .logo a,
     .main-nav a {
         font-size: 0.75000em;
@@ -663,7 +538,8 @@ MEDIA QUERIES TABLET
         color: #fff;
         display: block;
         text-align: center;
-        padding: 2px 0;
+        padding: 10px;
+        margin-top:0px;
         transition: color 0.3s ease-in-out;
     }
     .main-nav a:hover {
@@ -827,10 +703,6 @@ MEDIA QUERIE DESKTOP
         padding: 0;
         vertical-align: middle;
     }
-
-    /*========================
-    FIRST FOOTER CONTENT
-    =========================*/
 
     .social_heading {
         font-size: 33px;
