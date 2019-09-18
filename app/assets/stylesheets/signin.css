@@ -2,7 +2,7 @@ body#sign-in{
   color: #999;
   background-image: url(sign-in.jpg);
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: relative;
   background-repeat: no-repeat;
   font-family: 'Roboto', sans-serif;
 }
@@ -39,6 +39,7 @@ body#sign-in{
   font-size: 17px;
   line-height: normal;
   font-family: 'Courgette', sans-serif;
+  color: white;
 }
 
   .signup-form{

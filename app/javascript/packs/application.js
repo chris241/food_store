@@ -8,7 +8,30 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
-require("packs/image.js")
+require('packs/test.js')
+
+//= require jquery-1.10.2.min
+//= require js/bootstrap.min
+//= require jquery-1.10.2
+//= require jquery.mixitup.min
+//= require main
+//= require bootstrap.min
+
+//= require plugins
+//= require active
+
+
+//= require bootstrap.min
+//= require jquery-1.10.2
+//= require jquery.minixtup.min
+//= require main 
+
+//= require jquery/1.11.3/jquery.min
+//= require jquery-easing/1.3/jquery.easing.min
+//= require bootstrap.min
+//= require cbpAnimatedHeader
+//= require theme-scripts
+
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
