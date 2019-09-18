@@ -22,7 +22,6 @@ h1, h2, h3, h4, h5, h6 { color: #dadada;
     font-weight: 300; 
     font-family: 'Oswald', 
     sans-serif; letter-spacing: 2.5px;
-     text-transform: uppercase; 
     }
 
 a { text-decoration: none; 
@@ -51,7 +50,6 @@ a:focus, a:hover {
 .tutor-designation { 
     color: #ff3c2e; 
     display: block; 
-    text-transform: uppercase; 
     letter-spacing: 1px; 
     margin-bottom: 15px; 
     font-size: 12px; 

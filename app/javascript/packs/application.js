@@ -17,6 +17,8 @@ require('packs/test.js')
 //= require main
 //= require bootstrap.min
 
+//= require plugins
+//= require active
 
 
 //= require bootstrap.min
