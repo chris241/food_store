@@ -4,10 +4,10 @@
     <title></title>
 </head>
 <body style="background-color:powderblue;">
-<%= form_tag url_for(action: 'create'), method: "post" do %>
-
-
-    <center><%= label_tag 'name' %></center>
+<center>
+    <%= form_tag url_for(action: 'update'), method: "patch" do %>
+        
+        <center><%= label_tag 'name' %></center>
     <center><%= text_field  'name', @restaurant %></center>
     <br /> <br />
 
@@ -24,9 +24,13 @@
     <center><%= label_tag 'image_url' %></center>
     <center><%= url_field_tag 'image_url', @restaurant%></center>
      <br /> <br />
-     <center><%= submit_tag "Create restaurant" %></center>
+     
+
+      <%= submit_tag "Editer votre restaurant" %>
 
 <% end %>
-
+</center>
 </body>
 </html>
+
+
