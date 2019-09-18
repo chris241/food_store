@@ -37,3 +37,7 @@ div.dropdown-content > a{
     text-decoration: none;
     position: relative;
 }
+
+#round{
+    border-radius: 10px;
+}
