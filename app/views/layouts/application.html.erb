@@ -52,7 +52,7 @@
                             <a class="color_animation" href="#dropdown">
 
                               <%if current_client.avatar.attached?%>
-                                <%=image_tag current_client.avatar, alt: 'avatar', id:"round"%>
+                                <%=image_tag current_client.avatar, alt: 'avatar', id:"round", style:"margin-top: -15%"%>
                               <%else%>
                                 <%=current_client.first_name%> 
                               <%end%>

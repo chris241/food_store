@@ -20,8 +20,6 @@ class ReservationsController < ApplicationController
                                    date: params[:date],
                                    client_id: current_client.id,
                                    restaurant_id: session[:resto_id])
-
-
     if @reservation.save
       flash[:success] = "Vous avez enregistré une réservation"
       redirect_to reservations_path
