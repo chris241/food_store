@@ -6,59 +6,114 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
+   
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="apps.css" type="text/css">
+    <link rel="stylesheet" href=".css" type="text/css">
   </head>
 
   <body>
-    <div id="nav"> 
-    <nav class="navbar navbar-expand-lg navbar navbar-dark bg-nav">
-      <a class="navbar-brand" id="acc" href="<%=root_path%>">Accueil</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand"  href="<%=reservations_path%>">Reservation</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent col">
-        <ul class="navbar-nav mr-auto">
-
-          <div id="back">
-          <% if client_signed_in? %>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <%if current_client.avatar.attached?%>
-                <%=image_tag current_client.avatar, alt: 'avatar',class:"rounded-circle"%>
-                <%else%>
-                <%=current_client.first_name%> 
-                <%end%>
-              </a>
-       
-
-              <div class="dropdown-menu" id="menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<%=profiles_path%>">Mon Profil</a>
-                <a class="dropdown-item" href="/clients/sign_out">Deconnexion</a>
-              </div>
-
-          <%else%>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Connexion</a>
-                  <div class="dropdown-menu" id="menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/clients/sign_up">S'inscrire</a>
-                    <a class="dropdown-item" href="/clients/sign_in">Se connecter</a>
+    <!-- ============ NavBar  ============= -->
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
+              <div class="row">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Foodstore</a>
                   </div>
-              </li>
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <ul class="nav navbar-nav main-nav  clear navbar-right ">
+                          <li><a class="color_animation" href="<%=root_path%>">Accueil</a></li>
+                          <li><a class="color_animation" href="#story">Our team</a></li>
+                          <li><a class="color_animation" href="<%=reservations_path%>">Reservation</a></li>
+                      
+                        
+                        <!--   dropdown   -->
+                      <% if client_signed_in? %>
+                          <li class="dropdown">
+                            <a class="color_animation" href="#dropdown">
 
-          <%end%>
+                              <%if current_client.avatar.attached?%>
+                                <%=image_tag current_client.avatar, alt: 'avatar', id:"round"%>
+                              <%else%>
+                                <%=current_client.first_name%> 
+                              <%end%>
 
-          </div>
-        </ul>
-      </div>
-    </nav>
-    </div>
-    <%= yield %>
+                            </a>
+                              <div class="dropdown-content">
+                                <a href="<%=profiles_path%>">Mon profil</a>
+                                <a href="/clients/sign_out">Deconnexion</a>
+                      <% else %>          
+                          <li class="dropdown">
+                            <a class="color_animation" href="#dropdown">connexion</a>
+                            <div class="dropdown-content">
+                                <a href="/clients/sign_up">S'inscrire</a>
+                                <a href="/clients/sign_in">Se connecter</a>
+                              </div>
+                          </li>
+                      <% end %>
+                      </ul>
+                  </div><!-- /.navbar-collapse -->
+              </div>
+          </div><!-- /.container-fluid -->
+      </nav>
+  <%= yield %>
+
+		<footer class="footer-distributed">
+			<div class="footer-left">
+				<h3>Company<span>logo</span></h3>
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+				<p class="footer-company-name">Company Name &copy; 2015</p>
+			</div>
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p>21 Revolution Street Paris, France</p>
+				</div>
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+1 555 123456</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="https://github.com/chris241/food_store">https://github.com/food_store</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+		</footer>
+    
+
+<!-- Footer --> 
+
   </body>
-        <!-- Compiled and minified JavaScript -->
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-            
 </html>

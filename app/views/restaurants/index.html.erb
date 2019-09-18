@@ -1,136 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>index</title>
-      <meta name="description" content="Resto">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
-  </head>
-  <body data-spy="scroll" data-target="#navbar" id="index">
-    <div id="side-nav" class="sidenav">
-    <div id="canvas-overlay"></div>
-      <div class="boxed-page">
-
-        <!-- Special Dishes Section -->
-        <div class="content">
-          <h2>~ Food store ~</h2> 
-        </div>   
-    <section id="gtco-special-dishes" class="bg-grey section-padding">
-      <div class="container">
-
-        <div class="section-content">
-          <div class="heading-section text-center">
-    
-            <!--carousel-->
-              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-
-                    <!--image 1-->
-                <div class="container">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img class="d-block w-100" src="https://www.hotel-sarimanok-nosy-be.com/images/Images-web-hotel-sarimanok-nosy-be/1.Slideshow-sarimanok-nosy-be-madagascar/hotel-nosy-be-sarimanok-restaurant.jpg" alt="First slide">
-                        <!--c ommentaire caroussel -->
-                       <div class="carousel-caption">
-                          <h3>Los Angeles</h3>
-                          <p>LA is always so much fun!</p>
-                        </div>
-                    </div>
-
-                      <!--image 2-->
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="http://www.madagasikara-voyages.com/wp-content/uploads/2018/05/hotel_joffre-5-1.jpg" alt="Second slide">
-                     <!--c ommentaire caroussel -->
-                       <div class="carousel-caption">
-                          <h3>Koudeta</h3>
-                          <p>LA is always so much fun!</p>
-                        </div>
-                    </div>
-
-                      <!--image 3-->
-                    <div class="carousel-item">
-                      <img class="d-block w-100" src="https://pbs.twimg.com/media/Dpyz91zXUAEjCK8.jpg">
-                       <!--c ommentaire caroussel -->
-                       <div class="carousel-caption">
-                          <h3>Carlton</h3>
-                          <p>LA is always so much fun!</p>
-                        </div>
-                    </div>
-                  </div>
-
-                  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-              </div>
-              <!--carousel-->
-          </div>
-          
-        <%@restaurants.each do |restaurant| %>
-              <!-- Gauche -->
-          <div class="row mt-5">
-            <div class="col-lg-5 col-md-6 align-self-center py-5">
-              <h2 class="special-number"><%= restaurant.id%></h2>
-                <div class="dishes-text">
-                  <h3><span><%= restaurant.name %></span><br></h3>
-                  <p class="pt-3"><%= restaurant.address %></p>
-   
-               <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
-                </div>
+<body>
+    <div id="top" class="starter_container bg">
+        <div class="follow_container">
+            <div class="col-md-6 col-md-offset-3">
+                <h2 class="top-title"> Restaurant</h2>
+                <h2 class="white second-title">" Best in the city "</h2>
+                <hr>
             </div>
-            <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-              <div class="hovereffect">
-                <img class="img-fluid shadow w-100" src="<%=restaurant.image_url%>">
-                <div class="overlay">
-                  <h2>Hover effect 1</h2>
-                  <a class="info" href="#">link here</a>
-                </div>
-              </div>
-            </div>
-          </div>
-              <!-- Gauche -->
-        <% end %>
-              <!-- droite -->
-          <div class="row mt-5">
-            <div class="col-lg-5 col-md-6 align-self-center order-2 order-md-1 mt-4 mt-md-0">
-              <div class="hovereffect">
-                <img class="img-fluid shadow w-100" src="https://www.carlton-madagascar.com/assets/uploads/2017/05/Carlton-Madagascar-General-8.jpg">
-                  <div class="overlay">
-                    <h2>Hover effect 1</h2>
-                    <a class="info" href="#">link here</a>
-                  </div>
-              </div>
-            </div>
-
-            <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center order-1 order-md-2 py-5">
-              <h2 class="special-number">02.</h2>
-                <div class="dishes-text">
-                    <h3><span>Salmon</span><br> Zucchini</h3>
-                    <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, accusamus culpa quam amet ipsam odit ea doloremque accusantium quo, itaque possimus eius. In a quis quibusdam omnis atque vero dolores!</p>
-                    <h3 class="special-dishes-price">$12.00</h3>
-                    <a href="#" class="btn btn-outline-warning">book a table <span><i class="fa fa-long-arrow-right"></i></span></a>
-                </div>
-            </div>
-          </div>
-              <!-- droite -->
         </div>
-      </div>
-    </section>
-    <!-- End of Special Dishes Section -->	
+    </div>
+    <!-- ============ Our Bread  ============= -->
 
-    <!-- footer -->
-    <%= render "restaurants/index" %>
-  </body>
-</html>
+  <section id="portfolio" class="light-bg">
+        <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <div class="section-title">
+              <h2>Resto de Tanà</h2>
+              <p>Faite votre choix</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+        
+          <!-- start portfolio item -->
+        <% @restaurants.each do |restaurant| %>
+          <div class="col-md-4">
+            <div class="ot-portfolio-item">
+              <figure class="effect-bubba">
+                <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive" >
+                <figcaption>
+                  <h2><%= restaurant.name %></h2>
+                  <p>Branding, Design</p>
+                    <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        <% end %>
+        </div>
+        </div><!-- end container -->
+  </section>
+</body>
+   

@@ -10,8 +10,25 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+*= require bootstrap
+*= require font-awesome.min
+*= require jquery-ui
+*= require normalize
+*= require picto-foundry-food
+*= require style-portfolio
+*= require style
+*= require demo
+*= require footer-distributed-with-address-and-phones
+*= require profil
+
  *= require_tree .
  *= require_self
-
  */
+
+#alignement{
+    position: relative;
+    top:-90px;
+}
+ 
+
  

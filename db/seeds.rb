@@ -18,7 +18,9 @@ url = [
   "https://img-aws.ehowcdn.com/560x560/photos.demandstudios.com/getty/article/178/80/92572695.jpg",
   "https://www.grand-hotel-uriage.com/media/cache/jadro_resize/rc/t3vZi00r1563956452/jadroRoot/medias/5c237ef54140d/dg-4-avec-credit-photo-basse-def.jpg",
   "https://ad962edbae8ba7b03b7f-d10007df79b5b7a4e475a291e50a08cf.ssl.cf3.rackcdn.com/statut-juridique-restaurant/statut-juridique-restaurant.jpg",
-
+  "http://sakamanga.com/img/photo-resto-saka.jpg",
+  "http://www.madadecouverte.com/images/tananarive/hotel-chambre-hote/RESTO_12.jpg",
+  "https://media-cdn.tripadvisor.com/media/photo-s/16/4b/ef/5f/salle-de-restauration.jpg"
 ]
 
 for a in (0..url.length-1)
