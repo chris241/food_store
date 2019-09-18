@@ -28,6 +28,7 @@ body#sign-up{
   border-bottom: 1px solid rgb(0, 255, 242);
   color: #00cb82;
   border-radius: 20px;
+  margin-top: 90px;
 }
 .form-header h2{
   font-size: 34px;
