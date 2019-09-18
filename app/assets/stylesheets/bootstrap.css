@@ -74,7 +74,7 @@ sub {
   bottom: -.25em;
 }
 img {
-  border: 0;
+  border-radius: 25px;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -1772,6 +1772,8 @@ pre code {
   }
   .col-lg-6 {
     width: 50%;
+    position:relative;
+    bottom:90px;
   }
   .col-lg-5 {
     width: 41.66666667%;
@@ -3465,7 +3467,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-color: #e5e5e5;
 }
 .nav > li > a > img {
-  max-width: none;
+  max-width: 38px;
+  
 }
 .nav-tabs {
   border-bottom: 1px solid #ddd;
@@ -3811,9 +3814,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-nav > li {
     float: left;
   }
-  .navbar-nav > li > a {
-    padding-bottom: 15px;
-  }
+
   .navbar-nav.navbar-right:last-child {
     margin-right: -15px;
     margin-top: 0px;

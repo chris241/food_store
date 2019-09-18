@@ -19,12 +19,16 @@
 *= require style
 *= require demo
 *= require footer-distributed-with-address-and-phones
-
+*= require profil
 
  *= require_tree .
  *= require_self
  */
 
+#alignement{
+    position: relative;
+    top:-64px;
+}
  
 
  
