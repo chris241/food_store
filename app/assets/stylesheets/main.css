@@ -316,7 +316,7 @@ DESCRIPTION BODY CONTENT
 }
 
 #reservation{
-    background: rgba(27, 27, 27, 0.555);
+   
 }
 .description_body {
     margin: 45px auto;
@@ -859,3 +859,4 @@ MEDIA QUERIE DESKTOP
         font-size: 30px;
     }
 }
+/*front recherche */
