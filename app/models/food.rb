@@ -3,4 +3,7 @@ class Food < ApplicationRecord
 	belongs_to :menu
 	has_many :join_com_foods
   has_many :commands, through: :join_com_foods
+
+	has_many :join_res_foods
+	has_many :reservations, through: :join_res_foods
 end

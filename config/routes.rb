@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get '/command_food/:food_id', to: 'commands#new', as: 'command_food'
 
+  get '/reserve_food/:food_id', to: 'reservations#new', as: 'reserve_food'
+
   resources :foods do
     resources :foodavatar, only: [:create,:show]
   end
@@ -21,6 +23,8 @@ Rails.application.routes.draw do
   	resources :profiles, only:[:index] do
   	resources :avatars, only: [:create]
   end
+
+  post "/note", to: "commands#note", as: "note"
 
   # get '/coucou', to: "coucou#haha"
   post  '/foods/:menu_id/foodavatar/:food_id', to: 'foods#updateAvatar', as: 'foodavatar'
