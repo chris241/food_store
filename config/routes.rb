@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   	resources :avatars, only: [:create]
   end
 
+  post "/note", to: "commands#note", as: "note"
+
   # get '/coucou', to: "coucou#haha"
   post  '/foods/:menu_id/foodavatar/:food_id', to: 'foods#updateAvatar', as: 'foodavatar'
 

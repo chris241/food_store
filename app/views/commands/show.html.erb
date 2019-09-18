@@ -18,7 +18,7 @@
             <tr>
               <td><%=tab.menu.category %></td>
               <td><%=tab.name%></td>
-              <td><%=tab.join_com_foods[0].quantity%></td>
+              <td><%=tab.join_com_foods[-1].quantity%></td>
               <td><%=tab.price%></td>
               <td><%=(tab.price).to_i*(tab.join_com_foods[0].quantity).to_i%></td>
               <td>
@@ -35,9 +35,6 @@
         <td >Total</td>
           <td ><%=@sum%> €</td>
 
-
-
-
           <td>
             <%= link_to "Reserver table",reserve_food_path(1), class: "btn btn-primary",class:"btn btn-primary", style: "width:auto"%>
           </td>
@@ -46,10 +43,6 @@
           <%= link_to "Reserver une autre table", new_reservation_path, class: "btn btn-primary",class:"btn btn-primary", style: "width:auto"%>
           <%= link_to "Confirmer ma reservation", edit_reservation_path, class: "btn btn-primary",class:"btn btn-primary", style: "width:auto"%>
           </td>
-
-
-
-
       </tr>
     </tbody>
   </table>
