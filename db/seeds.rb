@@ -11,6 +11,9 @@ Restaurant.destroy_all
 
 require 'faker'
 
+
+
+
 url = [
   "https://media-cdn.tripadvisor.com/media/photo-o/0e/7a/70/64/2eme-salle-du-restaurant.jpg",
   "https://www.toute-la-franchise.com/images/zoom/fiches-franchises/restaurant_de_viande-franchis_ela_c__te_et_l'ar__te_4.jpg",
@@ -21,6 +24,7 @@ url = [
   "http://sakamanga.com/img/photo-resto-saka.jpg",
   "http://www.madadecouverte.com/images/tananarive/hotel-chambre-hote/RESTO_12.jpg",
   "https://media-cdn.tripadvisor.com/media/photo-s/16/4b/ef/5f/salle-de-restauration.jpg"
+
 ]
 
 for a in (0..url.length-1)
@@ -33,8 +37,7 @@ for a in (0..url.length-1)
 end
 
 
-
-  category =["Dessert","Entrée","Résistance","Boisson"]
+category =["Dessert","Entrée","Résistance","Boisson"]
 
 for i in (0..category.length-1)
   menu = Menu.create(category:category[i])
