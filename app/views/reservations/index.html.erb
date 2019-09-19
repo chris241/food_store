@@ -1,3 +1,5 @@
+<%if gerant_signed_in?%>
+
 <div class="container">
   <div class="row">
     <table class="table table-bordered">
@@ -10,16 +12,54 @@
       </tr>
       </thead>
         <%@reservations.each do |reservation|%>
-      <tbody>
-      <tr id ="<%=reservation.id%>">
-        <td ><%=reservation.client.last_name%></td>
-        <td><%=reservation.restaurant.name%></td>
-        <td><%=reservation.date%></td>
-        <td><%=reservation.nbr_person%></td>
-        <td><%= link_to 'cancel',reservation_path(reservation.id), method: :delete, remote: true %> </td>
-      </tr>
-      </tbody>
-      <%end%>
+        <%if reservation.restaurant.gerant.id == current_gerant.id%>
+          <tbody>
+          <tr id ="<%=reservation.id%>">
+            <td ><%=reservation.client.last_name%></td>
+            <td><%=reservation.restaurant.name%></td>
+            <td><%=reservation.date%></td>
+            <td><%=reservation.nbr_person%></td>
+            <td><%= link_to 'cancel',reservation_path(reservation.id), method: :delete, remote: true %> </td>
+          </tr>
+          </tbody>
+        <%else%>
+        <%end%>
+        <%end%>
     </table>
   </div>
 </div>
+
+<%elsif%>
+
+<%if client_signed_in? %>
+  <div class="container">
+  <div class="row">
+    <table class="table table-bordered">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Name restaurant</th>
+        <th scope="col">Date reservation</th>
+        <th scope="col">Nombre </th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+        <%@reservations.each do |reservation|%>
+        <%if reservation.client.id == current_client.id%>
+          <tbody>
+          <tr id ="<%=reservation.id%>">
+            <td ><%=reservation.client.last_name%></td>
+            <td><%=reservation.restaurant.name%></td>
+            <td><%=reservation.date%></td>
+            <td><%=reservation.nbr_person%></td>
+            <td><%= link_to 'cancel',reservation_path(reservation.id), method: :delete, remote: true %> </td>
+          </tr>
+          </tbody>
+      <%else%>
+      <%end%>
+      <%end%>
+  <%end%>
+</table>
+</div>
+</div>
+<%end%>
+

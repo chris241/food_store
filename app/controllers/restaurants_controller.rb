@@ -13,9 +13,10 @@ class RestaurantsController < ApplicationController
      @restaurant = Restaurant.create(name: params[:name][0],
                                   address: params[:address][0],
                                   description: params[:description][0],
-                                  image_url:params[:image_url]
+                                  image_url:params[:image_url],
+                                  gerant_id:params[:gerant_id]
                                   )
-     
+     @restaurant.gerant = current_gerant
      if @restaurant.save
       redirect_to root_path
      else
