@@ -21,15 +21,26 @@
           </div>
         </div>
         <div class="row">
+        <center>
+       <% if gerant_signed_in? %>
+         <%=link_to "ajouter votre restaurant ",new_restaurant_path,class:"btn btn-outline-info", type:"button"%>
+         <%else%>
+
+         <%end%>
+         </center>
         
-          <!-- start portfolio item -->
+        <!-- start portfolio item -->
         <% @restaurants.each do |restaurant| %>
         
           <div class="col-md-4">
             <div class="ot-portfolio-item">
               <figure class="effect-bubba">
               <div class="card" style="width: 18rem;">
-                <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
+                <% if restaurant.restoavatar.attached? == true%>
+                  <%=image_tag restaurant.restoavatar ,class:"img-responsive card-img-top"%>
+                 <%else%>
+                 <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
+                  <%end%>
                 <figcaption>
                   <h2><%= restaurant.name %></h2>
                   <p>Branding, Design</p>

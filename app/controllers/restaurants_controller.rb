@@ -15,6 +15,7 @@ class RestaurantsController < ApplicationController
                                   description: params[:description][0],
                                   image_url:params[:image_url]
                                   )
+     
      if @restaurant.save
       redirect_to root_path
      else
@@ -24,7 +25,7 @@ class RestaurantsController < ApplicationController
   def update
     @restaurant = Restaurant.find(params[:id])
 
-    if @restaurant.update(name: params[:name][0],
+    if @restaurant.current_gerant.update(name: params[:name][0],
                           address: params[:address][0],
                           description: params[:description][0],
                            image_url:params[:image_url]
