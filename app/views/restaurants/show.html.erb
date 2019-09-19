@@ -1,7 +1,7 @@
 
 <section id="story" class="description_content">
     <div class="text-content container">
-        <div class="col-md-6">
+        <div class="col-md-6" id="show-c">
             <h1>About us</h1>
             <div class="fa fa-cutlery fa-2x">
                 <strong><%=@restaurant.name%></strong>
@@ -11,11 +11,11 @@
             <br>
             <p class="desc-text"> <i>Adresse:</i><%=@restaurant.address%></p> <br> <br>
             <p class="desc-text"><%=link_to "Nos menus", menus_path, class: "btn btn-info"%>
-                <%=link_to "Reserver table", new_reservation_path, class: "btn btn-primary",class:"btn btn-primary"%>
+                <%=link_to "Reserver table", new_reservation_path, class: "btn btn-primary",class:"btn btn-success"%>
             </p>
         </div>
         <div class="col-md-6">
-            <%= image_tag @restaurant.image_url %> 
+            <%= image_tag @restaurant.image_url, id:"image-show"%> 
         </div>
  
 

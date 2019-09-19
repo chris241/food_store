@@ -39,7 +39,9 @@ div.dropdown-content > a{
 }
 
 #round{
-    border-radius: 10px;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
 }
 form#wrp{
     display: flex;
@@ -70,4 +72,10 @@ body#reserve-table{
 
 #reserve p{
     color: white;
+}
+
+#pdp{
+    width: 20em;
+    height: 15em;
+    margin-left: 51px;
 }
