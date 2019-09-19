@@ -17,6 +17,12 @@ body#client{
     background-size: cover;
 }
 
+body#client h2{
+    color: white;
+    font-size: 4em;
+    font-family: lucida;
+}
+
 h1, h2, h3, h4, h5, h6 { color: #dadada; 
     margin: 0px 0px 15px 0px; 
     font-weight: 300; 

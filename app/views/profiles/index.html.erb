@@ -18,9 +18,9 @@
               <%= submit_tag "mettre à jour" %>
             <% end %>
 
-            <h5 class="tutor-title"><%= @client.first_name %></h5>              
-              <span class="tutor-designation"><%= @client.last_name %></span>
-              <span class="tutor-designation"><%= @client.email %></span>
+            <h5 class="tutor-title">Nom: <%= @client.first_name %></h5>              
+              <span class="tutor-designation">Prénom: <%= @client.last_name %></span>
+              <span class="tutor-designation">E-mail: <%= @client.email %></span>
                 <p>Quisque malesuada nullanec mivarius efficitur. stibulum sollicitudin tortor vellorem.</p>
             <%= link_to "Edit profile", edit_client_registration_path(current_client.id), class:"btn btn-primary" %>
           </div>
