@@ -1,43 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body id="editresto">
-     <div class="container1">
-               <div class="resto-header">
-                   <h5>Ajouter votre restaurant</br>
-                        Soyez parmis nous</h5>
-               <div class="resto-group">
+<body style="background-color:powderblue;">
+           <center> 
+                  <h1>Ajouter votre restaurant</h1>
+               
                  <%= form_tag url_for(action: 'create'), method: "post" do %>
-                <div class="resto-group">
+               
                  <%= label_tag 'name :' %><br />
                  <%= text_field  'name', @restaurant, placeholder: "Intitulé ", class: "resto-group" %>
                  <br /> <br />
-                <div class="resto-group">
+               
                  <%= label_tag 'description :'%><br />
                  <%= text_field 'description', @restaurant, placeholder: "Décrivez votre restaurant", class: "resto-group" %>
                  <br /> <br />
-                <div class="resto-group">
+                
                   <%= label_tag 'address :'%><br />
                  <%= text_field 'address', @restaurant, placeholder: "Votre local ", class: "resto-group"%>
                  <br /> <br />
-                <div class="resto-group">
+                
                  <%= label_tag 'image_url :'%><br />
                  <%= url_field_tag 'image_url', @restaurant, placeholder: "Image", class: "resto-group"%>
                 <br /> <br />
-                <div class="resto-group">
+                
                  <%= submit_tag "Create restaurant" %>
                  <% end %>
-                </div> 
-              </div>
-            </div>
-           </div>
-        </div>
-      </div>
-   </div>
-</div>
-
-
+  </center>               
 </body>
-</html>

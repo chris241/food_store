@@ -26,7 +26,7 @@
 
         <center>
        <% if gerant_signed_in? %>
-         <%=link_to "ajouter votre restaurant ",new_restaurant_path,class:"btn btn-outline-info", type:"button"%>
+         <%=link_to "Ajouter votre restaurant ",new_restaurant_path,class:"btn btn-outline-info", type:"button"%>
          <%else%>
 
          <%end%>
@@ -49,9 +49,7 @@
                  <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
                   <%end%>
 
-              <div class="card">
-                <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
-
+              
                 <figcaption>
                   <h2><%= restaurant.name %></h2>
                   <p>Branding, Design</p>
