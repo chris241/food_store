@@ -17,7 +17,6 @@ variable = Mailjet::Send.create(messages: [{
   },
   'To'=> [
     {
-
       'Email'=> 'arorakotonindrina12@gmail.com',
       'Name'=> 'Aro'
     }
@@ -37,5 +36,4 @@ ActionMailer::Base.smtp_settings =   {
     :authentication     => :plain,
     :user_name          => ENV['MAILJET_LOGIN'],
     :password           => ENV['MAILJET_PWD']
-
 }

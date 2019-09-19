@@ -1,22 +1,26 @@
-<table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Name restaurant</th>
-      <th scope="col">Date reservation</th>
-      <th scope="col">Nombre </th>
-      <th scope="col">ddfjd</th>
-    </tr>
-  </thead>
-  <%@reservations.each do |reservation|%>
-  <tbody>
-    <tr>
-      <td><%=reservation.client.last_name%></td>
-      <td><%=reservation.restaurant.name%></td>
-      <td><%=reservation.date%></td>
-      <td><%=reservation.nbr_person%></td>
-       <td><%= link_to "cancel",reservation_path(reservation.id), method: :delete %> </td>
-    </tr>
-  </tbody>
-    <%end%>
-</table>
+
+<div class="container">
+  <div class="row">
+    <table class="table table-bordered">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Name restaurant</th>
+        <th scope="col">Date reservation</th>
+        <th scope="col">Nombre </th>
+        <th scope="col">Action</th>
+      </tr>
+      </thead>
+        <%@reservations.each do |reservation|%>
+      <tbody>
+      <tr id ="<%=reservation.id%>">
+        <td ><%=reservation.client.last_name%></td>
+        <td><%=reservation.restaurant.name%></td>
+        <td><%=reservation.date%></td>
+        <td><%=reservation.nbr_person%></td>
+        <td><%= link_to 'cancel',reservation_path(reservation.id), method: :delete, remote: true %> </td>
+      </tr>
+      </tbody>
+      <%end%>
+    </table>
+  </div>
+</div>

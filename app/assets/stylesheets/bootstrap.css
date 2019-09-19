@@ -74,7 +74,7 @@ sub {
   bottom: -.25em;
 }
 img {
-  border-radius: 25px;
+  border-radius: 0px;
 }
 svg:not(:root) {
   overflow: hidden;
@@ -895,6 +895,8 @@ figure {
 img {
   vertical-align: middle;
 }
+
+/*############ retoucher ##############"*/
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
@@ -903,7 +905,9 @@ img {
   display: block;
   width: 100% \9;
   max-width: 100%;
-  height: auto;
+  height: 200px;
+  width: 800px;
+  
 }
 .img-rounded {
   border-radius: 6px;

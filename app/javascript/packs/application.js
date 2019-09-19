@@ -41,3 +41,7 @@ require('packs/test.js')
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 //= require active_admin/base
+
+//= require jquery3
+//= require jquery_ujs
+//= require_tree .

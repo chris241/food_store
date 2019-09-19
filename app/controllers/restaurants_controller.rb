@@ -1,22 +1,46 @@
 class RestaurantsController < ApplicationController
   def index
-  	@restaurants = Restaurant.all
+    @q = Restaurant.search(params[:q])
+  @restaurants = @q.result
+  
   end
 
   def show
-  	@restaurant = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
     session[:resto_id]=params[:id]
   end
 
-  def new
-  	@restaurant = Restaurant.new()
-  end
-
   def create
-  	@restaurant = Restaurant.create(name: params[:name_id], address: params[:address_id], description: params[:description_id], image_url: params[:image_url_id])
-  	if @restaurant.save
-  		redirect_to "/"
-  	end
-  end
+     @restaurant = Restaurant.create(name: params[:name][0],
+                                  address: params[:address][0],
+                                  description: params[:description][0],
+                                  image_url:params[:image_url]
+                                  )
+     
+     if @restaurant.save
+      redirect_to root_path
+     else
+
+     end
+  end 
+  def update
+    @restaurant = Restaurant.find(params[:id])
+
+    if @restaurant.update(name: params[:name][0],
+                          address: params[:address][0],
+                          description: params[:description][0],
+                           image_url:params[:image_url]
+                                  )
+        flash[:success] = "Votre restaurant a été édité!"
+        redirect_to root_path
+    else
+      render :edit
+    end
+  end  
+  def destroy
+   @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
+    redirect_to root_path
+  end  
 
 end

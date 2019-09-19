@@ -1,95 +1,127 @@
-<body>
-    <div id="top" class="starter_container bg">
+
+<div id="top" class="starter_container bg">
         <div class="follow_container">
             <div class="col-md-6 col-md-offset-3">
-                <h2 class="top-title"> Restaurant</h2>
-                <h2 class="white second-title">" Best in the city "</h2>
+                <h2 class="top-title"> Restaurant</h2></br>
+                 <h2 class="white second-title"> <%= search_form_for @q do |f| %>
+                <div class="buscar-caja"> 
+                <%= f.text_field :name_cont, class:"buscar-txt", placeholder:"Search" %>
+                <a class="buscar-btn"> <i class="fa fa-search loupe "></i></a> 
+                <% end %>
+                
+                
+            </div></h2>
                 <hr>
             </div>
         </div>
     </div>
     <!-- ============ Our Bread  ============= -->
-
+            
   <section id="portfolio" class="light-bg">
-        <div class="container">
+      <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
             <div class="section-title">
               <h2>Resto de Tanà</h2>
               <p>Faite votre choix</p>
+
             </div>
           </div>
         </div>
+
         <div class="row">
+
+        <center>
+       <% if gerant_signed_in? %>
+         <%=link_to "Ajouter votre restaurant ",new_restaurant_path,class:"btn btn-outline-info", type:"button"%>
+         <%else%>
+
+         <%end%>
+         </center>
         
+        <!-- start portfolio item -->
+
           <!-- start portfolio item -->
+
         <% @restaurants.each do |restaurant| %>
+        
           <div class="col-md-4">
             <div class="ot-portfolio-item">
               <figure class="effect-bubba">
-                <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive" >
+
+              <div class="card" style="width: 18rem;">
+                <% if restaurant.restoavatar.attached? == true%>
+                  <%=image_tag restaurant.restoavatar ,class:"img-responsive card-img-top"%>
+                 <%else%>
+                 <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
+                  <%end%>
+
+              
                 <figcaption>
                   <h2><%= restaurant.name %></h2>
                   <p>Branding, Design</p>
                     <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
                 </figcaption>
+              </div>  
               </figure>
             </div>
           </div>
+        
         <% end %>
         </div>
-        </div><!-- end container -->
+      </div><!-- end container -->
   </section>
      
         <!-- ============ Featured Dish  ============= -->
 
-        <section id="featured" class="description_content">
-            <div  class="featured background_content">
-                <h1>Our Featured Dishes <span>Menu</span></h1>
+    <section id="featured" class="description_content">
+        <div  class="featured background_content">
+            <h1>Our Featured Dishes <span>Menu</span></h1>
+        </div>
+        <div class="text-content container"> 
+            <div class="col-md-6">
+                <h1>Have a look to our dishes!</h1>
+                <div class="icon-hotdog fa-2x"></div>
+                <p class="desc-text">Each food is handmade at the crack of dawn, using only the simplest of ingredients to bring out smells and flavors that beckon the whole block. Stop by anytime and experience simplicity at its finest.</p>
             </div>
-            <div class="text-content container"> 
-                <div class="col-md-6">
-                    <h1>Have a look to our dishes!</h1>
-                    <div class="icon-hotdog fa-2x"></div>
-                    <p class="desc-text">Each food is handmade at the crack of dawn, using only the simplest of ingredients to bring out smells and flavors that beckon the whole block. Stop by anytime and experience simplicity at its finest.</p>
-                </div>
-                <div class="col-md-6">
-                    <ul class="image_box_story2">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                            </ol>
+            <div class="col-md-6">
+                <ul class="image_box_story2">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                        </ol>
 
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <%= image_tag "slider1.jpg" %>
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <%= image_tag "slider1.jpg" %>
+                                <div class="carousel-caption">
+                                    
                                 </div>
-                                <div class="item">
-                                    <%= image_tag "slider2.jpg" %>
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
+                            </div>
+                            <div class="item">
+                                <%= image_tag "slider2.jpg" %>
+                                <div class="carousel-caption">
+                                    
                                 </div>
-                                <div class="item">
-                                    <%= image_tag "slider3.JPG" %>
-                                    <div class="carousel-caption">
-                                        
-                                    </div>
+                            </div>
+                            <div class="item">
+                                <%= image_tag "slider3.JPG" %>
+                                <div class="carousel-caption">
+                                    
                                 </div>
                             </div>
                         </div>
-                    </ul>
-                </div>
+                    </div>
+                </ul>
             </div>
-        </section>
-
+        </div>
+    </section>
 
 </body>
+
    
+
