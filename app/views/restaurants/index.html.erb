@@ -1,10 +1,17 @@
+
 <div id="top" class="starter_container bg">
         <div class="follow_container">
             <div class="col-md-6 col-md-offset-3">
-                <h2 class="top-title"> Restaurant</h2>
-                <h2 class="white second-title">" Best in the city "</h2>
+                <h2 class="top-title"> Restaurant</h2></br>
+                 <h2 class="white second-title"> <%= search_form_for @q do |f| %>
+                <div class="buscar-caja"> 
+                <%= f.text_field :name_cont, class:"buscar-txt", placeholder:"Search" %>
+                <a class="buscar-btn"> <i class="fa fa-search loupe "></i></a> 
+                <% end %>
+                
+                
+            </div></h2>
                 <hr>
-              
             </div>
         </div>
     </div>
