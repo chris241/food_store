@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  
+
   resources :reservations
 
   resources :menus
@@ -40,7 +40,6 @@ Rails.application.routes.draw do
   end
 
   post "/note", to: "commands#note", as: "note"
-
   # get '/coucou', to: "coucou#haha"
   post  '/foods/:menu_id/foodavatar/:food_id', to: 'foods#updateAvatar', as: 'foodavatar'
 

@@ -1,23 +1,27 @@
-<body id="view-img">
-  <section id="wall">
-    <div class="col-sm-4" id="show-center">
-      <div class="#" style="width: 34rem;">
-        <div class="card center" >
-       <% if @restaurant.restoavatar.attached? == true%>
-          <div class="w"><%=image_tag @restaurant.restoavatar%></div>
-          <%else%>
-          <div class="w"><%=image_tag @restaurant.image_url%></div>
-          <%end%>
-          <div class="card-body" id="card-view">
-              <h5 class="card-title"><%=@restaurant.name%></h5>
-              <p class="card-text">
-                <%=@restaurant.description%>
-                <%=@restaurant.address%>
+<section id="story" class="description_content">
+    <div class="text-content container">
+        <div class="col-md-6">
+            <h1>About us</h1>
+            <div class="fa fa-cutlery fa-2x">
+                <strong><%=@restaurant.name%></strong>
+            </div>
+
+            <p class="desc-text"><%=@restaurant.description%></p> 
+            <br>
+            <p class="desc-text"> <i>Adresse:</i><%=@restaurant.address%></p> <br> <br>
+            <p class="desc-text"><%=link_to "Nos menus", menus_path, class: "btn btn-info"%>
+            <%=link_to "Reserver table", new_reservation_path,class:"btn btn-primary"%>
             </p>
-          </div>
-          <%=link_to "Menus", menus_path, class: "btn btn-info"%>
-          <%=link_to "Reserver table", new_reservation_path, class: "btn btn-primary",class:"btn btn-primary"%>
-             <% if gerant_signed_in? %>
+
+        </div>
+        <div class="col-md-6">
+           <% if @restaurant.restoavatar.attached? == true%>
+           <%=image_tag @restaurant.restoavatar%>
+           <%else%>
+            <%= image_tag @restaurant.image_url %> 
+            <%end%>
+        </div>
+        <% if gerant_signed_in? %>
           <%=link_to "Editer",  edit_restaurant_path, class:"btn btn-success"%>
           <%= link_to 'Destroy',restaurant_path, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%>
           
@@ -28,10 +32,8 @@
          <%else%>
 
           <%end%>
+ 
+
+</section>
 
 
-        </div>
-      </div>
-    </div>
-  </section>
-</body>

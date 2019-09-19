@@ -14,61 +14,17 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     
   </head>
-
-  <body>
+    <body>
     <!-- ============ NavBar  ============= -->
       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-          <div class="container">
-              <div class="row">
-                  <div class="navbar-header">
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Foodstore</a>
-                  </div>
-                  <!-- Collect the nav links, forms, and other content for toggling -->
-                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                      <ul class="nav navbar-nav main-nav  clear navbar-right ">
-                          <li><a class="color_animation" href="<%=root_path%>">Accueil</a></li>
-                          <li><a class="color_animation" href="#story">Our team</a></li>
-                          <li><a class="color_animation" href="<%=reservations_path%>">Reservation</a></li>
-                      
-                        
-                        <!--   dropdown   -->
-                      <% if client_signed_in? %>
-                          <li class="dropdown">
-                            <a class="color_animation" href="#dropdown">
-
-                              <%if current_client.avatar.attached?%>
-                                <%=image_tag current_client.avatar, alt: 'avatar', id:"round"%>
-                              <%else%>
-                                <%=current_client.first_name%> 
-                              <%end%>
-
-                            </a>
-                              <div class="dropdown-content">
-                                <a href="<%=profiles_path%>">Mon profil</a>
-                                <a href="/clients/sign_out">Deconnexion</a>
-                      <% else %>          
-                          <li class="dropdown">
-                            <a class="color_animation" href="#dropdown">connexion</a>
-                            <div class="dropdown-content">
-                                <a href="/clients/sign_up">S'inscrire</a>
-                                <a href="/clients/sign_in">Se connecter</a>
-                              </div>
-                          </li>
-                      <% end %>
-                      </ul>
-                  </div><!-- /.navbar-collapse -->
-              </div>
-          </div><!-- /.container-fluid -->
+        <%= render 'layouts/navigation'%>
       </nav>
-  <%= yield %>
-
-
-
-  </body>
+  
+      <%= yield %>
+      <!-- ============ Footer  ============= -->
+      <footer class="footer-distributed">
+  	   <%=render  'layouts/footer'%>
+      </footer>  
+        
+    </body>
 </html>

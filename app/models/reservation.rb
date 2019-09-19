@@ -7,14 +7,6 @@ class Reservation < ApplicationRecord
 
  has_many :join_res_foods
  has_many :foods, through: :join_res_foods
-
-
- after_create :reservation_send
-
-  def reservation_send
-    ClientMailer.reservation_email(self).deliver_now
-  end
-
   validates :nbr_person, presence: true, length: {in:1..7}
   validates :date, presence: true
   validate :date_cannot_be_in_the_past

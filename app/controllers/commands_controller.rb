@@ -69,12 +69,13 @@ class CommandsController < ApplicationController
 
     totalprice = 0
     @totalCommands.each do |food|
-            @foodsprice = (food.price).to_i*(food.join_com_foods[0].quantity).to_i
-            totalprice += @foodsprice
-	          @sum = totalprice
+        @foodsprice = (food.price).to_i*(food.join_com_foods[0].quantity).to_i
+        totalprice += @foodsprice
+	     @sum = totalprice
 	   end
-  def paiement
-    @amount = @sum
+
+     def paiement
+    @amount = @sum 
     customer = Stripe::Customer.create({
     email: params[:stripeEmail],
     source: params[:stripeToken],
@@ -84,22 +85,23 @@ class CommandsController < ApplicationController
     customer: customer.id,
     amount: @amount,
     description: 'Rails Stripe customer',
-    currency: 'usd',
+    currency: 'Ariary',
   })
 
   rescue Stripe::CardError => e
   flash[:error] = e.message
-  redirect_to root_path
-
+  redirect_to command_path
   end
+  params[:total_price]=@sum
 end
 
-
   def destroy
-
     @command = Command.find(current_client.command.id)
 	  @join = @command.join_com_foods[0].destroy
-	    redirect_to command_path(current_client.command.id)
+    respond_to do |format|
+      format.html { redirect_to command_path(current_client.command.id) }
+      format.js { }
+	    
+    end
   end
-
 end

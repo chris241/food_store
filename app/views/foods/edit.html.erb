@@ -4,12 +4,10 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+
   <body>
-
-  <h1>Foods#update</h1>
-<p>Find me in app/views/foods/update.html.erb</p>
-
-
+    <center>
+      <h1>EDIT FOOD</h1>
 <%= form_tag url_for(action: 'update'), method: "patch" do %>
         
     <%= label_tag 'name' %></br>
@@ -43,7 +41,7 @@
  
   <%= submit_tag "Edit Food" %>
 <% end %>
-    
+    </center>
   </body>
 </html>
 

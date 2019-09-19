@@ -94,4 +94,5 @@ body#sign-up{
 
 div.form-header > h2,p {
   text-align: center;
+  margin: 14px;
 }
