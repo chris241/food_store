@@ -3727,6 +3727,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 18px;
   line-height: 20px;
 }
+
+#restau{
+
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 .navbar-brand:hover,
 .navbar-brand:focus {
   text-decoration: none;
