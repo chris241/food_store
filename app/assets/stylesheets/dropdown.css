@@ -2,17 +2,17 @@
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
-  position: absolute;
+
   bottom:-78px;
   right: -59px;
-  height: 85px;
+  height:auto;
   min-width: 135px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   border-top: 2px solid rgb(19, 173, 27);
   text-decoration: none;
   background-color: rgba(29, 28, 28, 0.788);
-  
+
 }
 .dropdown-content > a{
   margin-top: 15px;
@@ -34,5 +34,3 @@
 .dropdown:hover .dropbtn {
   background-color: #3b4e3b;
 }
-
-

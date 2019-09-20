@@ -32,15 +32,16 @@
                               <%if current_client.avatar.attached?%>
                                 <%=image_tag current_client.avatar, alt: 'avatar', id:"round", style:"margin-top: -15%"%>
                               <%else%>
-                                <%=current_client.first_name%> 
+                                <%=current_client.first_name%>
                               <%end%>
 
                             </a>
                               <div class="dropdown-content">
+                                <a class="Ldrop" href="<%=commands_path%>">Commandes</a>
                                 <a class="Ldrop" href="<%=profiles_path%>">Mon profil</a>
                                 <a class="Ldrop" href="/clients/sign_out">Deconnexion</a>
                               </div>
-                      <% else %>          
+                      <% else %>
                           <li class="dropdown">
                             <a class="color_animation" href="#dropdown">Client</a>
                             <div class="dropdown-content">
@@ -86,16 +87,17 @@
                         <li><a class="color_animation" href="<%=root_path%>">Accueil</a></li>
                         <li><a class="color_animation" href="#story">Our team</a></li>
                         <li><a class="color_animation" href="<%=reservations_path%>">Reservation</a></li>
-                    
+                        <li><a class="color_animation" href="<%=commands_path%>">Commandes</a></li>
+
                         <!--   dropdown   -->
                       <% if gerant_signed_in? %>
                           <li class="dropdown">
                             <a class="color_animation" href="#dropdown">
-                                <%=current_gerant.email%> 
+                                <%=current_gerant.email%>
                             </a>
                               <div class="dropdown-content">
                                 <a class="Ldrop" href="/gerants/sign_out">Deconnexion</a>
-                      <% else %>          
+                      <% else %>
                           <li class="dropdown">
                             <a class="color_animation" href="#dropdown">connexion</a>
                             <div class="dropdown-content">
