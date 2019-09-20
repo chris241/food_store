@@ -16,4 +16,6 @@ class Reservation < ApplicationRecord
             errors.add(:date, "can't be in the past")
         end
     end
+geocoded_by :address
+after_validation :geocode
 end
