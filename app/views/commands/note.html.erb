@@ -1,3 +1,4 @@
+<center>
 <ul id = "note">
 <% @note.each do |n| %>
     <%p n[0]%>
@@ -13,3 +14,4 @@
 <%= form_tag('/commands', method: :post) do %>
  <%= submit_tag "Voir votre réçu" %>
 <% end %>
+</center>

@@ -1,24 +1,46 @@
+<center><h2>Menu</h2></center>
+
 <%@menu.foods.each do |food|%>
 
-    <b>Nom: </b> <%=food.name%></br>
+
+    <div class ="food_content">
+
+        
+        <%=food.name%>
+
+    </div>
+
     <% if food.foodavatar.attached? == true%>
-          <%=image_tag food.foodavatar%>
-      <%else%>
-      <img src="<%=food.image_url%>">
-      <%end%>
+
+        <%= image_tag food.foodavatar,class:"food_image"%></br>
+
+    <%else%>
+
+     <%= food.image_url%></br>
+
+    <%end%>
+    
+
+    <div class ="food_description">
+        <span>Description: </span></br> <%=food.description%></br></br>
+        <span>Temps de préparation: </span><%=food.duration%> mn</br>
+        <span>Prix: </span><b id="prix"><%=food.price%> €</b></br>
+         
+    </div>
+
+    <div class ="food_buttonImage">
+            <%= form_tag foodavatar_path(@menu.id,food.id), multipart: true do %>
+            <%= file_field_tag :foodavatar, direct_upload: true %></br>
+            <%= submit_tag "mettre à jour" %>
+            
+            <%end%>
+    </div>
+
+        <div class ="food_button">
+            <%=link_to "Commander", command_food_path(food.id), class: "btn btn-warning"%>
+            <%=link_to "Edit", edit_food_path(food.id), class: "btn btn-warning"%>
+            <%= link_to 'Destroy', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger", style:"color:red;"%>
+            <br> <br> <br> <br>
+        </div>    
+    <%end%>
     </br>
-    <span>Description: </span> <%=food.description%></br>
-    <span>Prix: </span><%=food.price%> €</br>
-    <span>Temps de préparation: </span><%=food.duration%> mn </br>
-
-
-    <%= form_tag foodavatar_path(@menu.id,food.id), multipart: true do %>
-        <%= file_field_tag :foodavatar, direct_upload: true %>
-        <%= submit_tag "mettre à jour" %>
-    <%end%>
-
-        <%=link_to "Commander", command_food_path(food.id), class: "btn btn-warning"%>
-        <%=link_to "Edit", edit_food_path(food.id), class: "btn btn-warning"%>
-    <%= link_to 'Destroy', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger"%>
-<br> <br> <br> <br>
-    <%end%>
