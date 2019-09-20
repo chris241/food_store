@@ -17,7 +17,7 @@ class ReservationsController < ApplicationController
   def create
     @food_id = params[:food_id]
     if current_client== nil
-      flash[:danger] = "Vous devez se connecter"
+      flash[:danger] = "Vous devez vous connecter"
       redirect_to new_client_session_path
     else
 
