@@ -53,7 +53,7 @@
            <% if @restaurant.restoavatar.attached? == true%>
            <%=image_tag @restaurant.restoavatar%>
            <%else%>
-            <%= image_tag @restaurant.image_url %> 
+            <%= image_tag @restaurant.image_url, id:"image-show" %> 
             <%end%>
     </div>
     </section>
