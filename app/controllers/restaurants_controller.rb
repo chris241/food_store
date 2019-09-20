@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
   def index
-    @q = Restaurant.search(params[:q])
+  @q = Restaurant.search(params[:q])
   @restaurants = @q.result
   
   end
@@ -12,10 +12,10 @@ class RestaurantsController < ApplicationController
 
   def create
      @restaurant = Restaurant.create(name: params[:name][0],
-                                  address: params[:address][0],
-                                  description: params[:description][0],
-                                  image_url:params[:image_url],
-                                  gerant_id:params[:gerant_id]
+                                     address: params[:address][0],
+                                     description: params[:description][0],
+                                     image_url: params[:image_url],
+                                     gerant_id: params[:gerant_id]
                                   )
      @restaurant.gerant = current_gerant
      if @restaurant.save
