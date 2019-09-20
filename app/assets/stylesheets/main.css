@@ -294,6 +294,7 @@ DESCRIPTION BODY CONTENT
 
 #reservation{
    background-color:rgba(0, 0, 0, 0.733);
+   height: 36em;
 }
 .description_body {
     margin: 45px auto;
