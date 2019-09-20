@@ -13,22 +13,21 @@
               </button>
               <a class="navbar-brand" href="#">Foodstore 🍹</a>
             </div>
-
+  
                   <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                       <ul class="nav navbar-nav main-nav  clear navbar-right ">
                         <li><a class="color_animation" href="<%=root_path%>">Accueil</a></li>
                         <li><a class="color_animation" href="<%=ourteam_path%>">Our team</a></li>
                         <li><a class="color_animation" href="<%=reservations_path%>">Reservation</a></li>
-
-
+   
                         <!--   dropdown   -->
                       <% if client_signed_in? %>
                           <li class="dropdown">
-                            <a class="color_animation" href="#dropdown">
+                            <a class="color_animation">
 
                               <%if current_client.avatar.attached?%>
-                                <%=image_tag current_client.avatar, alt: 'avatar', id:"round", style:"margin-top: -15%"%>
+                                <%=image_tag current_client.avatar, alt: 'avatar', id:"round"%>
                               <%else%>
                                 <%=current_client.first_name%>
                               <%end%>
@@ -39,6 +38,7 @@
                                 <a class="Ldrop" href="<%=profiles_path%>">Mon profil</a>
                                 <a class="Ldrop" href="/clients/sign_out">Deconnexion</a>
                               </div>
+                 
                       <% else %>
                           <li class="dropdown">
                             <a class="color_animation" href="#dropdown">Client</a>
