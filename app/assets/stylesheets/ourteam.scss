@@ -7,8 +7,8 @@
 
 .bod {
 	background-image: url('fond.jpg');
-
-	background-size:auto;
+	background-size: cover;
+	background-repeat: no-repeat;
 	// background-position: center	center;
 	// display: flex;
 	flex-direction: column;
@@ -263,21 +263,21 @@ div.nam{
 }
 
 div.kin{
-	margin-left:9em;
+	margin-left:8em;
 }
 
 div.aro{
-	margin-left:9em;
+	margin-left:8em;
 }
 
 div.menja{
-	margin-left:9em;
+	margin-left:8em;
 }
 
 div.chris{
-	margin-left:9em;
+	margin-left:8em;
 }
 
 div.tsiry{
-	margin-left:9em;
+	margin-left:8em;
 }
