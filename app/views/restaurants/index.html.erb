@@ -16,62 +16,91 @@
         </div>
     </div>
     <!-- ============ Our Bread  ============= -->
-            
-  <section id="portfolio" class="light-bg">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <div class="section-title">
-              <h2>Resto de Tanà</h2>
-              <p>Faite votre choix</p>
 
-            </div>
+<section id="portfolio" class="light-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="section-title">
+            <h2>Resto de Tanà</h2>
+            <p>Faite votre choix</p>
           </div>
-        </div>
-
-        <div class="row">
-
-        <center>
-       <% if gerant_signed_in? %>
-         <%=link_to "Ajouter votre restaurant ",new_restaurant_path,class:"btn btn-outline-info", type:"button"%>
-         <%else%>
-
-         <%end%>
-         </center>
-        
-        <!-- start portfolio item -->
-
-          <!-- start portfolio item -->
-
-        <% @restaurants.each do |restaurant| %>
-        
-          <div class="col-md-4">
-            <div class="ot-portfolio-item">
-              <figure class="effect-bubba">
-
-              <div class="card" style="width: 18rem;">
-                <% if restaurant.restoavatar.attached? == true%>
-                  <%=image_tag restaurant.restoavatar ,class:"img-responsive card-img-top"%>
-                 <%else%>
-                 <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
-                  <%end%>
-
-              
-                <figcaption>
-                  <h2><%= restaurant.name %></h2>
-                  <p>Branding, Design</p>
-                    <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
-                </figcaption>
-              </div>  
-              </figure>
-            </div>
-          </div>
-        
-        <% end %>
         </div>
       </div>
-      <!-- end container -->
-  </section>
+
+      <div class="row">
+        <% if gerant_signed_in? %>
+                <% @restaurants.each do |restaurant| %>
+                    <%if restaurant.gerant_id == current_gerant.id%>
+                      <div class="col-md-4">
+                      <div class="ot-portfolio-item">
+                          <figure class="effect-bubba">
+                            <div class="card" style="width: 18rem;">
+                              <% if restaurant.restoavatar.attached? == true%>
+                                <%=image_tag restaurant.restoavatar ,class:"img-responsive card-img-top"%>
+                              <%else%>
+                                <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
+                              <%end%>
+                              <figcaption>
+                                <h2><%= restaurant.name %></h2>
+                                <p>Branding, Design</p>
+                                <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
+                              </figcaption>
+                            </div>  
+                        </figure>
+                      </div>
+                      </div>
+                    <%end%>
+                <%end%>  
+                <%=link_to "Ajouter votre restaurant ",new_restaurant_path,class:"btn btn-outline-info", type:"button"%>
+        <%elsif%>  
+          <% if client_signed_in? || !gerant_signed_in?%>
+            <% @restaurants.each do |restaurant| %>
+            <div class="col-md-4">
+                      <div class="ot-portfolio-item">
+                          <figure class="effect-bubba">
+                            <div class="card" style="width: 18rem;">
+                              <% if restaurant.restoavatar.attached? == true%>
+                                <%=image_tag restaurant.restoavatar ,class:"img-responsive card-img-top"%>
+                              <%else%>
+                                <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
+                              <%end%>
+                              <figcaption>
+                                <h2><%= restaurant.name %></h2>
+                                <p>Branding, Design</p>
+                                <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
+                              </figcaption>
+                            </div>  
+                        </figure>
+                      </div>
+                      </div>
+            <%end%>
+          <%end%>
+        <%else%>
+        <% @restaurants.each do |restaurant| %>
+            <div class="col-md-4">
+                      <div class="ot-portfolio-item">
+                          <figure class="effect-bubba">
+                            <div class="card" style="width: 18rem;">
+                              <% if restaurant.restoavatar.attached? == true%>
+                                <%=image_tag restaurant.restoavatar ,class:"img-responsive card-img-top"%>
+                              <%else%>
+                                <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
+                              <%end%>
+                              <figcaption>
+                                <h2><%= restaurant.name %></h2>
+                                <p>Branding, Design</p>
+                                <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
+                              </figcaption>
+                            </div>  
+                        </figure>
+                      </div>
+                      </div>
+            <%end%>
+        <%end%>
+      </div>
+    </div><!-- end container -->
+</section>
      
         <!-- ============ Featured Dish  ============= -->
 
