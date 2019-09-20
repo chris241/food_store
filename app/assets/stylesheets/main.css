@@ -552,6 +552,7 @@ MEDIA QUERIES TABLET
         width: 280px;
         letter-spacing: 0.040em;
         border: 1px solid #2f2e2f;
+        font-family: fantasy;
     }
     .picture_content {
         display: inline-block;
