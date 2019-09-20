@@ -1,4 +1,3 @@
-
 <%if client_signed_in? || !gerant_signed_in? %>
         <div class="container">
               <div class="row">
@@ -22,6 +21,7 @@
                         <li><a class="color_animation" href="<%=ourteam_path%>">Our team</a></li>
                         <li><a class="color_animation" href="<%=reservations_path%>">Reservation</a></li>
 
+                        
                         <!--   dropdown   -->
                       <% if client_signed_in? %>
                           <li class="dropdown">
