@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/reserve_food/:food_id', to: 'reservations#new', as: 'reserve_food'
 
+ get 'restaurants/ourteam', to: 'restaurants#ourteam'
+
   resources :foods do
     resources :foodavatar, only: [:create,:show]
   end
