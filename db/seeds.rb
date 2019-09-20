@@ -30,8 +30,8 @@ for a in (0..url.length-1)
         name: Faker::Restaurant.name,
         address:Faker::Address.street_address,
         description:Faker::Restaurant.description,
-        image_url:url[a],
-        gerant:Gerant.all.sample
+        image_url:url[a]
+        
     )
 end
 
