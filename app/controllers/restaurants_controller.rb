@@ -1,21 +1,22 @@
 class RestaurantsController < ApplicationController
   def index
     @q = Restaurant.search(params[:q])
-  @restaurants = @q.result
-  
+    @restaurants = @q.result
+
   end
 
   def show
+    session[:resto_id] = ""
     @restaurant = Restaurant.find(params[:id])
     session[:resto_id]=params[:id]
   end
 
   def create
      @restaurant = Restaurant.create(name: params[:name][0],
-                                  address: params[:address][0],
+                                   address: params[:address][0],
                                   description: params[:description][0],
-                                  image_url:params[:image_url],
-                                  gerant_id:params[:gerant_id]
+                                  image_url: params[:image_url],
+                                  gerant_id: params[:gerant_id]
                                   )
      @restaurant.gerant = current_gerant
      if @restaurant.save
@@ -23,7 +24,7 @@ class RestaurantsController < ApplicationController
      else
 
      end
-  end 
+  end
   def update
     @restaurant = Restaurant.find(params[:id])
 
@@ -37,12 +38,12 @@ class RestaurantsController < ApplicationController
     else
       render :edit
     end
-  end  
+  end
   def destroy
    @restaurant = Restaurant.find(params[:id])
     @restaurant.destroy
     redirect_to root_path
-  end  
+  end
 
   def ourteam
   end

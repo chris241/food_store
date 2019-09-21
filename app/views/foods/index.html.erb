@@ -1,8 +1,38 @@
-<h1>Foods#index</h1>
-<p>Find me in app/views/foods/index.html.erb</p>
+<%if gerant_signed_in?%>
+
+<%=link_to "Nouveau repas", new_food_path, class: "btn btn-info"%>
+<center><h2>Menu</h2></center>
+<%@foods.each do |food|%>
 
 
+    <div class ="food_content">
 
 
+        <%=food.name%>
 
+    </div>
 
+    <% if food.foodavatar.attached? == true%>
+
+        <%= image_tag food.foodavatar,class:"food_image"%></br>
+
+    <%else%>
+      <img  src="<%=food.image_url%>" alt="img02" >
+    <%end%>
+
+    <div class ="food_description">
+        <span>Description: </span></br> <%=food.description%></br></br>
+        <span>Temps de préparation: </span><%=food.duration%> mn</br>
+        <span>Prix: </span><b id="prix"><%=food.price%> €</b></br>
+
+    </div>
+        <div class ="food_button">
+
+            <%=link_to "Edit", edit_food_path(food.id), class: "btn btn-warning"%>
+            <%= link_to 'Destroy', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger", style:"color:red;"%>
+            <br> <br> <br> <br>
+        </div>
+    <%end%>
+
+    </br>
+<%end%>

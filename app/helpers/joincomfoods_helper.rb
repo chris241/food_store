@@ -1,0 +1,2 @@
+module JoincomfoodsHelper
+end

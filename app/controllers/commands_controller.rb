@@ -2,6 +2,10 @@ class CommandsController < ApplicationController
  # before_action :authenticate_client!
   def index
     @commands = Command.all
+    @restaurants = Restaurant.all
+    if gerant_signed_in?
+      @restaurant = Restaurant.find_by(gerant_id: current_gerant.id)
+    end
   end
 
   def new
@@ -23,6 +27,7 @@ class CommandsController < ApplicationController
 
     @command = Command.create(client_id: current_client.id)
     @command.save
+
 
 
     session[:note].each do |n|
@@ -99,19 +104,20 @@ class CommandsController < ApplicationController
 end
 
   def destroy
-    if client_signed_in?
-    @command = Command.find(current_client.command.id)
-	  @join = @command.join_com_foods[0].destroy
+    @command = Command.find(params[:id])
+      @join = @command.join_com_foods[0].destroy
     respond_to do |format|
-      format.html { redirect_to command_path(current_client.command.id) }
-      format.js { }
-    end
-  else gerant_signed_in?
-    @command = Command.find(params[:id]).destroy
-    respond_to do |format|
-      format.html { redirect_to commands_path }
+      format.html { redirect_to command_path }
       format.js { }
     end
   end
+  def supr
+      @command = Command.find(params[:id])
+      @command = Command.find(params[:id]).destroy
+      respond_to do |format|
+      format.html { redirect_to commands_path }
+      format.js { }
+    end
+
   end
 end
