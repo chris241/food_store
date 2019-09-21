@@ -11,7 +11,11 @@ footer{
 	text-align: left;
 	font: bold 16px sans-serif;
 	position: relative;
+<<<<<<< HEAD
 	top:12em;
+=======
+	margin-top: 0%;		
+>>>>>>> master
 }
 
 .footer-distributed .footer-left,

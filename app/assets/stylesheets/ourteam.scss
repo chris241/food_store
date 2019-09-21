@@ -2,12 +2,14 @@
 
 * {
 	box-sizing: border-box;
+
 }
 
 .bod {
 	background-image: url('fond.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+
 	flex-direction: column;
 	font-family: 'Muli';
 	justify-content: center;
@@ -21,6 +23,7 @@
 	display: flex;
 	justify-content: center;
 	perspective: 100em;
+
 	width: 100%;
 }
 
