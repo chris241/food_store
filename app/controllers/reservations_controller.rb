@@ -30,7 +30,9 @@ class ReservationsController < ApplicationController
       flash[:success] = "Vous avez enregistré une réservation"
       redirect_to reservations_path
     else
-    end    
+
+
+    end
     end
 
 
