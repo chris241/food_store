@@ -4,7 +4,7 @@ Group1
 
 TEAM: CODER-BRAIN
 
-Projet: Mada_resto
+Projet: food_store
 
 Les membres de notre équipe:
 
