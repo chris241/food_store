@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
- before_action :authenticate_client!
+
   def index
     @reservations = Reservation.all
   end
@@ -16,6 +16,11 @@ class ReservationsController < ApplicationController
 
   def create
     @food_id = params[:food_id]
+    if current_client== nil
+      flash[:danger] = "Vous devez vous connecter"
+      redirect_to new_client_session_path
+    else
+
     @reservation = Reservation.new(nbr_person: params[:nbr_person],
                                    date: params[:date],
                                    client_id: current_client.id,
@@ -27,6 +32,7 @@ class ReservationsController < ApplicationController
     else
 
 
+    end
     end
 
 

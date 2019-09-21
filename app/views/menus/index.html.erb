@@ -1,7 +1,19 @@
-<h1>Menus#index</h1>
-<p>Find me in app/views/menus/index.html.erb</p>
 
+<body class="menucateg">
+  <div class="menu">
+    <%@menus.each_with_index do|menu,i|%>
 
-<%@menus.each_with_index do|menu,i|%>
-<%=link_to "#{menu.category}", food_path(i+1)%> <br>
-<% end %>
+        <tr>
+          <td>
+              <%=link_to "#{menu.category} ", food_path(i+1),type:"button", class: " categ btn btn-outline-primary btn-lg"%>
+          </td>
+        </tr>
+
+    <% end %>
+  </div>
+  <div id="container">
+    <div class="sign-three">
+      <div class="restaurant">menu du Jour...</div>
+    </div>
+  </div>
+</body>
