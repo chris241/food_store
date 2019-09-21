@@ -15,7 +15,7 @@
 
           <%end%>
             <h5 class="card-title"><i>Commandé le:</i>  <%=command.created_at %> </h5>
-          <%= link_to "Enlever de la liste",supr_path(command.id) ,method: :delete , class: "btn btn-warning" , style: "width:auto"%>
+          <%= link_to "Enlever de la liste",supr_path(command.id) ,method: :supr , class: "btn btn-warning" , style: "width:auto"%>
         </div>
       </div>
     <%end%>

@@ -113,7 +113,7 @@ end
   end
   def supr
       @command = Command.find(params[:id])
-      @command = Command.find(params[:id]).destroy
+      @command.destroy
       respond_to do |format|
       format.html { redirect_to commands_path }
       format.js { }
