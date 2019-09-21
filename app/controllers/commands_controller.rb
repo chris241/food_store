@@ -1,5 +1,8 @@
 class CommandsController < ApplicationController
- before_action :authenticate_client!
+ # before_action :authenticate_client!
+  def index
+    @commands = Command.all
+  end
 
   def new
     @command = Command.new
@@ -17,7 +20,7 @@ class CommandsController < ApplicationController
     # # if current_client.command == nil
     # #     @command = Command.create(client_id: @u)
     # # end
-    
+
     @command = Command.create(client_id: current_client.id)
     @command.save
 
@@ -58,7 +61,7 @@ class CommandsController < ApplicationController
 
     p "#################"
     p session[:note]
-    
+
   end
 
   def show
@@ -75,7 +78,7 @@ class CommandsController < ApplicationController
 	   end
 
      def paiement
-    @amount = @sum 
+    @amount = @sum
     customer = Stripe::Customer.create({
     email: params[:stripeEmail],
     source: params[:stripeToken],
@@ -96,12 +99,19 @@ class CommandsController < ApplicationController
 end
 
   def destroy
+    if client_signed_in?
     @command = Command.find(current_client.command.id)
 	  @join = @command.join_com_foods[0].destroy
     respond_to do |format|
       format.html { redirect_to command_path(current_client.command.id) }
       format.js { }
-	    
     end
+  else gerant_signed_in?
+    @command = Command.find(params[:id]).destroy
+    respond_to do |format|
+      format.html { redirect_to commands_path }
+      format.js { }
+    end
+  end
   end
 end

@@ -1,0 +1,63 @@
+
+h2{
+    position: relative;
+    font-family: fantasy;
+    font-size: 75px;
+    font-style: italic;
+}
+
+
+
+.food_content{
+
+    position: relative;
+    left: 42%;
+    top: 9%;
+    font-family: cursive;
+    font-size: 37px;
+    width: 55%;
+}
+
+
+#prix{
+    font-size: 22px;
+    color: blue;
+}
+
+
+.food_description{
+
+box-shadow: 1px 1px 6px black;
+    position: relative;
+    left: 42%;
+    top: -25%;
+    width: 55%;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+
+.food_button{
+
+    position: relative;
+    left: 42%;
+    top: -29%;
+    width: 15%;
+}
+
+.food_image{
+
+ width: 40%;
+ height: 40%;
+ margin-left: 1%;
+ 
+}
+
+.food_buttonImage{
+
+    position: relative;
+    top: -14%;
+    margin-left: 1%;
+    width: 32%;
+}

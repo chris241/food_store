@@ -10,9 +10,12 @@ class Reservation < ApplicationRecord
   validates :nbr_person, presence: true, length: {in:1..7}
   validates :date, presence: true
   validate :date_cannot_be_in_the_past
+  validates :client, presence: true
   def date_cannot_be_in_the_past
       if date < Date.today
             errors.add(:date, "can't be in the past")
         end
     end
+geocoded_by :address
+after_validation :geocode
 end
