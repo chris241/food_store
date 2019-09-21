@@ -12,7 +12,7 @@
 
                 <%end%>
                 <span> <i>Commandé le:</i>  <%=command.created_at %> </span>
-                <%= link_to "Enlever de la liste",command_path(command.id) ,method: :delete , class: "btn btn-outline-warning" , style: "width:auto"%>
+                <%= link_to "Enlever de la liste",supr_path(command.id) , class: "btn btn-outline-warning" , style: "width:auto"%>
                 <br> <br>
         <%end%>
       <%end%>

@@ -8,7 +8,6 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
   end
 
-
   def new
     @reservation = Reservation.new
     @food_id = params[:food_id]
@@ -25,20 +24,13 @@ class ReservationsController < ApplicationController
                                    date: params[:date],
                                    client_id: current_client.id,
                                    restaurant_id: session[:resto_id])
-
     if @reservation.save
       flash[:success] = "Vous avez enregistré une réservation"
       redirect_to reservations_path
     else
-
-
     end
     end
-
-
-
   end
-
 
   def update
   end
@@ -46,10 +38,6 @@ class ReservationsController < ApplicationController
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
-    respond_to do |format|
-      format.html { redirect_to reservations_path }
-      format.js { }
-    end
-    
+    redirect_to reservations_path
   end
 end

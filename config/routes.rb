@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :reservations
+  resources :joincomfoods
 
   resources :menus
 
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   get '/reserve_food/:food_id', to: 'reservations#new', as: 'reserve_food'
 
  get 'restaurants/ourteam', to: 'restaurants#ourteam', as: 'ourteam'
+ get 'supr/:id', to: 'commands#supr', as: 'supr'
 
   resources :foods do
     resources :foodavatar, only: [:create,:show]

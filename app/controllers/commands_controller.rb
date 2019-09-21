@@ -104,10 +104,20 @@ class CommandsController < ApplicationController
 end
 
   def destroy
-    @command = Command.find(params[:id]).destroy
+    @command = Command.find(params[:id])
+      @join = @command.join_com_foods[0].destroy
     respond_to do |format|
+      format.html { redirect_to command_path }
+      format.js { }
+    end
+  end
+  def supr
+      @command = Command.find(params[:id])
+      @command = Command.find(params[:id]).destroy
+      respond_to do |format|
       format.html { redirect_to commands_path }
       format.js { }
     end
+
   end
 end
