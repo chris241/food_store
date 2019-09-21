@@ -16,9 +16,9 @@ require 'faker'
                                  description:"Petit resto de spécialités coréennes (barbecue qu'on peut faire soi-même à table sur un te pan ou plaque chauffé). A tout l'air d'un boui-boui, mais la cuisine est de bien meilleure qualité ! Toutefois, tout n'est pas du même niveau, et les saveurs sont assez épicées. Essayez les Mandoo (raviolis farcis aux brèdes et à la viande), les Kimpab (sushis), les Japchae (nouilles de patates douces sautées), le Bulgogi gui (lamelles de zébu marinées) ou encore le Hemul dupbab (riz à la sauce fruits de mer). On sent un peu le graillon à la fin, mais c'est très bon !",
                                  gerant_id: 1,
                                  image_url:"https://media-cdn.tripadvisor.com/media/photo-s/10/f7/34/13/photo0jpg.jpg")
-        
-    
- 
+
+
+
 restaurant2 =Restaurant.create( name:"Le Carnivore - Restaurant Bar Lounge",
                                   address: " 66 Rue Ratsimilaho Ambatonakanga, Lalana Ranavalona III, Antananarivo 101",
                                   description:"Reprenant un concept bien établi au Brésil notamment (churrasqueira) ou à Nairobi au Kenya, ce resto propose de la viande à volonté : porc caramélisé ananas, ribs, côte d'agneau, poularde, gésier de poulet, du très bon zébu sous toutes ses formes, crocodile, sanglier, serpent... Sympa : on vous donne les drapeaux des nationalités présentes à votre table, que vous devez  coucher  quand vous n'avez plus faim. L'ensemble est correct, très branché, le service un peu dépassé par moments. A essayer pour le concept et si vous êtes carnivore avant tout ! Steeve propose aussi des véhicules en location." ,
@@ -53,9 +53,35 @@ food =Food.create!(
         description:"Le paradis des gourmands et des amoureux du bon pain. En salle ou en terrasse, l’Eclair vous surprendra par la qualité de ses créations pâtissières.",
         duration: 7,
         price: 5000,
-        menu_id: 1)
+        menu_id: 1,
+        image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZer5yuieS_PgVU6QKEImuWTnA-jLF7tQUx7uuuxg3MB7dnlOE" )
+food =Food.create!(
+                name:"Mojito à la pastèque sans alcool",
+                description:"Mojito à la pastèque sans alcool Bonjour tout le monde, Il est magnifique ce Mojito à la pastèque sans alcool, j’ai trouvé la recette sur le blog de Sophie, et j’ai pas pu résisté surtout que j’aime beaucoup le mojito sans alcool bien sur, et surtout aussi,...",
+                duration: 10,
+                price: 500,
+                menu_id: 4,
+                image_url: "https://www.amourdecuisine.fr/wp-content/uploads/2019/08/mojito-a-la-pasteque-sans-alcool.jpg" )
 
-join = JoinRestoFood.create(restaurant_id: rand(1..2), food_id: Food.all.sample)
+
+food =Food.create!(
+                name:"Riz cantonais",
+                description:"Le riz cantonais est le nom donné en France à un plat de riz frit, servi avec des lamelles de porc et des légumes mélangés, qu'on pense originaire de Canton. En réalité, on trouve des recettes de riz frit dans différents pays d'Asie de l'Est et du Sud-Est.",
+                duration: 50,
+                price: 200,
+                menu_id: 3,
+                image_url: "https://assets.afcdn.com/recipe/20160517/45721_w420h344c1cx2000cy3000.jpg" )
+
+food =Food.create!(
+                name:"CheeseCake",
+                description:"Estelle, Toquée de CuisineAZ, réside dans la région Centre. Elle partage ses recettes sucrées et salées sur son blog « Pretty Little Kitchen » pour le plus grand bonheur des internautes. Elle s’est spécialisée dans la cuisine végétarienne et propose des créations simples, gourmandes et innovantes. Son objectif est de montrer que l’on peut se régaler sainement, de l’apéritif jusqu’au dessert, en famille ou entre amis. Estelle apprécie les cuismonde, riches en saveurs. Elle confectionne également des recettes avec des huiles essentielles. ",
+                duration: 60,
+                price: 300,
+                menu_id: 2,
+                image_url: "https://static.cuisineaz.com/680x357/i124880-carpaccio-de-nectarines-feta-et-tomates.jpeg" )
+
+
+join = JoinRestoFood.create(restaurant_id: rand(1..4), food_id: rand(1..4))
 
 
 puts "restaurant 1"

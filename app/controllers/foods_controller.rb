@@ -11,7 +11,6 @@ class FoodsController < ApplicationController
 
   def new
     @menu = Menu.all
-
   end
 
   def create
