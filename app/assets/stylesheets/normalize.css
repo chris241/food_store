@@ -201,6 +201,8 @@ hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
+  position: relative;
+  top:10px;
 }
 
 /**

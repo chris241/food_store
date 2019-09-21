@@ -1,6 +1,6 @@
 
 <section  id="reserve">
-    <div class="text-content container"> 
+    <div class="text-content container">
         <div class="inner contact">
             <!-- Form Area -->
             <div class="contact-form">
@@ -13,24 +13,24 @@
 
                                             <div class="col-lg-6 col-md-6 col-xs-6">
                                                     <%= form_tag url_for(action: 'create'), method: "post" do %>
-                                                    <%= label_tag 'Nombres de personnes:' %> 
+                                                    <%= label_tag 'Nombres de personnes:' %>
                                                     <%= number_field_tag  'nbr_person', @reservation.nbr_person, class:'form' %>
-                                                     <%= hidden_field_tag 'client', current_client%> 
-                                                     <%= label_tag 'Dates:' %> 
-                                                     <%= datetime_field_tag  'date', @reservation.date, class:'form'%> 
+                                                     <%= hidden_field_tag 'client', current_client%>
+                                                     <%= label_tag 'Dates:' %>
+                                                     <%= datetime_field_tag  'date', @reservation.date, class:'form'%>
                                                      <%= submit_tag "Reserver", class: "text-center form-btn form-btn" %>
                                                     <%end%>
+                                                    
                                                 <!-- Name -->
                                             </div>
-                                            
+
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <!-- Clear -->
                             <div class="clear"></div>
-              
+
                     </div><!-- End Contact Form Area -->
                 </div><!-- End Inner -->
-           

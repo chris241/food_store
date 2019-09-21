@@ -12,7 +12,6 @@
 
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
   </head>
     <body>
 
@@ -22,8 +21,7 @@
       <div><%= flash[:success] %></div>
       <div><%= flash[:danger] %></div>
       <%= yield %>
-
-      <footer class="footer-distributed">
+      <footer class="footer-distributed" id="footer">
   	   <%=render 'layouts/footer'%>
       </footer>
 

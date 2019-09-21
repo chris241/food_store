@@ -29,13 +29,13 @@ body#sign-up{
   color: #00cb82;
   border-radius: 20px;
   margin-top: 90px;
-    margin-left: -84%;
-    margin-right: 19%;
+  margin-left: -84%;
+  margin-right: 19%;
 }
 .form-header-gerant-sign-up h2{
   font-size: 34px;
   font-weight: bold;
-      margin: 0 0 10px;
+  margin: 0 0 10px;
   font-family: 'Pacifico', sans-serif;
   }
 

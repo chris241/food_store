@@ -3,15 +3,11 @@ body#sign-in-gerant{
   color: #999;
   background-image: url(https://www.africarising.tv/wp-content/uploads/edd/2018/03/African-stock-video-of-a-black-chef-with-healthy-salad-food-and-chalk-social-media-icons-background.jpg);
   background-size: cover;
-  background-attachment: relative;
   background-repeat: no-repeat;
   font-family: 'Roboto', sans-serif;
   font-size: 16px; 
   font-weight: 400; 
   line-height: 28px;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 
@@ -35,9 +31,9 @@ body#sign-in-gerant{
   border-bottom: 1px solid rgb(0, 255, 242);
   color: #00cb82;
   border-radius: 20px;
-  margin-right: 50em;
+  margin-right: 25em;
   margin-left: 9em;
-  margin-top:15em;
+  margin-top: 4em;
   padding:65px 65px 0px 65px;
 }
 .form-header-gerant h2{
@@ -108,6 +104,5 @@ div.form-header-gerant > h2,p {
 
 div#ligne > a{
   text-decoration: none;
-  margin-right: 49px;
-  margin-left: 14em;
+  margin-left: 7em;
 }

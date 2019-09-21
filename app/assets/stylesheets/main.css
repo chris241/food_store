@@ -37,11 +37,11 @@ p.desc-text{
 }
 @font-face {
     font-family: 'icomoon';
-    src:url('../fonts/icomoonacfe.eot?-yinaf8');
-    src:url('../fonts/icomoond41d.eot?#iefix-yinaf8') format('embedded-opentype'),
-    url('../fonts/icomoonacfe.woff?-yinaf8') format('woff'),
-    url('../fonts/icomoonacfe.ttf?-yinaf8') format('truetype'),
-    url('../fonts/icomoonacfe.svg?-yinaf8#icomoon') format('svg');
+    src:url('icomoonacfe.eot?-yinaf8');
+    src:url('icomoond41d.eot?#iefix-yinaf8') format('embedded-opentype'),
+    url('icomoonacfe.woff?-yinaf8') format('woff'),
+    url('icomoonacfe.ttf?-yinaf8') format('truetype'),
+    url('icomoonacfe.svg?-yinaf8#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -199,6 +199,7 @@ INTRO CONTAINER
     font-family: 'Playball', cursive;
     font-size: 120px;
     font-weight: 400;
+    margin-top:20px;
  }
 .second-title {
     font-weight: lighter;
@@ -293,7 +294,7 @@ DESCRIPTION BODY CONTENT
 }
 
 #reservation{
-   background-color:rgba(0, 0, 0, 0.733);
+   background-color:rgba(0, 0, 0, 0.329);
    height: 36em;
 }
 .description_body {
@@ -322,24 +323,24 @@ IMAGE DESCRIPTION BODY CONTENT
 .form{
     width: 100%;
     padding: 16.94px;
-    /* background:#E2E2E2; */
     border: 1px solid rgba(13, 12, 12, 0.23);
     margin-bottom:25px;
-    color:#727272 !important;
+    color:#ffffff !important;
     font-size:13px;
     -webkit-transition: all 0.4s;
     -moz-transition: all 0.4s;
     transition: all 0.4s;
+    background-color: #2f2e2f;
 }
 
 .form:hover{
-    border:1px solid #8BC3A3;
+    border:1px solid rgb(2, 238, 104);
 }
 
 .form:focus{
     color: white;
     outline: none;
-    border:1px solid #8BC3A3;
+    border:1px solid rgb(2, 238, 104);
 }
 
 .textarea{
@@ -772,3 +773,4 @@ MEDIA QUERIE DESKTOP
 
 color:black;
 }
+
