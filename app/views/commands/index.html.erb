@@ -1,39 +1,47 @@
 <%if client_signed_in?%>
-
+<center><h1>Vos commandes</h1></center> <br>
+<div class="allcom">
       <% @commands.each do |command| %>
         <%if command.client.id == current_client.id%>
-          <strong>Commande n° <%= command.id%></strong> <br>
-          <span> <i>Nom du client:</i>  <%=command.client.first_name %> </span> <br>
-          <span> <i>Liste des répas</i> </span>
-                <% command.foods.each do |food|%>
-                <div style="margin-left:2%;">
-                  <li><%=food.name%> : <%=food.join_com_foods[0].quantity%>personnes</li>
-                </div>
-
-                <%end%>
-                <span> <i>Commandé le:</i>  <%=command.created_at %> </span>
-                <%= link_to "Enlever de la liste",supr_path(command.id) , class: "btn btn-outline-warning" , style: "width:auto"%>
-                <br> <br>
-        <%end%>
-      <%end%>
-
-<%else gerant_signed_in?%>
- <%=%>
-<% @commands.each do |command| %>
-  <%if command.foods.ids[0] ==@restaurant.foods[0].id%>
-    <strong>Commande n° <%= command.id%></strong> <br>
-    <span> <i>Nom du client:</i>  <%=command.client.first_name %> </span> <br>
-    <span> <i>Liste des répas</i> </span>
+      <div id = "main" class="card border-secondary mb-3" style="max-width: 18rem;">
+        <div id = "comtitle" class="card-header"><center>Commande n° <%= command.id%></center></div>
+        <div class="card-body text-secondary" id = "command">
+          <h5 class="card-title">Nom du client: <%=command.client.first_name %></h5>
+          <h5 class="card-title">Liste des répas</h5>
           <% command.foods.each do |food|%>
-          <div style="margin-left:2%;">
-            <li><%=food.name%> : <%=food.join_com_foods[0].quantity%>personnes</li>
-          </div>
+          <h5 style="margin-left:5%;" class="card-title">
+              <h5 class="card-title">- <%=food.name%> : <%=food.join_com_foods[0].quantity%> personnes </h5>
+          </h5>
 
           <%end%>
-          <span> <i>Commandé le:</i>  <%=command.created_at %> </span>
-          <%= link_to "Enlever de la liste",command_path(command.id) ,method: :delete , class: "btn btn-outline-warning" , style: "width:auto"%>
-          <br> <br>
-  <%end%>
+            <h5 class="card-title"><i>Commandé le:</i>  <%=command.created_at %> </h5>
+          <%= link_to "Enlever de la liste",supr_path(command.id) ,method: :delete , class: "btn btn-warning" , style: "width:auto"%>
+        </div>
+      </div>
+    <%end%>
 <%end%>
+</div>
 
+<%else gerant_signed_in?%>
+<center><h1>Commandes de tous le clients</h1></center> <br>
+<div class="allcom">
+      <% @commands.each do |command| %>
+        <%if command.foods.ids[0] ==@restaurant.foods[0].id%>
+      <div id = "main" class="card border-secondary mb-3" style="max-width: 18rem;">
+        <div id = "comtitle" class="card-header"><center>Commande n° <%= command.id%></center></div>
+        <div class="card-body text-secondary" id = "command">
+          <h5 class="card-title">Nom du client: <%=command.client.first_name %></h5>
+          <h5 class="card-title">Liste des répas</h5>
+          <% command.foods.each do |food|%>
+          <h5 style="margin-left:5%;" class="card-title">
+              <h5 class="card-title">- <%=food.name%> : <%=food.join_com_foods[0].quantity%> personnes </h5>
+          </h5>
+          <%end%>
+            <h5 class="card-title"><i>Commandé le:</i>  <%=command.created_at %> </h5>
+          <%= link_to "Enlever de la liste",supr_path(command.id) ,method: :delete , class: "btn btn-warning" , style: "width:auto"%>
+        </div>
+      </div>
+    <%end%>
+<%end%>
+</div>
 <%end%>

@@ -1,5 +1,4 @@
 class CommandsController < ApplicationController
- before_action :authenticate_client!
   def index
     @commands = Command.all
     @restaurants = Restaurant.all

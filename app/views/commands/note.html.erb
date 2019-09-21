@@ -1,17 +1,15 @@
-<center>
-<ul id = "note">
+<center> <h2>Liste de vos commandes</h2> </center>
 <% @note.each do |n| %>
     <%p n[0]%>
-    <li>
-        <strong>Répas</strong>: <%= Food.find(n[0]).name %>
-        <strong>Quantité</strong>: <%= n[1] %>
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <strong> <%= Food.find(n[0]).name %></strong>
+      <span class="badge badge-primary badge-pill"><strong> <%= n[1] %> personnes</strong></span>
     </li>
+  </ul>
     <%end%>
-</ul>
-
 
 <%= form_tag('/commands', method: :post) do %>
  <%= submit_tag "Voir votre réçu", class: "btn btn-info" %>
  <%= link_to "Commander plus", menus_path, class: "btn btn-warning" %>
 <% end %>
-</center>

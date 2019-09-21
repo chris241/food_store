@@ -13,7 +13,7 @@ footer{
 	position: relative;
 	top: 100%;
 	bottom: 100%;
-		
+
 }
 
 .footer-distributed .footer-left,
@@ -86,11 +86,11 @@ footer{
 	background-image:url("https://images.pexels.com/photos/164005/pexels-photo-164005.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
 	font-size: 17px;
 	line-height: 38px;
-	
+
 }
 
 .footer-distributed .footer-center p{
-	
+
 	display: inline-block;
 	color: #ffffff;
 	vertical-align: middle;
@@ -105,7 +105,7 @@ footer{
 }
 
 .footer-distributed .footer-center p a{
-	
+
 	color:  #04ffea;
 	text-decoration: none;;
 }
@@ -148,7 +148,7 @@ footer{
 	color: #fffdfd;
 	text-align: center;
 	line-height: 35px;
-	
+
 }
 
 /* If you don't want the footer to be responsive, remove these media queries */
@@ -164,7 +164,7 @@ footer{
 	.footer-distributed .footer-right{
 		display: block;
 		width: 100%;
-		
+
 		text-align: center;
 	}
 
