@@ -10,6 +10,13 @@ require("channels")
 require("jquery")
 require('packs/test.js')
 // require('packs/menu.js')
+//= require jquery3
+//= require jquery_ujs
+//= require turbolinks
+//= require underscore
+//= require gmaps/google
+//= require_tree .
+
 
 //= require jquery-1.10.2.min
 //= require js/bootstrap.min
@@ -42,9 +49,3 @@ require('packs/test.js')
 // const imagePath = (name) => images(name, true)
 //= require active_admin/base
 
-//= require jquery3
-//= require jquery_ujs
-//= require turbolinks
-//= require underscore
-//= require gmaps/google
-//= require_tree .
