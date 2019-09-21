@@ -1,17 +1,4 @@
-/*
-Theme Name: Restaurant
-Theme URI: http://themewagon.com/demo/Restaurant/
-Author: ThemeWagon
-Author URI: http://themewagon.com/
-Description: 
-Version: 1.0
-License: GNU General Public License v3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Text Domain: restaurant
-*/
-/*========================
-GLOBAL
-=========================*/
+
 h1 {
     font-size: 37px;
     font-weight: 900;
@@ -38,7 +25,7 @@ p.desc-text{
 }
 
 *, *:before, *:after {
-    -moz-box-sizing: border-box;  
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
 }
@@ -79,7 +66,7 @@ p.desc-text{
 
 .icon-github:before {
     content: "\e601";
-}  
+}
 
 .icon-twitter:before {
     content: "\e602";
@@ -92,10 +79,10 @@ p.desc-text{
 .carousel-slide{
     float: right !important;
     margin-right: -15px;
-} 
+}
 
 li.item{
-    position: relative; 
+    position: relative;
     width: 100%; /* for IE 6 */
 
     background: rgba(211, 15, 34, 1);
@@ -111,7 +98,7 @@ li.item{
     -moz-transition-duration: 0.5s;
     -o-transition-duration: 0.5s;
     transition-duration: 0.5s;
-     
+
     -webkit-transition-property: -webkit-transform;
     -moz-transition-property: -moz-transform;
     -o-transition-property: -o-transform;
@@ -138,9 +125,7 @@ body, html {
 
 h1, h2, p, span, a {
     font-family: "museo-sans", helvetica, sans-serif;
-    color: #2f2e2f;
-    margin: 0;
-    padding: 0;
+    padding-bottom: 14px
 }
 
 .limit {
@@ -150,10 +135,8 @@ h1, h2, p, span, a {
 }
 .color_animation {
     text-decoration: initial;
-    /* word-spacing: 5px; */
-    margin-right: -30px;
-    margin-left: -30px !important;
-    margin-bottom: 10px;
+    margin-right: -34px;
+    margin-left: 0px !important;
     color: white !important;
     -webkit-transition: color 0.3s ease-out;
     -moz-transition: color 0.3s ease-in-out;
@@ -172,12 +155,6 @@ div#bs-example-navbar-collapse-1 {
     overflow: hidden;
     text-align: center;
     text-decoration: none !important;
-}
-.navbar-brand{
-    font-family: 'Pacifico', cursive;
-    font-size: 34px !important;
-    text-decoration: none;
-    color: white !important;
 }
 
 nav {
@@ -202,7 +179,7 @@ INTRO CONTAINER
     background: url('steak.jpg') no-repeat center center;
     background-size: cover;
     text-align: center;
-    background-position: center;  
+    background-position: center;
 }
 .follow_container {
     width: 100%;
@@ -224,9 +201,9 @@ INTRO CONTAINER
     font-weight: 400;
  }
 .second-title {
-    font-weight: lighter; 
-    font-size: 30px; 
-    font-style: italic; 
+    font-weight: lighter;
+    font-size: 30px;
+    font-style: italic;
     text-transform: capitalize;
 }
 
@@ -266,36 +243,36 @@ INTRO CONTAINER
 }
 
 .beer.background_content{
-    background: url('beer.jpg') no-repeat center center; 
+    background: url('beer.jpg') no-repeat center center;
     background-size: cover;
     background-position: 70% 50%;
 }
 
 .bread.background_content{
-    background: url('bread.jpg') no-repeat center center; 
+    background: url('bread.jpg') no-repeat center center;
     background-size: cover;
     background-position: 70% 50%;
 }
  .featured.background_content{
-    background: url('featured.jpg') no-repeat center center; 
+    background: url('featured.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
  .pricing.background_content{
-    background: url('pricing.jpg') no-repeat center center; 
+    background: url('pricing.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 .reservation.background_content{
-    background: url('reservation-seat.jpg') no-repeat center center; 
+    background: url('reservation-seat.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
 .bread.background_content{
-    background: url('breakfast.jpg') no-repeat center center; 
+    background: url('breakfast.jpg') no-repeat center center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -311,12 +288,13 @@ DESCRIPTION BODY CONTENT
     z-index: 99;
     position: relative;
     background: rgba(255, 255, 255, 0.555);
-    text-align: center; 
-    
+    text-align: center;
+
 }
 
 #reservation{
    background-color:rgba(0, 0, 0, 0.733);
+   height: 36em;
 }
 .description_body {
     margin: 45px auto;
@@ -368,7 +346,7 @@ IMAGE DESCRIPTION BODY CONTENT
     height: 200px;
     max-height: 200px;
     max-width: 100%;
-} 
+}
 /* Generic Button Styles */
 .button{
     padding:8px 12px;
@@ -465,21 +443,21 @@ MEDIA QUERIES TABLET
 =========================*/
 
 
-    @media (min-width: 400px) { 
+    @media (min-width: 400px) {
     .starter_container {
         height: 100%;
     }
     .background_content h1 {
       top: 33%;
-    }  
+    }
 }
 
 /*========================
 MEDIA QUERIES TABLET
 =========================*/
 
-    @media (min-width: 660px) { 
-  
+    @media (min-width: 660px) {
+
         .starter_container {
             height: 100%;
         }
@@ -496,7 +474,7 @@ MEDIA QUERIES TABLET
         padding-right: -15px;
     }
     .navbar-brand{
-        font-family: 'Pacifico', cursive;
+        font-family: cursive;
         font-size: 34px !important;
         text-decoration: none;
         color: white !important;
@@ -512,6 +490,7 @@ MEDIA QUERIES TABLET
         padding: 0;
         background-color: #1e1e1e;
         text-align: center;
+
     }
     .logo {
         display: none;
@@ -527,8 +506,8 @@ MEDIA QUERIES TABLET
     }
 
  /*###########################################*/
-  /*#############       NavBar       ###########*/   
-   /*###########################################*/      
+  /*#############       NavBar       ###########*/
+   /*###########################################*/
     .logo a,
     .main-nav a {
         font-size: 0.75000em;
@@ -549,8 +528,8 @@ MEDIA QUERIES TABLET
         border: 5px solid rgba(0,0,0,0);
         display: inline-block;
         width: 45px;
-        height: 45px;  
-        background-size: 30px; 
+        height: 45px;
+        background-size: 30px;
     }
     .direction a:hover {
         border: 5px solid #6D903C;
@@ -615,7 +594,7 @@ MEDIA QUERIES TABLET
     section.social_connect {
         background-color: black;
         text-align: center;
-        
+
   }
 
     .social_heading {
@@ -635,14 +614,14 @@ MEDIA QUERIES TABLET
         display: inline-block;
         margin: 0 auto;
         width: 325px;
-    } 
+    }
  /*END OF MEDIA QUERY*/
 
 /*========================
 MEDIA QUERIE DESKTOP
 =========================*/
 
-@media (min-width: 1100px) { 
+@media (min-width: 1100px) {
 
     .starter_container {
         background-attachment: fixed;
@@ -732,54 +711,54 @@ MEDIA QUERIE DESKTOP
     }
 }
 /*front recherche */
-.buscar-caja { 
-  position: absolute; 
-  top: 75%; left: 50%; 
-  transform: translate(-50%, -50%); 
-  background: #fff; 
-  border-radius: 40px; 
-  padding: 10px; 
-} 
-.buscar-caja:hover > .buscar-txt 
+.buscar-caja {
+  position: absolute;
+  top: 75%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 40px;
+  padding: 10px;
+}
+.buscar-caja:hover > .buscar-txt
 {
-  width: 230px; 
-  padding: 0 6px; 
-} 
+  width: 230px;
+  padding: 0 6px;
+}
 .buscar-caja:hover > .buscar-btn {
-  background: white; 
-  color: black; 
-} 
+  background: white;
+  color: black;
+}
 
-.buscar-btn { 
-  
-  float: right; 
-  width: 40px; 
-  height: 40px; 
-  border-radius: 50%; 
-  
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  transition: 0.4s; 
-  color: white; 
-  cursor: pointer; 
-} 
-.buscar-btn > i 
-{ 
-  font-size: 18px; 
-} 
-.buscar-txt { 
-  border: none; 
-  background: none; 
-  outline: none; 
-  float: left; 
-  padding: 0; 
-  color: #333; 
-  font-size: 16px; 
-  transition: 0.4s; 
-  line-height: 40px; 
-  width: 0px; 
-  font-weight: bold; 
+.buscar-btn {
+
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  color: white;
+  cursor: pointer;
+}
+.buscar-btn > i
+{
+  font-size: 18px;
+}
+.buscar-txt {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: #333;
+  font-size: 16px;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 0px;
+  font-weight: bold;
 }
 
 .btn-primary{

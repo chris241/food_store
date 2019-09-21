@@ -1,26 +1,19 @@
 
 <body class="menucateg">
+  <div class="menu">
+    <%@menus.each_with_index do|menu,i|%>
 
-<div class="menu">
-<%@menus.each_with_index do|menu,i|%>
-        
-            <tr>
-                    <td>  
-                        <%=link_to "#{menu.category} ", food_path(i+1),type:"button", class: " categ btn btn-outline-primary btn-lg"%> 
-                    </td>
-            </tr>
-        
-        <% end %>
+        <tr>
+          <td>
+              <%=link_to "#{menu.category} ", food_path(i+1),type:"button", class: " categ btn btn-outline-primary btn-lg"%>
+          </td>
+        </tr>
 
+    <% end %>
+  </div>
+  <div id="container">
+    <div class="sign-three">
+      <div class="restaurant">menu du Jour...</div>
     </div>
-
-        <div id="container">
-                <div class="sign-three">
-                    <div class="restaurant">menu du Jour...</div>
-                </div>
-        </div>
-
+  </div>
 </body>
-
-
-

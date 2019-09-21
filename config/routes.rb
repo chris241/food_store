@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/reserve_food/:food_id', to: 'reservations#new', as: 'reserve_food'
 
+ get 'restaurants/ourteam', to: 'restaurants#ourteam', as: 'ourteam'
+
   resources :foods do
     resources :foodavatar, only: [:create,:show]
   end
@@ -19,16 +21,16 @@ Rails.application.routes.draw do
 
   resources :restaurants do
   resources :restoavatar,only: [:create,:show]
-  end	
+  end
   devise_for :gerants, path: 'gerants', controllers: { registrations: "gerants/registrations",sessions: "gerants/sessions" }
   resources :commands
 
 
-  
+
   resources :profiles, only:[:index] do
   	resources :avatars, only: [:create]
   end
- 
+
 
   devise_scope :client do
      get '/clients/sign_out'=> 'devise/sessions#destroy'
