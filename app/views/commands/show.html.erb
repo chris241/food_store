@@ -8,21 +8,21 @@
           <th >Menus</th>
           <th >Répas</th>
           <th >Quantités</th>
-          <th >Prix unitaire </th>
-          <th >Prix total </th>
+          <th >Prix unitaire (€)</th>
+          <th >Prix total (€)</th>
         </tr>
       </thead>
 
     <tbody>
         <% @tab.each do |tab| %>
-            <tr id = "<%= tab.id%>">
+            <tr>
               <td><%=tab.menu.category %></td>
               <td><%=tab.name%></td>
-              <td><%=tab.join_com_foods[-1].quantity%></td>
+              <td><%=tab.join_com_foods[0].quantity%></td>
               <td><%=tab.price%></td>
               <td><%=(tab.price).to_i*(tab.join_com_foods[0].quantity).to_i%></td>
               <td>
-                <%= link_to "Enlever de la liste",command_path(tab.id) ,method: :delete , class: "btn btn-outline-warning" , style: "width:auto", remote: true %>
+                <%= link_to "Enlever de la liste",command_path(tab.id) ,method: :delete , class: "btn btn-outline-warning" , style: "width:auto"%>
               </td>
             </tr>
         <%end%>
@@ -33,35 +33,24 @@
           <%= %>
         </td>
         <td >Total</td>
-          <td ><%=@sum%> Ariary</td>
+          <td ><%=@sum%> €</td>
 
-          <td>
-          <%= form_tag commands_path do %>
-            <article>
-              <% if flash[:error].present? %>
-                <div id="error_explanation">
-                  <p><%= flash[:error] %></p>
-                </div>
-              <% end %>
-              <label class="amount">
-              </label>
-            </article>
-          
-            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-                    data-description="A month's subscription"
-                    data-amount="<%=(params[:total_price].to_f)*100%>"
-                    data-locale="auto">
-        
-                    </script>
-          <% end %>
-          </td>
 
+
+          <%if current_client.reservations[0]==nil%>
           <td>
-          
+            <%= link_to "Reserver table", new_reservation_path, class: "btn btn-primary",class:"btn btn-primary", style: "width:auto"%>
           </td>
+          <%else%>
+          <td>
+          <%= link_to "Reserver une autre table", new_reservation_path, class: "btn btn-primary",class:"btn btn-primary", style: "width:auto"%>
+          <%= link_to "Confirmer ma reservation", edit_reservation_path, class: "btn btn-primary",class:"btn btn-primary", style: "width:auto"%>
+          </td>
+          <%end%>
+
+
+
       </tr>
     </tbody>
   </table>
-  
 </body>
