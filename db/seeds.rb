@@ -12,7 +12,6 @@ Restaurant.destroy_all
 require 'faker'
 
 
-
 url = [
   "https://media-cdn.tripadvisor.com/media/photo-o/0e/7a/70/64/2eme-salle-du-restaurant.jpg",
   "https://www.toute-la-franchise.com/images/zoom/fiches-franchises/restaurant_de_viande-franchis_ela_c__te_et_l'ar__te_4.jpg",

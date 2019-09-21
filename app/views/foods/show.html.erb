@@ -7,12 +7,16 @@
     <% if food.foodavatar.attached? == true%>
         <%= image_tag food.foodavatar,class:"food_image"%></br>
     <%else%>
-     <%=image_tag food.image_url%></br>
+     <%= food.image_url%></br>
     <%end%>
+
+
     <div class ="food_description">
         <span>Description: </span></br> <%=food.description%></br></br>
         <span>Temps de préparation: </span><%=food.duration%> mn</br>
         <span>Prix: </span><b id="prix"><%=food.price%> €</b></br>
+
+    </div>
 
     </div>
     <%if gerant_signed_in? %>
@@ -20,6 +24,7 @@
             <%= form_tag foodavatar_path(@menu.id,food.id), multipart: true do %>
             <%= file_field_tag :foodavatar, direct_upload: true %></br>
             <%= submit_tag "mettre à jour" %>
+
             <%end%>
     <%end%>
     </div>

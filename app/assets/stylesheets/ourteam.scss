@@ -7,8 +7,8 @@
 
 .bod {
 	background-image: url('fond.jpg');
-
-	background-size:auto;
+	background-size: cover;
+	background-repeat: no-repeat;
 	// background-position: center	center;
 	// display: flex;
 	flex-direction: column;
@@ -42,6 +42,7 @@
 	transition: transform 0.2s ease-in-out;
 	width: 20%;
 	min-width: 100px;
+	display: inline-block;
 
 }
 
@@ -81,7 +82,7 @@ h2{
 }
 
 .card1:nth-of-type(5) {
-	background-image: url('Chris.jpg');
+	background-image: url('chris1.jpg');
 }
 
 .card1:nth-of-type(6) {
@@ -243,12 +244,6 @@ div.descri h3{
 	font-size: 27px;
 }
 
-div#all{
-	display: flex;
-	margin:1%;
-	margin-bottom: 31px;
-
-}
 
 .descri{
 	color:white;
@@ -259,25 +254,7 @@ p.fonct{
 }
 
 div.nam{
-	margin-left:2em;
+	position: relative;
+	top:20em;
 }
 
-div.kin{
-	margin-left:9em;
-}
-
-div.aro{
-	margin-left:9em;
-}
-
-div.menja{
-	margin-left:9em;
-}
-
-div.chris{
-	margin-left:9em;
-}
-
-div.tsiry{
-	margin-left:9em;
-}

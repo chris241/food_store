@@ -11,6 +11,8 @@ footer{
 	text-align: left;
 	font: bold 16px sans-serif;
 	position: relative;
+	top:12em;
+
 
 		
 }
@@ -77,7 +79,7 @@ footer{
 	border-radius: 50%;
 	text-align: center;
 	line-height: 42px;
-	margin: 10px 15px;
+
 	vertical-align: middle;
 }
 
@@ -147,7 +149,6 @@ footer{
 	color: #fffdfd;
 	text-align: center;
 	line-height: 35px;
-	margin-right: 3px;
 	
 }
 

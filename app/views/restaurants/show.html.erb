@@ -1,9 +1,7 @@
-
-
-<% if gerant_signed_in? %>
+<% if gerant_signed_in? %>  
     <section id="story" class="description_content">
     <div class="text-content container">
-        <div class="col-md-6">
+        <div class="col-md-6" id="show-c">
             <h1>About us</h1>
             <div class="fa fa-cutlery fa-2x">
                 <strong><%=@restaurant.name%></strong>
@@ -23,7 +21,7 @@
            <% if @restaurant.restoavatar.attached? == true%>
            <%=image_tag @restaurant.restoavatar%>
            <%else%>
-            <%= image_tag @restaurant.image_url %>
+            <%= image_tag @restaurant.image_url, id:"image-show" %>
             <%end%>
 
             <%= form_tag restaurant_restoavatar_index_path(session[:resto_id]), multipart: true do %>
@@ -56,7 +54,7 @@
            <% if @restaurant.restoavatar.attached? == true%>
            <%=image_tag @restaurant.restoavatar%>
            <%else%>
-            <%= image_tag @restaurant.image_url %>
+            <%= image_tag @restaurant.image_url, id:"image-show" %>
             <%end%>
     </div>
     </section>
