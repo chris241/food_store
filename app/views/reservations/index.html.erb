@@ -10,7 +10,6 @@
         <th scope="col">Nombre </th>
         <th scope="col">Action</th>
       </tr>
-      </thead>
         <%@reservations.each do |reservation|%>
         <%if reservation.restaurant.gerant.id == current_gerant.id%>
           <tbody>
