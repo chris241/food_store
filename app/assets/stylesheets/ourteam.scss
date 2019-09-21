@@ -2,15 +2,12 @@
 
 * {
 	box-sizing: border-box;
-
 }
 
 .bod {
 	background-image: url('fond.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	// background-position: center	center;
-	// display: flex;
 	flex-direction: column;
 	font-family: 'Muli';
 	justify-content: center;
@@ -23,7 +20,7 @@
 .cards-container {
 	display: flex;
 	justify-content: center;
-	perspective: 4000px;
+	perspective: 100em;
 	width: 100%;
 }
 
