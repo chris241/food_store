@@ -6,23 +6,23 @@
 .menu{
 
     position: absolute;
-    left: 20%; 
-    top: 92%;
-    
-    
+    left: 35%;
+    top: 20%;
+
+
 }
 .menucateg{
-    background-image: url(https://pointos.com/wp-content/uploads/2017/10/blur-background-of-pub-restaurant-with-wood-table-628137314_2125x1416.jpeg);
+    background-image: url(fondMenu.jpeg);
     background-size: cover;
 }
 
 
 .categ {
     text-emphasis: 10em;
-    color: white; 
-    font-size: 35px; 
+    color: white;
+    font-size: 245%;
     font-weight: bold;
-    font-family: Georgia, 'Times New Roman', Times, serif;   
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
@@ -70,12 +70,12 @@ html,
     font-size: 5vw;
     line-height: 4vw;
     // padding-top: ;
-    text-shadow: 
-    .1vw 0vw .25vw #28D7FE, .2vw 0vw .25vw #28D7FE, .4vw 0vw .25vw #28D7FE, 
+    text-shadow:
+    .1vw 0vw .25vw #28D7FE, .2vw 0vw .25vw #28D7FE, .4vw 0vw .25vw #28D7FE,
     .1vw 0vw .1vw #1041FF, .2vw 0vw 0vw #1041FF, .4vw 0vw 0vw #1041FF,
     .1vw 0vw .1vw #1041FF, .2vw 0vw .1vw #1041FF, .4vw 0vw 0vw #1041FF,
     .1vw 0vw .8vw #1041FF, .2vw 0vw .8vw #1041FF, .4vw 0vw .8vw #1041FF, .2vw 0vw .5vw #1041FF,
-    .1vw 0vw .5vw #1041FF, .2vw 0vw .5vw #1041FF, .4vw 0vw .5vw #1041FF, 
+    .1vw 0vw .5vw #1041FF, .2vw 0vw .5vw #1041FF, .4vw 0vw .5vw #1041FF,
     .1vw 0vw 10vw #1041FF, .2vw 0vw 10vw #1041FF, .4vw 0vw 10vw #1041FF;
     color: #28D7FE;
 
@@ -91,13 +91,16 @@ html,
     transform: rotate(-10deg);
     margin-left: 30vw;
     margin-top: 19vw;
-    text-shadow: 
-    .1vw 0vw .25vw #28D7FE, .2vw 0vw .25vw #28D7FE, .4vw 0vw .25vw #28D7FE, 
+    text-shadow:
+    .1vw 0vw .25vw #28D7FE, .2vw 0vw .25vw #28D7FE, .4vw 0vw .25vw #28D7FE,
     .1vw 0vw .1vw #1041FF, .2vw 0vw 0vw #1041FF, .4vw 0vw 0vw #1041FF,
     .1vw 0vw .1vw #1041FF, .2vw 0vw .1vw #1041FF, .4vw 0vw 0vw #1041FF,
     .1vw 0vw .8vw #1041FF, .2vw 0vw .8vw #1041FF, .4vw 0vw .8vw #1041FF, .2vw 0vw .5vw #1041FF,
-    .1vw 0vw .5vw #1041FF, .2vw 0vw .5vw #1041FF, .4vw 0vw .5vw #1041FF, 
+    .1vw 0vw .5vw #1041FF, .2vw 0vw .5vw #1041FF, .4vw 0vw .5vw #1041FF,
     .1vw 0vw 10vw #1041FF, .2vw 0vw 10vw #1041FF, .4vw 0vw 10vw #1041FF;
   }
-  
+
+
+
+
 

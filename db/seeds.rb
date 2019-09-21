@@ -38,20 +38,24 @@ restaurant4 =Restaurant.create( name:"Carlton Madagascar",
                                    )
 
 
+
+
+
 category =["Dessert","Entrée","Résistance","Boisson"]
 
 for i in (0..category.length-1)
   menu = Menu.create(category:category[i])
 end
 
+
 food =Food.create!(
         name:"l’Eclair",
         description:"Le paradis des gourmands et des amoureux du bon pain. En salle ou en terrasse, l’Eclair vous surprendra par la qualité de ses créations pâtissières.",
         duration: 7,
         price: 5000,
-        menu_id: 1
-      )
+        menu_id: 1)
 
+join = JoinRestoFood.create(restaurant_id: rand(1..2), food_id: Food.all.sample)
 
 
 puts "restaurant 1"

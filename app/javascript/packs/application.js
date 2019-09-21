@@ -9,7 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 require('packs/test.js')
-// require('packs/menu.js')
+require('packs/menu.js')
 
 //= require jquery-1.10.2.min
 //= require js/bootstrap.min
