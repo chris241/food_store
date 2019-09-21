@@ -13,7 +13,6 @@ require 'faker'
 
 
 
-
 url = [
   "https://media-cdn.tripadvisor.com/media/photo-o/0e/7a/70/64/2eme-salle-du-restaurant.jpg",
   "https://www.toute-la-franchise.com/images/zoom/fiches-franchises/restaurant_de_viande-franchis_ela_c__te_et_l'ar__te_4.jpg",
@@ -30,11 +29,11 @@ url = [
 for a in (0..url.length-1)
   restaurant = Restaurant.create(
         name: Faker::Restaurant.name,
-        address:Faker::Address.street_address,
-        description:Faker::Restaurant.description,
-        image_url:url[a],
-        gerant:Gerant.all.sample
-    )
+        address: Faker::Address.street_address,
+        description: Faker::Restaurant.description,
+        gerant_id:Gerant.all.sample,
+        image_url: url[a]
+        )
 end
 
 
@@ -44,16 +43,28 @@ for i in (0..category.length-1)
   menu = Menu.create(category:category[i])
 end
 
-5.times do
+
+urlfood = [
+"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSZbitxjD5JfwpXIiBVTxyYIXvUySDCG4si2PYxIpxeM88yUs_N",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTAWiD0lJk7CjmAzRmix7BRGpN8-OoZMB50S82SxUb9hsWLnXLh",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR_BT3kk0VsL5jS5ryRDfq0naUf6bCBtRJWxN1TtmALHGwoCJRX",
+"http://recettescookeo.com/wp-content/uploads/2015/03/xrecettes-plats-cookeo.jpg.pagespeed.ic.Ie3QCX1EzE.jpg",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRR_2IAEiooW0c37GjGmvlvyQFLS8evCW2RfPZ3fP8Th4FvEvHV",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRGRsQltJactIHI4SIsD_SOaAyExkpog8rW_ZuZUxKTJQw5qZSO",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ9J84b-TUgyE-rqjp78Q1ZNB1wW_8q_-WUkGTxOrWhdE2eMWav"
+]
+for a in (0..urlfood.length-1)
 food =Food.create!(
         name:Faker::Food.dish,
         description:Faker::Food.description,
         duration:rand(1..60),
         price:Faker::Commerce.price,
-        menu:Menu.all.sample
+        menu:Menu.all.sample,
+        image_url: urlfood[a]
       )
 end
 
+join = JoinRestoFood.create(restaurant_id: rand(1..2), food_id: Food.all.sample)
 
 puts "resto"
 puts "menu"
