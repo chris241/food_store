@@ -11,9 +11,8 @@ footer{
 	text-align: left;
 	font: bold 16px sans-serif;
 	position: relative;
-	top:12em;
-
-
+	top: 100%;
+	bottom: 100%;
 		
 }
 
