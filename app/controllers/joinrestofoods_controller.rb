@@ -1,5 +1,7 @@
 class JoincomfoodsController < ApplicationController
-  def destroy
-  @join = JoinComFood.find(params[:id]).destroy
+  def new
+  @join = JoinComFood.new
+  end
+  def create
   end
 end

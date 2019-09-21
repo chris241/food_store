@@ -81,7 +81,7 @@ food =Food.create!(
                 image_url: "https://static.cuisineaz.com/680x357/i124880-carpaccio-de-nectarines-feta-et-tomates.jpeg" )
 
 
-join = JoinRestoFood.create(restaurant_id: Restaurant.all.sample, food_id: Food.all.sample)
+join = JoinRestoFood.create(restaurant_id: rand(1..4), food_id: rand(1..4))
 
 
 puts "restaurant 1"
