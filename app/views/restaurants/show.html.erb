@@ -7,21 +7,21 @@
                 <strong><%=@restaurant.name%></strong>
             </div>
 
-            <p class="desc-text"><%=@restaurant.description%></p> 
+            <p class="desc-text"><%=@restaurant.description%></p>
             <br>
             <p class="desc-text"> <i>Adresse:</i><%=@restaurant.address%></p> <br> <br>
             <p class="desc-text"><%=link_to "Nos menus", menus_path, class: "btn btn-info"%>
-            <%=link_to "Reserver table", new_reservation_path,class:"btn btn-primary"%>
+            <%=link_to "Commandes", commands_path,class:"btn btn-primary"%>
             <%=link_to "Editer",  edit_restaurant_path, class:"btn btn-success"%>
             <%= link_to 'Effacer',restaurant_path, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%>
-            </p> 
+            </p>
         </div>
 
         <div class="col-md-6">
            <% if @restaurant.restoavatar.attached? == true%>
            <%=image_tag @restaurant.restoavatar%>
            <%else%>
-            <%= image_tag @restaurant.image_url, id:"image-show" %> 
+            <%= image_tag @restaurant.image_url, id:"image-show" %>
             <%end%>
 
             <%= form_tag restaurant_restoavatar_index_path(session[:resto_id]), multipart: true do %>
@@ -29,9 +29,10 @@
             <%= submit_tag "mettre à jour" %>
             <% end %>
         </div>
+        <%= link_to "Afficher tous les repas",foods_path, class: "btn btn-outline-info" , style: "width:auto"%>
     </section>
 
-<%else%>  
+<%else%>
     <% if client_signed_in?|| !gerant_signed_in? %>
        <section id="story" class="description_content">
     <div class="text-content container">
@@ -41,19 +42,19 @@
                 <strong><%=@restaurant.name%></strong>
             </div>
 
-            <p class="desc-text"><%=@restaurant.description%></p> 
+            <p class="desc-text"><%=@restaurant.description%></p>
             <br>
             <p class="desc-text"> <i>Adresse:</i><%=@restaurant.address%></p> <br> <br>
             <p class="desc-text"><%=link_to "Nos menus", menus_path, class: "btn btn-info"%>
             <%=link_to "Reserver table", new_reservation_path,class:"btn btn-primary"%>
-            </p> 
+            </p>
         </div>
 
         <div class="col-md-6">
            <% if @restaurant.restoavatar.attached? == true%>
            <%=image_tag @restaurant.restoavatar%>
            <%else%>
-            <%= image_tag @restaurant.image_url, id:"image-show" %> 
+            <%= image_tag @restaurant.image_url, id:"image-show" %>
             <%end%>
     </div>
     </section>

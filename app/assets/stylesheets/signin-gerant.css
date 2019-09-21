@@ -1,6 +1,7 @@
-body#sign-in{
+
+body#sign-in-gerant{
   color: #999;
-  background-image: url(sign-in.jpg);
+  background-image: url(https://www.africarising.tv/wp-content/uploads/edd/2018/03/African-stock-video-of-a-black-chef-with-healthy-salad-food-and-chalk-social-media-icons-background.jpg);
   background-size: cover;
   background-attachment: relative;
   background-repeat: no-repeat;
@@ -12,6 +13,8 @@ body#sign-in{
   background-attachment: fixed;
   background-size: cover;
 }
+
+
 
 .form-control{
   min-height: 41px;
@@ -27,20 +30,24 @@ body#sign-in{
   border-radius: 3px;
   }
 
-.form-header{
+.form-header-gerant{
   background: rgba(26, 25, 25, 0.5);
   border-bottom: 1px solid rgb(0, 255, 242);
   color: #00cb82;
   border-radius: 20px;
+  margin-right: 25em;
+  margin-left: 9em;
+  margin-top:15em;
+  padding:65px 65px 0px 65px;
 }
-.form-header h2{
+.form-header-gerant h2{
   font-size: 34px;
   font-weight: bold;
       margin: 0 0 10px;
   font-family: 'Pacifico', sans-serif;
   }
 
-.form-header p{
+.form-header-gerant p{
   margin: 20px 0 15px;
   font-size: 17px;
   line-height: normal;
@@ -48,12 +55,12 @@ body#sign-in{
   color: white;
 }
 
-  .signup-form{
+  .signup-form-gerant{
   margin: 0 auto;	
   padding: 30px 0;	
 }
 
-  .signup-form form{
+  .signup-form-gerant form{
     color: rgb(255, 255, 255);
     border-radius: 3px;
     margin-bottom: 15px;
@@ -61,20 +68,20 @@ body#sign-in{
     padding: 30px;
   }
 
-.signup-form .form-group{
+.signup-form-gerant .form-group{
   margin-bottom: 20px;
 }		
 
-.signup-form label{
+.signup-form-gerant label{
   font-weight: normal;
   font-size: 13px;
 }
 
-  .signup-form input[type="checkbox"]{
+  .signup-form-gerant input[type="checkbox"]{
   margin-top: 2px;
 }
 
-  .signup-form .btn{        
+  .signup-form-gerant .btn{        
       font-size: 16px;
       font-weight: bold;
   background: #00cb82;
@@ -82,19 +89,25 @@ body#sign-in{
   min-width: 200px;
   }
 
-.signup-form .btn:hover, .signup-form .btn:focus{
+.signup-form-gerant .btn:hover, .signup-form-gerant .btn:focus{
   background: #00b073 !important;
       outline: none;
 }
 
-  .signup-form a{
+  .signup-form-gerant a{
   color: #00cb82;		
 }
 
-  .signup-form a:hover{
-  text-decoration: underline;
+  .signup-form-gerant a:hover{
+  text-decoration: none;
 }
 
-div.form-header > h2,p {
+div.form-header-gerant > h2,p {
   text-align: center;
+}
+
+div#ligne > a{
+  text-decoration: none;
+  margin-right: 49px;
+  margin-left: 14em;
 }

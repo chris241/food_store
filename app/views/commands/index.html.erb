@@ -1,17 +1,39 @@
+<%if client_signed_in?%>
 
+      <% @commands.each do |command| %>
+        <%if command.client.id == current_client.id%>
+          <strong>Commande n° <%= command.id%></strong> <br>
+          <span> <i>Nom du client:</i>  <%=command.client.first_name %> </span> <br>
+          <span> <i>Liste des répas</i> </span>
+                <% command.foods.each do |food|%>
+                <div style="margin-left:2%;">
+                  <li><%=food.name%> : <%=food.join_com_foods[0].quantity%>personnes</li>
+                </div>
 
+                <%end%>
+                <span> <i>Commandé le:</i>  <%=command.created_at %> </span>
+                <%= link_to "Enlever de la liste",supr_path(command.id) , class: "btn btn-outline-warning" , style: "width:auto"%>
+                <br> <br>
+        <%end%>
+      <%end%>
+
+<%else gerant_signed_in?%>
+ <%=%>
 <% @commands.each do |command| %>
+  <%if command.foods.ids[0] ==@restaurant.foods[0].id%>
+    <strong>Commande n° <%= command.id%></strong> <br>
+    <span> <i>Nom du client:</i>  <%=command.client.first_name %> </span> <br>
+    <span> <i>Liste des répas</i> </span>
+          <% command.foods.each do |food|%>
+          <div style="margin-left:2%;">
+            <li><%=food.name%> : <%=food.join_com_foods[0].quantity%>personnes</li>
+          </div>
 
-<strong>Commande n° <%= command.id%></strong> <br>
-<span> <i>Nom du client:</i>  <%=command.client.first_name %> </span> <br>
-<span> <i>Liste des répas</i> </span>
-      <% command.foods.each do |food|%>
-      <div style="margin-left:2%;">
-        <li><%=food.name%> : <%=food.join_com_foods[0].quantity%>personnes</li>
-      </div>
+          <%end%>
+          <span> <i>Commandé le:</i>  <%=command.created_at %> </span>
+          <%= link_to "Enlever de la liste",command_path(command.id) ,method: :delete , class: "btn btn-outline-warning" , style: "width:auto"%>
+          <br> <br>
+  <%end%>
+<%end%>
 
-    <%end%>
-    <span> <i>Commandé le:</i>  <%=command.created_at %> </span>
-    <%= link_to "Enlever de la liste",command_path(command.id) ,method: :delete , class: "btn btn-outline-warning" , style: "width:auto"%>
-    <br> <br>
 <%end%>
