@@ -82,7 +82,7 @@ class CommandsController < ApplicationController
 	     @sum = totalprice
 	   end
 
-     def paiement
+  def paiement
     @amount = @sum
     customer = Stripe::Customer.create({
     email: params[:stripeEmail],
