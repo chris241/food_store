@@ -29,6 +29,7 @@ class CommandsController < ApplicationController
     @command.save
 
 
+
     session[:note].each do |n|
       @food = Food.find(n[0])
       @joinCommand = JoinComFood.create(command_id: @command.id, food_id: @food.id, quantity: n[1])

@@ -1,4 +1,4 @@
-<center><h2>Menu</h2></center>
+<center><h2><%=@menu.category%>s disponibles </h2></center>
 <%@restaurant.foods.each do |food|%>
 <%if food.menu.id== @menu.id%>
     <div class ="food_content">
@@ -7,7 +7,7 @@
     <% if food.foodavatar.attached? == true%>
         <%= image_tag food.foodavatar,class:"food_image"%></br>
     <%else%>
-     <%= food.image_url%></br>
+     <%=image_tag food.image_url%></br>
     <%end%>
 
 
@@ -18,7 +18,6 @@
 
     </div>
 
-    </div>
     <%if gerant_signed_in? %>
     <div class ="food_buttonImage">
             <%= form_tag foodavatar_path(@menu.id,food.id), multipart: true do %>
