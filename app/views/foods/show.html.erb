@@ -7,7 +7,7 @@
     <% if food.foodavatar.attached? == true%>
         <%= image_tag food.foodavatar,class:"food_image"%></br>
     <%else%>
-     <%=image_tag food.image_url%></br>
+     <%=image_tag food.image_url, alt:"img.jpg"%></br>
     <%end%>
 
 

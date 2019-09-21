@@ -42,7 +42,7 @@ box-shadow: 1px 1px 6px black;
 
     position: relative;
     left: 42%;
-    top: -29%;
+    top: -22%;
     width: 15%;
 }
 
@@ -57,7 +57,83 @@ box-shadow: 1px 1px 6px black;
 .food_buttonImage{
 
     position: relative;
-    top: -14%;
+    top: -10%;
     margin-left: 1%;
     width: 32%;
+    
+}
+
+
+
+// --------------------------------CSS pour food-index  mode Gerant----------------------------
+
+
+#Menuss{
+    position: relative;
+    left: 45%;
+    width: 15%;
+}
+
+#food_content{
+
+    position: relative;
+    left: 42%;
+    top: 7%;
+    font-family: cursive;
+    font-size: 37px;
+    width: 55%;
+}
+
+
+.prix{
+    font-size: 22px;
+    color: blue;
+}
+
+
+#food_description{
+
+box-shadow: 1px 1px 6px black;
+    position: relative;
+    left: 42%;
+    top: -30%;
+    width: 55%;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+
+#food_button{
+
+    position: relative;
+    left: 42%;
+    top: -29%;
+    width: 15%;
+    
+}   
+
+#food_image{
+
+ width: 40%;
+ height: 40%;
+ margin-left: 1%;
+ 
+}
+
+#food_buttonImage{
+
+    position: relative;
+    top: -10%;
+    margin-left: 1%;
+    width: 32%;
+    
+}
+#btnnouveau{
+
+    position: relative;
+    top: -15%;
+    margin-left: 85%;
+    width: 10%;
+    height: 4%;
 }

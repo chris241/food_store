@@ -1,35 +1,33 @@
 <%if gerant_signed_in?%>
 
-<%=link_to "Nouveau repas", new_food_path, class: "btn btn-info"%>
-<center><h2>Menu</h2></center>
+<%=link_to "Nouveau repas", new_food_path, id:"btnnouveau",class: "btn btn-info"%>
+<h2 id="Menuss">Menu</h2>
 <%@foods.each do |food|%>
 
 
-    <div class ="food_content">
-
-
+    <div id="food_content" class ="food_content">
         <%=food.name%>
-
     </div>
 
     <% if food.foodavatar.attached? == true%>
 
-        <%= image_tag food.foodavatar,class:"food_image"%></br>
+        <%= image_tag food.foodavatar,class:"food_image", id:"food_image"%></br>
 
     <%else%>
+
       <img  src="<%=food.image_url%>" alt="img02" >
     <%end%>
 
-    <div class ="food_description">
+    <div id="food_description" class ="food_description">
         <span>Description: </span></br> <%=food.description%></br></br>
         <span>Temps de préparation: </span><%=food.duration%> mn</br>
-        <span>Prix: </span><b id="prix"><%=food.price%> €</b></br>
+        <span>Prix: </span><b id="prix" class="prix"><%=food.price%> €</b></br>
 
     </div>
-        <div class ="food_button">
+        <div id="food_button" class ="food_button">
 
-            <%=link_to "Edit", edit_food_path(food.id), class: "btn btn-warning"%>
-            <%= link_to 'Destroy', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger", style:"color:red;"%>
+            <%=link_to "Edit", edit_food_path(food.id), class: "btn btn-warning btn-lg active"%>
+            <%= link_to 'Destroy', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger btn-lg active", style:"color:red;"%>
             <br> <br> <br> <br>
         </div>
     <%end%>

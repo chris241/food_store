@@ -25,3 +25,11 @@
  *= require_tree .
  *= require_self
  */
+
+ #bott{
+     margin-right: 29em;
+}
+
+#restoavatar{
+    margin-top: 2em;
+}
