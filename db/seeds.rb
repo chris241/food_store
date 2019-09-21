@@ -49,7 +49,7 @@ food =Food.create!(
         description:"Le paradis des gourmands et des amoureux du bon pain. En salle ou en terrasse, l’Eclair vous surprendra par la qualité de ses créations pâtissières.",
         duration: 7,
         price: 5000,
-        menu: Menu.all.sample
+        menu_id: 1
       )
 
 
