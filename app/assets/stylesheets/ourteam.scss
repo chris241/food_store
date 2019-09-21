@@ -5,7 +5,7 @@
 }
 
 .bod {
-	background-image: url('fond.jpg');
+	background-color: rgb(22, 22, 22);
 	background-size: cover;
 	background-repeat: no-repeat;
 	flex-direction: column;
@@ -54,7 +54,8 @@
 
 h2.title{
 	text-align: center;
-    color: #fff ;
+	color: white;
+	font-family: Verdana;
 }
 h2{
 	color: black;
@@ -243,15 +244,19 @@ div.descri h3{
 
 
 .descri{
-	color:white;
+	color:rgb(30, 248, 255);
 }
 
 p.fonct{
-	color:white;
+	color:rgb(255, 255, 255);
 }
 
 div.nam{
 	position: relative;
 	top:20em;
+	background-color: rgba(29, 29, 29, 0.5);
+	padding-top: 26px;
+	height: 163px;
+	border-radius: 0px 56px 0px 56px;
 }
 
