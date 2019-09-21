@@ -18,75 +18,18 @@
 *= require style-portfolio
 *= require style
 *= require demo
+*= require apps
 *= require footer-distributed-with-address-and-phones
 *= require profil
-
-
-
 
  *= require_tree .
  *= require_self
  */
 
-#alignement{
-    position: relative;
-    top:-90px;
+ #bott{
+     margin-right: 29em;
 }
 
- 
-div.dropdown-content > a{
-    text-decoration: none;
-    position: relative;
-}
-
-#round{
-    border-radius: 50px;
-    width: 40px;
-    height: 40px;
-    position: relative;
-    bottom:10px;
-}
-form#wrp{
-    display: flex;
-    padding:1px;
-}
-
-#text{
-    margin-top: -9em;
-    background-color: rgba(32, 32, 32, 0.548);
-    border-radius: 0px 56px 0px 66px;
-    padding: 20px;
-    width:23em;
-}
-body#reserve-table{
-    background-image: url("https://images.pexels.com/photos/696218/pexels-photo-696218.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-    background-attachment: scroll ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color:white;
-}
-#reserve h2{
-    text-align: center;
-    font-family: verdana;
-    font-style: italic;
-    font-size: 3em;
-    color: rgb(202, 121, 16);
-}
-
-#reserve p{
-    color: white;
-}
-
-#pdp{
-    width: 20em;
-    height: 15em;
-    margin-left: 51px;
-}
-
-div.image-index{
-    width:22em;
-}
-
-#align-avatar{
-    height: 22px;
+#restoavatar{
+    margin-top: 2em;
 }

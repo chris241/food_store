@@ -28,6 +28,8 @@ class ReservationsController < ApplicationController
       flash[:success] = "Vous avez enregistré une réservation"
       redirect_to reservations_path
     else
+      flash[:danger]= "La date de réservation doit etre dans le futur"
+      render :new
     end
     end
   end

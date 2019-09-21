@@ -9,17 +9,14 @@
                 <%= render "devise/shared/error_messages", resource: resource %>
 
                 <div class="field">
-      
                   <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", id:"first_name" ,class:"form" ,placeholder:"First Name" %>
                 </div>
 
-                <div class="field">
-                  
+                <div class="field">   
                   <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name",id:"last_name" ,class:"form" ,placeholder:"Last Name" %>
                 </div>
 
                 <div class="field">
-            
                   <%= f.email_field :email, autofocus: true, autocomplete: "email",id:"email" ,class:"form" ,placeholder:"email" %>
                 </div>
             </div>
