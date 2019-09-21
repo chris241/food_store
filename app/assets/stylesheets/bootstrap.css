@@ -907,7 +907,7 @@ img {
   max-width: 100%;
   height: 200px;
   width: 800px;
-  
+
 }
 .img-rounded {
   border-radius: 6px;
@@ -1293,7 +1293,7 @@ pre code {
   width: 58.33333333%;
 }
 .col-xs-6 {
-  width: 50%;
+  width: 81%;
 }
 .col-xs-5 {
   width: 41.66666667%;
@@ -2655,11 +2655,7 @@ fieldset[disabled] .btn-default.active {
   color: #fff;
   background-color: #333;
 }
-.btn-primary {
-  color: #fff;
-  background-color: #428bca;
-  border-color: #357ebd;
-}
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -3463,7 +3459,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav > li > a > img {
   max-width: 38px;
-  
+
 }
 .nav-tabs {
   border-bottom: 1px solid #ddd;
@@ -3723,13 +3719,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   bottom: 0;
   margin-bottom: 0;
   border-width: 1px 0 0;
-}
-.navbar-brand {
-  float: left;
-  height: 50px;
-  padding: 15px 15px;
-  font-size: 18px;
-  line-height: 20px;
 }
 
 #restau{
@@ -4424,7 +4413,7 @@ a.list-group-item.active > .badge,
     padding-right: 60px;
     padding-left: 60px;
   }
-  
+
 }
 .thumbnail {
   display: block;
@@ -5477,6 +5466,8 @@ button.close {
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
   line-height: 1;
+  position: relative;
+  height: 19em;
 }
 .carousel-inner > .active,
 .carousel-inner > .next,
