@@ -20,7 +20,7 @@
 <%else gerant_signed_in?%>
  <%=%>
 <% @commands.each do |command| %>
-  <%if command.foods[0].id== @restaurant.foods[0].id%>
+  <%if command.foods.ids[0] == @restaurant.foods[0].id%>
     <strong>Commande n° <%= command.id%></strong> <br>
     <span> <i>Nom du client:</i>  <%=command.client.first_name %> </span> <br>
     <span> <i>Liste des répas</i> </span>
