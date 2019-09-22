@@ -73,6 +73,7 @@ class CommandsController < ApplicationController
   def show
     @command = Command.find(params[:id])
     @tab = @command.foods
+    @joins = JoinComFood.all
     # @totalCommands = current_client.command.foods
     @totalCommands = @tab
 
