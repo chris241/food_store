@@ -172,6 +172,8 @@ ActiveRecord::Schema.define(version: 2019_09_20_115909) do
   end
 
   create_table "restaurants", force: :cascade do |t|
+    t.float "latitude"
+    t.float "longitude"
     t.string "name"
     t.string "address"
     t.text "description"
