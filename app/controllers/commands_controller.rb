@@ -5,6 +5,7 @@ class CommandsController < ApplicationController
     @restaurants = Restaurant.all
     if gerant_signed_in?
       @restaurant = Restaurant.find_by(gerant_id: current_gerant.id)
+      @joins = JoinRestoFood.all
     end
   end
 

@@ -1,53 +1,83 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<body id="client">
 
-  <body>
-    <center>
-      <h1>EDIT FOOD</h1>
-<%= form_tag url_for(action: 'update'), method: "patch" do %>
-        
-    <%= label_tag 'name' %></br>
-    <%= text_field  'name', @food %></br>
+  <section  id="reservation"  class="description_content">
 
-    <%= label_tag 'description' %></br>
-    <%= text_field 'description', @food %>
+    <h2>Edit food</h2>
 
-    <br /><%= label_tag 'duration' %></br>
-    <%= text_field 'duration', @food %>
+      <div class="text-content container">
 
-    <br /> <br />
+        <div class="inner contact">
 
-    <%= label_tag 'image_url' %></br>
-    <%= url_field_tag 'image_url', @food%>
+           <%= form_tag url_for(action: 'update'), method: "patch" do %>
 
-    <br /> <br />
+             <div class="col-lg-6 col-md-6 col-xs-6" id="alignement">
 
-    <%= label_tag 'price' %></br>
-    <%= text_field 'price', @food%>
-    
-    <br /> <br />
+              <div class="form-group">
 
-<select id="menu_id" name="menu_id"></br>
-<option value="1">Entrée</option>
-<option value="2">Résistance</option>
-<option value="3">Dessert</option>
-<option value="4">Boisson</option>
-</select><br /><br />
+                <%= text_field 'name', @food, class:"form-create", id:"first_name" , placeholder:"Enter your name" %>
 
- 
-  <%= submit_tag "Edit Food" %>
-<% end %>
-    </center>
-  </body>
-</html>
+              </div>
+
+              <div class="form-group">
+
+                <%= text_area_tag 'description', @food , class:"form-create", id:"first_name", rows:"3" ,placeholder:"description" %>
+
+              </div>
 
 
 
+              <div class="form-group">
+
+                <%= text_field_tag 'price', @food,class:"form-create", id:"first_name", placeholder:"price ( € )" %>
+
+              </div>
+
+            </div>
+
+            <div class="col-lg-6 col-md-6 col-xs-6" id="alignement">
+
+              <div class="form-group">
+
+                <%= text_field_tag 'duration', @food,class:"form-create", id:"first_name", placeholder:"duration (minute)" %>
+
+              </div>
+
+              <div class="form-group">
+
+                <%= url_field_tag 'image_url',@food,class:"form-create", id:"first_name", placeholder:"image" %>
+
+              </div>
 
 
 
+              <select id="menu_id first_name" name="menu_id" class="form-create">
 
+                <option value="1">Dessert</option>
+
+                <option value="2">Entrée</option>
+
+                <option value="3">Résistance</option>
+
+                <option value="4">Boisson</option>
+
+              </select>
+
+            </div>
+
+            <div id="bott">
+
+              <%= submit_tag "Edit",class:"btn btn-success" %>
+
+            </div>
+
+          <%end%>
+
+
+
+        </div>
+
+      </div>
+
+  </section>
+
+</body>
