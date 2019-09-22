@@ -4,12 +4,16 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :reservations
+  resources :joincomfoods
 
   resources :menus
 
   get '/command_food/:food_id', to: 'commands#new', as: 'command_food'
 
   get '/reserve_food/:food_id', to: 'reservations#new', as: 'reserve_food'
+
+ get 'restaurants/ourteam', to: 'restaurants#ourteam', as: 'ourteam'
+ get 'supr/:id', to: 'commands#supr', as: 'supr'
 
   resources :foods do
     resources :foodavatar, only: [:create,:show]
@@ -19,16 +23,16 @@ Rails.application.routes.draw do
 
   resources :restaurants do
   resources :restoavatar,only: [:create,:show]
-  end	
+  end
   devise_for :gerants, path: 'gerants', controllers: { registrations: "gerants/registrations",sessions: "gerants/sessions" }
   resources :commands
 
 
-  
+
   resources :profiles, only:[:index] do
   	resources :avatars, only: [:create]
   end
- 
+
 
   devise_scope :client do
      get '/clients/sign_out'=> 'devise/sessions#destroy'

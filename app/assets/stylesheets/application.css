@@ -18,31 +18,18 @@
 *= require style-portfolio
 *= require style
 *= require demo
+*= require apps
 *= require footer-distributed-with-address-and-phones
 *= require profil
-
-
-
 
  *= require_tree .
  *= require_self
  */
 
-#alignement{
-    position: relative;
-    top:-90px;
+ #bott{
+     margin-right: 29em;
 }
 
- 
-div.dropdown-content > a{
-    text-decoration: none;
-    position: relative;
-}
-
-#round{
-    border-radius: 10px;
-}
-form#wrp{
-    display: flex;
-    padding:1px;
+#restoavatar{
+    margin-top: 2em;
 }

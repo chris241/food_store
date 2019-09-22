@@ -1,78 +1,47 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
+<body id="client">
+  <section  id="reservation"  class="description_content">
+    <h2>CREATION Foods</h2>
+      <div class="text-content container"> 
+        <div class="inner contact">    
 
-  <style media="screen">
+          <%=form_tag url_for(action:'create'), method: "POST" do %>
+            <div class="col-lg-6 col-md-6 col-xs-6" id="alignement">
+              <div class="form-group">          
+                <%= text_field_tag 'name', @food, class:"form-create", id:"first_name" , placeholder:"Enter you Phone" %>
+              </div>
 
-  form
-    {
-      /* Uniquement centrer le formulaire sur la page */
-        margin: 5;
-        width: 400px;
-          /* Encadré pour voir les limites du formulaire */
-            padding: 1em;
-            border: 0px solid #CCC;
-            border-radius: 1em;
+              <div class="form-group">           
+                <%= text_area_tag 'description', @food , class:"form-create", id:"first_name", rows:"3" ,placeholder:"description" %>
+              </div>
+        
+              <div class="form-group">           
+                <%= text_field_tag 'price', @food,class:"form-create", id:"first_name", placeholder:"price ( € )" %>
+              </div>
+            </div>
 
-          }
+            <div class="col-lg-6 col-md-6 col-xs-6" id="alignement">
+              <div class="form-group">           
+                <%= text_field_tag 'duration', @food,class:"form-create", id:"first_name", placeholder:"duration (minute)" %>
+              </div>
 
-          button {
-    /* Pour placer le bouton à la même position que les champs texte */
-    padding-left: 60px; /* même taille que les étiquettes */
-    padding-right: 57px;
-  }
-
-  button {
-    /* Cette marge supplémentaire représente grosso modo le même espace que celui
-       entre les étiquettes et les champs texte */
-    margin-left: 3em;
-
-  }
-
-  </style>
-
-  <body>
-  <center>  
-<br />
-<h1><center>Créez votre repas</center></h1>
-
-<%=form_tag url_for(action:'create'), method: "POST" do %>
-
-  <%= label_tag 'name of product:' %></br>
-  <%= text_field_tag 'name', @food%>
-  <br /> <br />
-
-  <%= label_tag 'description:' %></br>
-  <%= text_area_tag 'description', @food%>
-  <br /> <br />
-
-  <%= label_tag 'price: ( € )' %></br>
-  <%= text_field_tag 'price', @food %>
-  <br /> <br />
-
-  <%= label_tag 'duration: (mn)' %></br>
-  <%= text_field_tag 'duration', @food %>
-  <br /> <br />
+              <div class="form-group">
+                <%= url_field_tag 'image_url',@food,class:"form-create", id:"first_name", placeholder:"image" %>
+              </div>
+          
+              <select id="menu_id first_name" name="menu_id" class="form-create">
+                <option value="1">Dessert</option>
+                <option value="2">Entrée</option>
+                <option value="3">Résistance</option>
+                <option value="4">Boisson</option>
+              </select>
+            </div>
+            <div id="bott">
+              <%= submit_tag "Create food",class:"btn btn-success" %>
+            </div>
+        <%end%>
 
 
-  <%= label_tag 'Image:' %></br>
-  <%= url_field_tag 'image_url',@food %><br /><br />
-
-
-
-  <select id="menu_id" name="menu_id">
-  <option value="1">Dessert</option>
-  <option value="2">Entrée</option>
-  <option value="3">Résistance</option>
-  <option value="4">Boisson</option>
-</select><br /><br />
-
-
-  <%= submit_tag "Create food" %>
-<%end%>
-</center>
-  </body>
-</html>
+        </div>
+      </div>
+  </section>
+</body>

@@ -5,6 +5,12 @@ body#sign-in{
   background-attachment: relative;
   background-repeat: no-repeat;
   font-family: 'Roboto', sans-serif;
+  font-size: 16px; 
+  font-weight: 400; 
+  line-height: 28px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .form-control{

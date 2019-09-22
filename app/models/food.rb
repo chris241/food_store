@@ -10,4 +10,7 @@ class Food < ApplicationRecord
 	has_many :join_res_foods
 	has_many :reservations, through: :join_res_foods
 
+	has_many :join_resto_foods
+	has_many :restaurants, through: :join_resto_foods
+
 end
