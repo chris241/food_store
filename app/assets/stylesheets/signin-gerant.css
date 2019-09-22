@@ -8,6 +8,8 @@ body#sign-in-gerant{
   font-size: 16px; 
   font-weight: 400; 
   line-height: 28px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 

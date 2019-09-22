@@ -7,7 +7,7 @@
           <%=form_tag url_for(action:'create'), method: "POST" do %>
             <div class="col-lg-6 col-md-6 col-xs-6" id="alignement">
               <div class="form-group">          
-                <%= text_field_tag 'name', @food, class:"form-create", id:"first_name" , placeholder:"Enter you Phone" %>
+                <%= text_field_tag 'name', @food, class:"form-create", id:"first_name" , placeholder:"Nom du repas" %>
               </div>
 
               <div class="form-group">           
@@ -15,13 +15,13 @@
               </div>
         
               <div class="form-group">           
-                <%= text_field_tag 'price', @food,class:"form-create", id:"first_name", placeholder:"price ( € )" %>
+                <%= text_field_tag 'price', @food,class:"form-create", id:"first_name", placeholder:"Prix ( ariary )" %>
               </div>
             </div>
 
             <div class="col-lg-6 col-md-6 col-xs-6" id="alignement">
               <div class="form-group">           
-                <%= text_field_tag 'duration', @food,class:"form-create", id:"first_name", placeholder:"duration (minute)" %>
+                <%= text_field_tag 'duration', @food,class:"form-create", id:"first_name", placeholder:"Durée de préparation (minute)" %>
               </div>
 
               <div class="form-group">

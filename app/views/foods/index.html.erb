@@ -1,6 +1,6 @@
 <%if gerant_signed_in?%>
 
-<%=link_to "Nouveau repas", new_food_path, id:"btnnouveau",class: "btn btn-info"%>
+<%=link_to "Nouveau repas", new_food_path, id:"nouveau_repas",class: "btn btn-info"%>
 <h2 id="Menuss">Menu</h2>
 <%@foods.each do |food|%>
 
