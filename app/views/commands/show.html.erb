@@ -20,7 +20,7 @@
               <td><%=tab.name%></td>
               <td><%=tab.join_com_foods[-1].quantity%></td>
               <td><%=tab.price%></td>
-              <td><%=(tab.price).to_i*(tab.join_com_foods[-1].quantity).to_i%></td>
+              <td><%=(tab.price).to_i*(tab.join_com_foods[0].quantity).to_i%></td>
               <td>
                 <%= link_to "Enlever de la liste",command_path(@command.id), method: :delete , class: "btn btn-outline-warning" , style: "width:auto" %>
               </td>
