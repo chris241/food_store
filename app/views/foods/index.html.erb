@@ -1,36 +1,36 @@
+
+<center><h2>Menus disponibles </h2></center>
+
 <%if gerant_signed_in?%>
-
-<%=link_to "Nouveau repas", new_food_path, id:"btnnouveau",class: "btn btn-info"%>
-<h2 id="Menuss">Menu</h2>
 <%@foods.each do |food|%>
+    <div class="container-fluid" id = "foodcard">
+        <div class="row">
+            <div class="col-12 mt-3">
+                <div class="card">
+                    <div class="card-horizontal">
+                        <div class="img-square-wrapper" id= imagefood>
+                          <% if food.foodavatar.attached? == true%>
+                              <%= image_tag food.foodavatar%></br>
+                          <%else%>
+                           <%=image_tag food.image_url, alt:"img.jpg", id:"imagefood"%></br>
+                          <%end%>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title" id = "foodtitle"><%=food.name%></h4>
 
+                              <strong>Description: </strong></br> <%=food.description%></br></br>
+                              <strong>Temps de préparation: </strong><%=food.duration%> mn</br>
+                              <strong>Prix: </strong><b><%=food.price%> €</b></br
 
-    <div id="food_content" class ="food_content">
-        <%=food.name%>
-    </div>
-
-    <% if food.foodavatar.attached? == true%>
-
-        <%= image_tag food.foodavatar,class:"food_image", id:"food_image"%></br>
-
-    <%else%>
-
-      <img  src="<%=food.image_url%>" alt="img02" >
-    <%end%>
-
-    <div id="food_description" class ="food_description">
-        <span>Description: </span></br> <%=food.description%></br></br>
-        <span>Temps de préparation: </span><%=food.duration%> mn</br>
-        <span>Prix: </span><b id="prix" class="prix"><%=food.price%> €</b></br>
-
-    </div>
-        <div id="food_button" class ="food_button">
-
-            <%=link_to "Edit", edit_food_path(food.id), class: "btn btn-warning btn-lg active"%>
-            <%= link_to 'Destroy', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-outline-danger btn-lg active", style:"color:red;"%>
-            <br> <br> <br> <br>
+                            <span>
+                                <%=link_to "Edit", edit_food_path(food.id), class: "btn btn-warning"%>
+                                <%= link_to 'Destroy', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    <%end%>
-
-    </br>
+    </div>
+  <%end%>
 <%end%>

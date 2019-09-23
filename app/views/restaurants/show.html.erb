@@ -1,4 +1,4 @@
-<% if gerant_signed_in? %>  
+<% if gerant_signed_in? %>
   <section id="story" class="description_content">
     <div class="text-content container">
       <div class="col-md-6" id="show-c">
@@ -11,7 +11,8 @@
         <br>
           <p class="desc-text"> <i>Adresse:</i><%=@restaurant.address%></p> <br> <br>
             <p class="desc-text"><%=link_to "Nos menus", menus_path, class: "btn btn-info"%>
-              <%=link_to "Commandes", commands_path,class:"btn btn-primary"%>
+              <%=link_to "Commandes", commands_path,class:"btn btn-info"%>
+              <%= link_to "Nos repas",foods_path, class: "btn btn-info" , style: "width:auto"%>
               <%=link_to "Editer",  edit_restaurant_path, class:"btn btn-success"%>
               <%= link_to 'Effacer',restaurant_path, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%>
             </p>
@@ -24,12 +25,12 @@
           <%= image_tag @restaurant.image_url, id:"image-show" %>
           <%end%>
 
-          <%= form_tag restaurant_restoavatar_index_path(session[:resto_id]), multipart: true do %>
-          <%= file_field_tag :restoavatar %>
-          <%= submit_tag "mettre à jour" %>
-          <% end %>
+            <%= form_tag restaurant_restoavatar_index_path(session[:resto_id]), multipart: true do %>
+            <%= file_field_tag :restoavatar %>
+            <%= submit_tag "mettre à jour" %>
+            <% end %>
       </div>
-      <%= link_to "Afficher tous les repas",foods_path, class: "btn btn-outline-info" , style: "width:auto"%>
+
   </section>
 
 <%else%>
@@ -46,7 +47,9 @@
             <br>
             <p class="desc-text"> <i>Adresse:</i><%=@restaurant.address%></p> <br> <br>
             <p class="desc-text"><%=link_to "Nos menus", menus_path, class: "btn btn-info"%>
-            <%=link_to "Reserver table", new_reservation_path,class:"btn btn-primary"%>
+                <% if client_signed_in?%>
+            <%=link_to "Reserver table", new_reservation_path,class:"btn btn-warning"%>
+            <%end%>
             </p>
         </div>
 

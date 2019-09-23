@@ -1,3 +1,21 @@
 // Place all the styles related to the Food controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+#foodcard{margin-bottom: 50px
+}
+
+#imagefood{
+  margin-left: 10px;
+  margin-right: 50px;
+  width: 400px;
+  height: 80%; 
+}
+
+#foodtitle{
+  font-size: 50px;
+}
