@@ -2,7 +2,7 @@
   <section id="story" class="description_content">
     <div class="text-content container">
       <div class="col-md-6" id="show-c">
-        <h1>About us</h1>
+        <h1>A propos</h1>
         <div class="fa fa-cutlery fa-2x">
             <strong><%=@restaurant.name%></strong>
         </div>
@@ -10,7 +10,7 @@
         <p class="desc-text"><%=@restaurant.description%></p>
         <br>
           <p class="desc-text"> <i>Adresse:</i><%=@restaurant.address%></p> <br> <br>
-            <p class="desc-text"><%=link_to "Nos menus", menus_path, class: "btn btn-info"%>
+            <p class="desc-text"><%=link_to "Nos menus", menus_path, class: "btn btn-info", id:"bouton"%>
               <%=link_to "Commandes", commands_path,class:"btn btn-primary"%>
               <%=link_to "Editer",  edit_restaurant_path, class:"btn btn-success"%>
               <%= link_to 'Effacer',restaurant_path, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%>
@@ -37,7 +37,7 @@
        <section id="story" class="description_content">
     <div class="text-content container">
         <div class="col-md-6">
-            <h1>About us</h1>
+            <h1>A propos</h1>
             <div class="fa fa-cutlery fa-2x">
                 <strong><%=@restaurant.name%></strong>
             </div>

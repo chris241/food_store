@@ -23,13 +23,13 @@
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="field">
               <%= f.label :email, class:"pos" %><br />
-              <%= f.email_field :email, autofocus: true, id:"inputEmail", class:"form-control",placeholder:"Email address" ,autocomplete: "email" %>
+              <%= f.email_field :email, autofocus: true, id:"inputEmail", class:"form-control",placeholder:"Adresse email" ,autocomplete: "email" %>
             </div> 
 
             <br />
             <div class="field">
-              <%= f.label :password, class:"pos" %><br />
-              <%= f.password_field :password, autocomplete: "current-password", id:"inputPassword", class:"form-control", placeholder:"Password" %>
+              <%= f.label :mot_de_passe, class:"pos" %><br />
+              <%= f.password_field :password, autocomplete: "current-password", id:"inputPassword", class:"form-control", placeholder:"Mot de passe" %>
             </div> 
             
             <br />
@@ -41,7 +41,7 @@
             <% end %>  
 
             <div class="actions">
-              <%= f.submit "Log in", class:"btn btn-lg btn-primary btn-block" %>
+              <%= f.submit "Se connecter", class:"btn btn-lg btn-primary btn-block" %>
             </div>
 
           <% end %>

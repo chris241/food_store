@@ -33,3 +33,5 @@
 #restoavatar{
     margin-top: 2em;
 }
+
+* {-moz-box-sizing: border-box; box-sizing: border-box;}
