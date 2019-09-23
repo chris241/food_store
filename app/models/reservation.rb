@@ -16,5 +16,4 @@ class Reservation < ApplicationRecord
             errors.add(:date, "can't be in the past")
         end
     end
-
 end

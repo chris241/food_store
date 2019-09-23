@@ -3,6 +3,7 @@ footer{
 	background-image: url("http://jolofsystem.com/wp-content/uploads/2014/12/footer-background-011.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	position: absolute;
 }
 .footer-distributed{
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -10,9 +11,6 @@ footer{
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
-	position: relative;
-	top: 100%;
-	bottom: 100%;
 
 }
 

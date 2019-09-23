@@ -172,6 +172,9 @@ sub {
 
 img {
   border: 0;
+  margin-left: 1em;
+  height: 22em;
+  width: 30em;
 }
 
 /**
