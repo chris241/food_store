@@ -1,3 +1,4 @@
+<% if client_signed_in?%>
 <%= form_tag note_path(), method: "post" do %>
     <%= hidden_field_tag 'food_id', @food_id %>
     <!-- <%= hidden_field_tag 'menu_id', @menu_id %> -->
@@ -5,4 +6,9 @@
     <center><%= number_field_tag  'quantity', @command.quantity %></center>
     <br /> <br />
     <center><%= submit_tag "Commander" %></center>
+<% end %>
+
+<%else%>
+<center><a href="<%=new_client_session_path%>">Vous devez vous connecter</a></center>
+
 <% end %>
