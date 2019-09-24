@@ -734,54 +734,54 @@ MEDIA QUERIE DESKTOP
     }
 }
 /*front recherche */
-.buscar-caja {
-  position: absolute;
-  top: 75%; left: 50%;
-  transform: translate(-50%, -50%);
-  background: #fff;
-  border-radius: 40px;
-  padding: 10px;
-}
-.buscar-caja:hover > .buscar-txt
+.buscar-caja { 
+  position: absolute; 
+  top: 50%; left: 50%; 
+  transform: translate(-50%, -50%); 
+  background: #fff; 
+  border-radius: 40px; 
+  padding: 10px; 
+} 
+.buscar-caja:hover > .buscar-txt 
 {
-  width: 230px;
-  padding: 0 6px;
-}
+  width: 240px; 
+  padding: 0 6px; 
+} 
 .buscar-caja:hover > .buscar-btn {
-  background: white;
-  color: black;
-}
+  background: white; 
+  color: black; 
+} 
 
-.buscar-btn {
-
-  float: right;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.4s;
-  color: white;
-  cursor: pointer;
-}
-.buscar-btn > i
-{
-  font-size: 18px;
-}
-.buscar-txt {
-  border: none;
-  background: none;
-  outline: none;
-  float: left;
-  padding: 0;
-  color: #333;
-  font-size: 16px;
-  transition: 0.4s;
-  line-height: 40px;
-  width: 0px;
-  font-weight: bold;
+.buscar-btn { 
+  
+  float: right; 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  transition: 0.4s; 
+  color: white; 
+  cursor: pointer; 
+} 
+.buscar-btn > i 
+{ 
+  font-size: 18px; 
+} 
+.buscar-txt { 
+  border: none; 
+  background: none; 
+  outline: none; 
+  float: left; 
+  padding: 0; 
+  color: #333; 
+  font-size: 16px; 
+  transition: 0.4s; 
+  line-height: 40px; 
+  width: 0px; 
+  font-weight: bold; 
 }
 
 .btn-primary{
@@ -789,8 +789,3 @@ MEDIA QUERIE DESKTOP
     color: #CB356B;
     border: none;
 }
-.loupe{
-
-color:black;
-}
-
