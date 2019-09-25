@@ -78,7 +78,7 @@ class CommandsController < ApplicationController
 
     totalprice = 0
     @totalCommands.each do |food|
-        @foodsprice = (food.price).to_i*(food.join_com_foods[0].quantity).to_i
+        @foodsprice = (food.price).to_i*(food.join_com_foods[-1].quantity).to_i
         totalprice += @foodsprice
 	     @sum = totalprice
 	   end
