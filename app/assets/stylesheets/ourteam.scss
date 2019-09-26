@@ -14,11 +14,12 @@
 	align-items: center;
 	height: 100vh;
 	text-align: center;
-	font-size: 16px; 
-  font-weight: 400; 
+	font-size: 16px;
+  font-weight: 400;
   line-height: 28px;
   background-repeat: no-repeat;
   background-attachment: fixed;
+	padding-bottom: 75%;
 }
 
 .cards-container {
@@ -31,7 +32,6 @@
 .cards-container:hover .card1 {
 	transform: rotateY(35deg);
 }
-
 .card1 {
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -246,7 +246,6 @@ div.descri h3{
 	font-size: 27px;
 }
 
-
 .descri{
 	color:rgb(30, 248, 255);
 }
@@ -263,4 +262,3 @@ div.nam{
 	height: 163px;
 	border-radius: 0px 56px 0px 56px;
 }
-
