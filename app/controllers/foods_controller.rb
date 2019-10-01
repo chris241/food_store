@@ -1,22 +1,21 @@
 class FoodsController < ApplicationController
   def index
     @foods = Food.all
+
   end
 
   def show
     @menu = Menu.find(params[:id])
-    
+   @restaurant = Restaurant.find(session[:resto_id])
   end
 
   def new
     @menu = Menu.all
-
   end
 
   def create
-    @food = Food.new
-
-      Food.create!(name: params[:name],
+      @food = Food.new
+      @food = Food.create!(name: params[:name],
       description: params[:description],
       price: params[:price],
       duration: params[:duration],
@@ -24,12 +23,17 @@ class FoodsController < ApplicationController
       image_url:params[:image_url])
 
       if @food.save
+
+        @join= JoinRestoFood.new
+        @join= JoinRestoFood.create(restaurant_id: session[:resto_id],  food_id: @food.id)
+
         flash[:success] = "Créé avec succés"
         redirect_to foods_path
 
       else
         render :new
       end
+
   end
 
   def updateAvatar

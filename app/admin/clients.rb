@@ -9,10 +9,10 @@ permit_params :first_name, :last_name, :email, :password, :password_confirmation
   #
   # or
   #
-  # permit_params do
-  #   permitted = [:email, :encrypted_password, :first_name, :last_name, :is_alive, :reset_password_token, :reset_password_sent_at, :remember_created_at]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
+   permit_params do
+   permitted = [:email, :encrypted_password, :first_name, :last_name, :is_alive, :reset_password_token, :reset_password_sent_at, :remember_created_at]
+   permitted << :other if params[:action] == 'create' && current_user.admin?
+    permitted
+   end
   
 end

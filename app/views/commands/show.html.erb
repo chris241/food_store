@@ -20,9 +20,9 @@
               <td><%=tab.name%></td>
               <td><%=tab.join_com_foods[-1].quantity%></td>
               <td><%=tab.price%></td>
-              <td><%=(tab.price).to_i*(tab.join_com_foods[0].quantity).to_i%></td>
+              <td><%=(tab.price).to_i*(tab.join_com_foods[-1].quantity).to_i%></td>
               <td>
-                <%= link_to "Enlever de la liste",command_path(tab.id) ,method: :delete , class: "btn btn-outline-warning" , style: "width:auto", remote: true %>
+                <%= link_to "Enlever de la liste",command_path(@command.id), method: :delete , class: "btn btn-outline-warning" , style: "width:auto" %>
               </td>
             </tr>
         <%end%>
@@ -46,22 +46,23 @@
               <label class="amount">
               </label>
             </article>
-          
+
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                     data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                     data-description="A month's subscription"
                     data-amount="<%=(params[:total_price].to_f)*100%>"
                     data-locale="auto">
-        
+
+
                     </script>
           <% end %>
           </td>
 
           <td>
-          
+
           </td>
       </tr>
     </tbody>
   </table>
-  
+
 </body>

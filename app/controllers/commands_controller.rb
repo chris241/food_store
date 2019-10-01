@@ -1,5 +1,13 @@
 class CommandsController < ApplicationController
- before_action :authenticate_client!
+ #before_action :authenticate_client!
+  def index
+    @commands = Command.all
+    @restaurants = Restaurant.all
+    if gerant_signed_in?
+      @restaurant = Restaurant.find_by(gerant_id: current_gerant.id)
+      @joins = JoinRestoFood.all
+    end
+  end
 
   def new
     @command = Command.new
@@ -17,9 +25,10 @@ class CommandsController < ApplicationController
     # # if current_client.command == nil
     # #     @command = Command.create(client_id: @u)
     # # end
-    
+
     @command = Command.create(client_id: current_client.id)
     @command.save
+
 
 
     session[:note].each do |n|
@@ -58,7 +67,7 @@ class CommandsController < ApplicationController
 
     p "#################"
     p session[:note]
-    
+
   end
 
   def show
@@ -69,13 +78,13 @@ class CommandsController < ApplicationController
 
     totalprice = 0
     @totalCommands.each do |food|
-        @foodsprice = (food.price).to_i*(food.join_com_foods[0].quantity).to_i
+        @foodsprice = (food.price).to_i*(food.join_com_foods[-1].quantity).to_i
         totalprice += @foodsprice
 	     @sum = totalprice
 	   end
 
-     def paiement
-    @amount = @sum 
+  def paiement
+    @amount = @sum
     customer = Stripe::Customer.create({
     email: params[:stripeEmail],
     source: params[:stripeToken],
@@ -96,12 +105,20 @@ class CommandsController < ApplicationController
 end
 
   def destroy
-    @command = Command.find(current_client.command.id)
-	  @join = @command.join_com_foods[0].destroy
+    @command = Command.find(params[:id])
+      @join = @command.join_com_foods[0].destroy
     respond_to do |format|
-      format.html { redirect_to command_path(current_client.command.id) }
+      format.html { redirect_to command_path }
       format.js { }
-	    
     end
+  end
+  def supr
+      @command = Command.find(params[:id])
+      @command.destroy
+      respond_to do |format|
+      format.html { redirect_to commands_path }
+      format.js { }
+    end
+
   end
 end

@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
- before_action :authenticate_client!
+
   def index
     @reservations = Reservation.all
   end
@@ -8,7 +8,6 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.find(params[:id])
   end
 
-
   def new
     @reservation = Reservation.new
     @food_id = params[:food_id]
@@ -16,23 +15,24 @@ class ReservationsController < ApplicationController
 
   def create
     @food_id = params[:food_id]
+    if current_client== nil
+      flash[:danger] = "Vous devez vous connecter"
+      redirect_to new_client_session_path
+    else
+
     @reservation = Reservation.new(nbr_person: params[:nbr_person],
                                    date: params[:date],
                                    client_id: current_client.id,
                                    restaurant_id: session[:resto_id])
-
     if @reservation.save
       flash[:success] = "Vous avez enregistré une réservation"
       redirect_to reservations_path
     else
-
-
+      flash[:danger]= "La date de réservation doit etre dans le futur"
+      render :new
     end
-
-
-
+    end
   end
-
 
   def update
   end
@@ -40,10 +40,6 @@ class ReservationsController < ApplicationController
   def destroy
     @reservation = Reservation.find(params[:id])
     @reservation.destroy
-    respond_to do |format|
-      format.html { redirect_to reservations_path }
-      format.js { }
-    end
-    
+    redirect_to reservations_path
   end
 end

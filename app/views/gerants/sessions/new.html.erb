@@ -1,26 +1,54 @@
-<h2>Log in</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700" rel="stylesheet">
+    <title> Sign up </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="sign.css" rel="stylesheet">
+  </head>
+  
+  <body id="sign-in-gerant">
+    <div class="signup-form-gerant">
+      <div class="form-header-gerant">
+          <h2>Se connecter en tant que gérant</h2>   
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :emailgerant %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+        <div class="form-group">
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="field">
+              <%= f.label :email, class:"pos" %><br />
+              <%= f.email_field :email, autofocus: true, id:"inputEmail", class:"form-control",placeholder:"Votre adresse email" ,autocomplete: "email" %>
+            </div> 
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
+            <br />
+            <div class="field">
+              <%= f.label :Mot_de_passe, class:"pos" %><br />
+              <%= f.password_field :password, autocomplete: "current-password", id:"inputPassword", class:"form-control", placeholder:"Mot de passe" %>
+            </div> 
+            
+            <br />
+            <% if devise_mapping.rememberable? %>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :Se_souvenir_de_moi %>
+              </div>
+            <% end %> 
 
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+            <div class="actions">
+              <%= f.submit "Se connecter", class:"btn btn-lg btn-primary btn-block" %>
+            </div>
+          <% end %>
+            <div id="ligne">
+              <%= link_to "Devenir un gerant?", new_gerant_registration_path%>
+              <%= render "gerants/shared/links" %>
+            </div>
+        </div>
+      </div>
     </div>
-  <% end %>
+  </body>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
 
-<%= render "gerants/shared/links" %>
