@@ -102,8 +102,14 @@ div.form-header-gerant-sign-up > h2,p {
 
 body#sign-up-gerant{
 
-    background-size: 100%;
-    background-repeat: no-repeat;
-    height: 100%;
-padding-bottom: 75%;
+  color: #999;
+  background-image: url(https://www.africarising.tv/wp-content/uploads/edd/2018/03/African-stock-video-of-a-black-chef-with-healthy-salad-food-and-chalk-social-media-icons-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px; 
+  font-weight: 400; 
+  line-height: 28px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
