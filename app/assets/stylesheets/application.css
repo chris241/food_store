@@ -41,10 +41,10 @@
 }
 
 #newResto{
-    background-image: url()
+    background-image: url('reservation-seat.jpg')
 }
 #editResto{
-    background-image: url(reservation-seat.jpg);
+    background-image: url('reservation-seat.jpg');
 }
 
 #tire{
@@ -69,8 +69,17 @@
 
 .t{
     color:black;
-    background-color: rgba(255, 255, 255, 0.774);
+    background-color: rgba(155, 155, 155, 0.534);
     border-color: rgba(27, 27, 27, 0.678);
+    height: 3em;
+    border-radius: 7px;
+    padding-left: 24px;
+    margin-bottom: 23px;
+    border-color: rgb(3, 66, 7);
+}
+
+.t:hover{
+    background-color: rgba(255, 255, 255, 0.774);
 }
 #bb{
     color: black;
@@ -87,4 +96,15 @@
     border-color: rgb(150, 127, 0);
     background-color: rgb(22, 22, 22);
     
+}
+#tire h1{
+    color: rgb(0, 241, 221);
+    text-align: center;
+    position: relative;
+    left: 23%;
+    width: 60%;
+    font-family: Verdana;
+    border: none;
+    margin-top: 1%;
+    font-size: 3em;
 }

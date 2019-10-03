@@ -1,26 +1,29 @@
-<body id="newResto">
-           <center> 
-                  <h1>Ajouter votre restaurant</h1>
-               
-                 <%= form_tag url_for(action: 'create'), method: "post" do %>
-               
-                 <%= label_tag 'Nom :' %><br />
-                 <%= text_field  'name', @restaurant, placeholder: "Intitulé ", class: "resto-group" %>
-                 <br /> <br />
-               
-                 <%= label_tag 'Description :'%><br />
-                 <%= text_field 'description', @restaurant, placeholder: "Décrivez votre restaurant", class: "resto-group" %>
-                 <br /> <br />
-                
-                  <%= label_tag 'Adresse :'%><br />
-                 <%= text_field 'address', @restaurant, placeholder: "Votre local ", class: "resto-group"%>
-                 <br /> <br />
-                
-                 <%= label_tag 'URL :'%><br />
-                 <%= url_field_tag 'image_url', @restaurant, placeholder: "Image", class: "resto-group"%>
-                <br /> <br />
-                
-                 <%= submit_tag "Créer un restaurant" %>
-                 <% end %>
-  </center>               
+<body id="editResto">
+  <div id="tire">       
+      <h1>Ajouter votre restaurant</h1>
+    
+      <%= form_tag url_for(action: 'create'), method: "post" do %>
+        <div class="nom">
+          <%= label_tag 'Nom :' %>
+            <%= text_field  'name', @restaurant, placeholder: "Intitulé ", class:"t" %>
+              <br>
+              
+          <%= label_tag 'Description :'%>
+            <%= text_field 'description', @restaurant, placeholder: "Décrivez votre restaurant",class:"t"%>
+              <br>
+        
+          <%= label_tag 'Adresse :'%>
+            <%= text_field 'address', @restaurant, placeholder: "Votre local ", class:"t"%>
+              <br>
+        
+          <%= label_tag 'URL :'%>
+            <%= url_field_tag 'image_url', @restaurant, placeholder: "Image", class:"t"%>
+              <br> 
+        
+            <div id="boutt">
+              <center><%= submit_tag "Créer un restaurant", class:"btn btn-primary" %></center>
+            </div>
+        </div>
+      <% end %>
+	</div>  
 </body>
