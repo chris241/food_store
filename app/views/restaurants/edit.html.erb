@@ -1,36 +1,30 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body style="background-color:powderblue;">
-<center>
-    <%= form_tag url_for(action: 'update'), method: "patch" do %>
-        
-        <center><%= label_tag 'name' %></center>
-    <center><%= text_field  'name', @restaurant %></center>
-    <br /> <br />
+<body id="editResto">
+	<div id="tire">
+		<%= form_tag url_for(action: 'update'), method: "patch" do %>
+				
+			<div class="nom">
+				<%= label_tag 'Nom' %>
+				<%= text_field  'name', @restaurant , class:"t"%>
+			<br>
+		
+				<%= label_tag 'Description' %>
+				<%= text_field 'description', @restaurant, class:"t" %>
+			<br>
 
+				<%= label_tag 'Adresse' %>
+				<%= text_field 'address', @restaurant, class:"t" %>
+			<br>
 
-
-    <center><%= label_tag 'description' %></center>
-    <center><%= text_field 'description', @restaurant %></center>
-    <br /> <br />
-
-
-    <center><%= label_tag 'address' %></center>
-    <center><%= text_field 'address', @restaurant%></center>
-    <br /> <br />
-    <center><%= label_tag 'image_url' %></center>
-    <center><%= url_field_tag 'image_url', @restaurant%></center>
-     <br /> <br />
-     
-
-      <%= submit_tag "Editer votre restaurant" %>
-
-<% end %>
-</center>
+				<%= label_tag 'URL' %>
+				<%= url_field_tag 'image_url', @restaurant, class:"t" %>
+			<br>
+					
+				<div id="boutt">
+					<center><%= submit_tag "Editer votre restaurant" %>	</center>
+				<div>
+			<div>
+		<% end %>
+	</div>
 </body>
-</html>
 
 

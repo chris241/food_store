@@ -57,28 +57,30 @@
                       </div>
                     <%end%>
                 <%end%>
-                <%=link_to "Ajouter votre restaurant ",new_restaurant_path,class:"btn btn-outline-info", type:"button"%>
+         
+                <%=link_to "Ajouter votre restaurant ",new_restaurant_path, id:"bb", class:"btn btn-outline-info", type:"button"%>
+         
         <%elsif%>
           <% if client_signed_in? || !gerant_signed_in?%>
             <% @restaurants.each do |restaurant| %>
-            <div class="col-md-4">
-                      <div class="ot-portfolio-item">
-                          <figure class="effect-bubba">
-                            <div class="card image-index">
-                              <% if restaurant.restoavatar.attached? == true%>
-                                <%=image_tag restaurant.restoavatar ,class:"img-responsive card-img-top"%>
-                              <%else%>
-                                <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
-                              <%end%>
-                              <figcaption>
-                                <h2><%= restaurant.name %></h2>
-                                <p>Branding, Design</p>
-                                <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
-                              </figcaption>
-                            </div>
-                        </figure>
+              <div class="col-md-4">
+                <div class="ot-portfolio-item">
+                    <figure class="effect-bubba">
+                      <div class="card image-index">
+                        <% if restaurant.restoavatar.attached? == true%>
+                          <%=image_tag restaurant.restoavatar ,class:"img-responsive card-img-top"%>
+                        <%else%>
+                          <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
+                        <%end%>
+                        <figcaption>
+                          <h2><%= restaurant.name %></h2>
+                          <p>Branding, Design</p>
+                          <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
+                        </figcaption>
                       </div>
-                      </div>
+                  </figure>
+                </div>
+              </div>
             <%end%>
           <%end%>
         <%else%>

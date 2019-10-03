@@ -1,33 +1,33 @@
 <%if gerant_signed_in?%>
 
-<div class="container">
-  <div class="row">
-    <table class="table table-bordered">
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Name restaurant</th>
-        <th scope="col">Date reservation</th>
-        <th scope="col">Nombre </th>
-        <th scope="col">Action</th>
-      </tr>
-        <%@reservations.each do |reservation|%>
-        <%if reservation.restaurant.gerant.id == current_gerant.id%>
-          <tbody>
-          <tr id ="<%=reservation.id%>">
-            <td ><%=reservation.client.last_name%></td>
-            <td><%=reservation.restaurant.name%></td>
-            <td><%=reservation.date%></td>
-            <td><%=reservation.nbr_person%></td>
-            <td><%= link_to 'cancel',reservation_path(reservation.id), method: :delete, remote: true %> </td>
-          </tr>
-          </tbody>
-        <%else%>
-        <p> Vous n'avez pas encore de reservation pour le moment</p>
-        <%end%>
-        <%end%>
-    </table>
+  <div class="container">
+    <div class="row">
+      <table class="table table-bordered">
+        <tr>
+          <th scope="col">Nom</th>
+          <th scope="col">Nom du restaurant</th>
+          <th scope="col">Date de reservation</th>
+          <th scope="col">Nombre </th>
+          <th scope="col">Action</th>
+        </tr>
+          <%@reservations.each do |reservation|%>
+            <%if reservation.restaurant.gerant.id == current_gerant.id%>
+              <tbody>
+                <tr id ="<%=reservation.id%>">
+                  <td ><%=reservation.client.last_name%></td>
+                  <td><%=reservation.restaurant.name%></td>
+                  <td><%=reservation.date%></td>
+                  <td><%=reservation.nbr_person%></td>
+                  <td><%= link_to 'Annuler',reservation_path(reservation.id), method: :delete, remote: true %> </td>
+                </tr>
+              </tbody>
+            <%else%>
+              <p> Vous n'avez pas encore de reservation pour le moment</p>
+            <%end%>
+          <%end%>
+      </table>
+    </div>
   </div>
-</div>
 
 <%elsif%>
 
@@ -36,9 +36,9 @@
   <div class="row">
     <table class="table table-bordered">
       <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Name restaurant</th>
-        <th scope="col">Date reservation</th>
+        <th scope="col">Nom</th>
+        <th scope="col">Nom du restaurant</th>
+        <th scope="col">Date de reservation</th>
         <th scope="col">Nombre </th>
         <th scope="col">Action</th>
       </tr>
@@ -51,7 +51,7 @@
             <td><%=reservation.restaurant.name%></td>
             <td><%=reservation.date%></td>
             <td><%=reservation.nbr_person%></td>
-            <td><%= link_to 'cancel',reservation_path(reservation.id), method: :delete, remote: true %> </td>
+            <td><%= link_to 'annuler',reservation_path(reservation.id), method: :delete, remote: true %> </td>
           </tr>
           </tbody>
       <%else%>

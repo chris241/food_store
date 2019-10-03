@@ -4,23 +4,23 @@
                
                  <%= form_tag url_for(action: 'create'), method: "post" do %>
                
-                 <%= label_tag 'name :' %><br />
+                 <%= label_tag 'Nom :' %><br />
                  <%= text_field  'name', @restaurant, placeholder: "Intitulé ", class: "resto-group" %>
                  <br /> <br />
                
-                 <%= label_tag 'description :'%><br />
+                 <%= label_tag 'Description :'%><br />
                  <%= text_field 'description', @restaurant, placeholder: "Décrivez votre restaurant", class: "resto-group" %>
                  <br /> <br />
                 
-                  <%= label_tag 'address :'%><br />
+                  <%= label_tag 'Adresse :'%><br />
                  <%= text_field 'address', @restaurant, placeholder: "Votre local ", class: "resto-group"%>
                  <br /> <br />
                 
-                 <%= label_tag 'image_url :'%><br />
+                 <%= label_tag 'URL :'%><br />
                  <%= url_field_tag 'image_url', @restaurant, placeholder: "Image", class: "resto-group"%>
                 <br /> <br />
                 
-                 <%= submit_tag "Create restaurant" %>
+                 <%= submit_tag "Créer un restaurant" %>
                  <% end %>
   </center>               
 </body>

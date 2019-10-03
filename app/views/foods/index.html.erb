@@ -1,8 +1,10 @@
-
-<center><h2>Menus disponibles </h2></center>
+  <div id="c">
+    <h2>Menus disponibles</h2>
+    <%=link_to "Nouveau repas", new_food_path, id:"btnnouveau",class: "btn btn-success"%>
+  </div>
 
 <%if gerant_signed_in?%>
-<%@foods.each do |food|%>
+  <%@foods.each do |food|%>
     <div class="container-fluid" id = "foodcard">
         <div class="row">
             <div class="col-12 mt-3">
@@ -12,7 +14,7 @@
                           <% if food.foodavatar.attached? == true%>
                               <%= image_tag food.foodavatar%></br>
                           <%else%>
-                           <%=image_tag food.image_url, alt:"img.jpg", id:"imagefood"%></br>
+                            <%=image_tag food.image_url, alt:"img.jpg", id:"imagefood"%></br>
                           <%end%>
                         </div>
                         <div class="card-body">
@@ -23,8 +25,8 @@
                               <strong>Prix: </strong><b><%=food.price%> Ariary</b></br
 
                             <span>
-                                <%=link_to "Edit", edit_food_path(food.id), class: "btn btn-warning"%>
-                                <%= link_to 'Destroy', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%>
+                                <%=link_to "Editer", edit_food_path(food.id), class: "btn btn-warning"%>
+                                <%= link_to 'Supprimer', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%>
                             </span>
                         </div>
                     </div>

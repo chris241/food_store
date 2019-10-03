@@ -130,10 +130,11 @@ box-shadow: 1px 1px 6px black;
     
 }
 #btnnouveau{
+position: absolute;
+right:  5%;
+top: 5.5%;
+}
 
-    position: relative;
-    top: -15%;
-    margin-left: 85%;
-    width: 10%;
-    height: 4%;
+div#c h2{
+    text-align: center;
 }
