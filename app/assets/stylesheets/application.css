@@ -35,3 +35,11 @@
 }
 
 * {-moz-box-sizing: border-box; box-sizing: border-box;}
+
+.espace{
+    margin: 0% 6% 6% auto;
+}
+
+#newResto{
+    background-image: url()
+}

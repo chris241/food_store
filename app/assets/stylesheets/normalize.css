@@ -172,10 +172,8 @@ sub {
 
 img {
   border: 0;
-  margin-left: 1em;
-  height: 22em;
-  width: 30em;
 }
+
 
 /**
  * Correct overflow not hidden in IE 9/10/11.

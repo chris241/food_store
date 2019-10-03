@@ -38,13 +38,13 @@
                 <% @restaurants.each do |restaurant| %>
                     <%if restaurant.gerant_id == current_gerant.id%>
                       <div class="col-md-4">
-                      <div class="ot-portfolio-item">
+                        <div class="ot-portfolio-item">
                           <figure class="effect-bubba">
                             <div class="card">
                               <% if restaurant.restoavatar.attached? == true%>
-                                <%=image_tag restaurant.restoavatar ,class:"img-responsive card-img-top" %>
+                                <%= image_tag restaurant.restoavatar ,class:"img-responsive card-img-top" %>
                               <%else%>
-                                <img  src="<%=restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
+                                <img  src="<%= restaurant.image_url%>" alt="img02" class="img-responsive card-img-top" >
                               <%end%>
                               <figcaption>
                                 <h2><%= restaurant.name %></h2>
@@ -52,8 +52,8 @@
                                 <%= link_to  "Voir",restaurant_path(restaurant.id), class:'btn btn-outline-warning'%>
                               </figcaption>
                             </div>
-                        </figure>
-                      </div>
+                          </figure>
+                        </div>
                       </div>
                     <%end%>
                 <%end%>

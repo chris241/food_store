@@ -165,7 +165,7 @@ div#bs-example-navbar-collapse-1 {
 
 nav {
     background: #1E1E1E !important;
-    font-size: 18px;
+    font-size: 135%;
     color: white !important;
 }
 
@@ -769,7 +769,8 @@ MEDIA QUERIE DESKTOP
 .buscar-btn > i
 {
   color: black;
-  font-size: 18px;
+  font-size: 90%;
+  margin-top: 34%;
 }
 .buscar-txt {
   border: none;

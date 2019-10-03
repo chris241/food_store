@@ -32,7 +32,9 @@ footer{
 .footer-distributed h3{
 	color:  #ffffff;
 	font: normal 36px 'Cookie', cursive;
-	margin: 0;
+	padding: 1%;
+	font-size: 3em;
+	margin-left: 22%;
 }
 
 .footer-distributed h3 span{
@@ -43,7 +45,6 @@ footer{
 
 .footer-distributed .footer-links{
 	color:  #ffffff;
-
 	padding: 0;
 }
 
@@ -93,6 +94,8 @@ footer{
 	color: #ffffff;
 	vertical-align: middle;
 	margin:0;
+	padding-top: 10px;
+	padding-left: 2px;
 }
 
 .footer-distributed .footer-center p span{
@@ -118,7 +121,7 @@ footer{
 .footer-distributed .footer-company-about{
 	line-height: 20px;
 	color:  #ffffff;
-	font-size: 13px;
+	font-size: 90%;
 	font-weight: normal;
 	margin: 0;
 }
@@ -126,13 +129,14 @@ footer{
 .footer-distributed .footer-company-about span{
 	display: block;
 	color:  #ffffff;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: bold;
 
 }
 
 .footer-distributed .footer-icons{
 	margin-top: 25px;
+	margin-left: 18%;
 }
 
 .footer-distributed .footer-icons a{
